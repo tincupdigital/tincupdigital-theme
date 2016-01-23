@@ -1,0 +1,56 @@
+/**
+ * _variables.scss
+ */
+
+/*
+Typography
+ */
+/* Variables */
+$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Definitions */
+$body-font: $helvetica;
+$heading-font: $helvetica;
+
+/* Sizes */
+$font-xs: 14px !default;
+$font-sm: 15px !default;
+$font-lg: 16px !default;
+
+/*
+Colors
+ */
+// brand color function
+@function brand-color($key: 'blue') {
+  @return map-get($brand-colors, $key);
+}
+
+/* Variables */
+$gray-dark: #404040;
+$gray-light: #EEE;
+
+$brand-colors: (
+  'blue': #107DC1
+);
+
+/* Definitions */
+$border-color: $gray-light;
+$link-color: brand-color('blue');
+$text-color: $gray-dark;
+
+// social colors
+$facebook: #415696;
+$twitter: #4FA6DD;
+
+/*
+Screen widths
+ */
+$width-xs: 35rem !default;
+$width-sm: 48rem !default;
+$width-md: 62rem !default;
+$width-lg: 100rem !default;
+
+/*
+Margins
+ */
+$margin-p: 1.3rem;

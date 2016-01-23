@@ -1,0 +1,42 @@
+/**
+ * _content.scss
+ */
+
+.site-content {}
+
+/*
+Posts
+ */
+.entry-content {
+  p.p1 {
+    padding: 0 !important;
+  }
+}
+
+/*
+Comments
+ */
+p.form-submit {
+  margin: 0;
+}
+
+/*
+Navigation
+ */
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  margin: 0 0 $margin-p;
+  overflow: hidden;
+}
+.nav-previous,
+.nav-next {
+  width: 50%;
+}
+.nav-previous {
+  float: left;
+}
+.nav-next {
+  float: right;
+  text-align: right;
+}
