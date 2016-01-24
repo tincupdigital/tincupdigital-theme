@@ -6,7 +6,7 @@
 Typography
  */
 /* Variables */
-$helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$helvetica: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
 
 /* Definitions */
 $body-font: $helvetica;
@@ -30,13 +30,16 @@ $gray-dark: #404040;
 $gray-light: #EEE;
 
 $brand-colors: (
-  'blue': #107DC1
+  'blue': #1B2139,
+  'yellow': #FFB218
 );
 
 /* Definitions */
 $border-color: $gray-light;
 $link-color: brand-color('blue');
 $text-color: $gray-dark;
+
+$nav-bg-color: brand-color('yellow');
 
 // social colors
 $facebook: #415696;

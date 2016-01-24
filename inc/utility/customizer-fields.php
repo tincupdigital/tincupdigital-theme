@@ -69,21 +69,30 @@ function _s_customizer_add_fields( $wp_customize ) {
       'settings' => 'brand_logo'
     ) )
   );
+  $wp_customize->add_setting( 'brand_logo_white' );
+  $wp_customize->add_control( new WP_Customize_Image_Control(
+    $wp_customize, 'brand_logo_white', array(
+      'label' => __( 'Brand Logo (White)', '_s' ),
+      'description' => __( 'Upload your brand\'s white logo here.', '_s' ),
+      'section' => 'appearance',
+      'settings' => 'brand_logo_white'
+    ) )
+  );
 
   /* Contact Info */
-  $wp_customize->add_setting( 'email_address' );
-  $wp_customize->add_control( 'email_address', array(
-    'label' => __( 'Email Address', '_s' ),
-    'description' => __( 'Add the primary email address of the business.', '_s' ),
-    'section' => 'contact_info',
-    'type' => 'email'
-  ) );
   $wp_customize->add_setting( 'phone_number' );
   $wp_customize->add_control( 'phone_number', array(
     'label' => __( 'Phone Number', '_s' ),
     'description' => __( 'Add the phone number of the business.', '_s' ),
     'section' => 'contact_info',
     'type' => 'text'
+  ) );
+  $wp_customize->add_setting( 'email_address' );
+  $wp_customize->add_control( 'email_address', array(
+    'label' => __( 'Email Address', '_s' ),
+    'description' => __( 'Add the primary email address of the business.', '_s' ),
+    'section' => 'contact_info',
+    'type' => 'email'
   ) );
 
   /* Social Media */

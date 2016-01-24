@@ -25,8 +25,9 @@ function _s_register_required_plugins() {
    */
   $plugins_local = array(
     array(
-      'name' => 'Advanced Custom Fields',
-      'slug' => 'advanced-custom-fields',
+      'name' => 'Advanced Custom Fields Pro',
+      'slug' => 'advanced-custom-fields-pro',
+      'source' => 'http://www.ecm-design.com/assets/plugins/advanced-custom-fields-pro.zip',
       'required' => true,
       'force_activation' => true
     ),
@@ -59,8 +60,8 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'Clef Two-Factor Authentication',
-      'slug' => 'wpclef',
+      'name' => 'Brute Force Login Protection',
+      'slug' => 'brute-force-login-protection',
       'required' => true,
       'force_activation' => true
     ),

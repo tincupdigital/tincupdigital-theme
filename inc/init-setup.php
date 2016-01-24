@@ -40,7 +40,7 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
-//add_image_size( 'hero', 1600, 640, true );
+add_image_size( 'hero', 1920, 768, true );
 
 /**
  * Customizer additions.
@@ -50,7 +50,7 @@ require get_template_directory() . '/inc/utility/customizer-fields.php';
 /**
  * CPT Class
  */
-//require get_template_directory() . '/inc/utility/cpt-setup.php';
+require get_template_directory() . '/inc/utility/cpt-setup.php';
 
 /**
  * TGM Plugin Activation

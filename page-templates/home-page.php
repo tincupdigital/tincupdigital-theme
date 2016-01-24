@@ -16,7 +16,48 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<div class="entry-content">
-						<?php the_content(); ?>
+						<?php /* Sections */
+						if ( have_rows( 'home_sections' ) ):
+
+							// only displaying the hero section here as we want to
+							// display hero first, then main nav, then other sections.
+
+							// loop through rows
+							while ( have_rows( 'home_sections' ) ): the_row();
+
+								/* Hero */
+								if ( get_row_layout() == 'hero_section' ) {
+									get_template_part( 'templates/home/hero', 'section' );
+								}
+
+							endwhile;
+
+						endif;
+
+						/* Nav */
+						// it's displayed down here on the home page
+						get_template_part( 'templates/global/main', 'navigation' );
+
+						/* Sections */
+						if ( have_rows( 'home_sections' ) ):
+
+							// second loop through, displaying other rows
+							while ( have_rows( 'home_sections' ) ): the_row();
+
+								/* About */
+								if ( get_row_layout() == 'about_section' ) {
+									get_template_part( 'templates/home/about', 'section' );
+								}
+
+								/* Services */
+								if ( get_row_layout() == 'services_section' ) {
+									get_template_part( 'templates/home/services', 'section' );
+								}
+
+							endwhile;
+
+						endif; ?>
+
 						<?php
 							wp_link_pages( array(
 								'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),

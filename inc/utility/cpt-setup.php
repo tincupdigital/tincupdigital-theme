@@ -14,27 +14,27 @@ include_once get_template_directory() . '/inc/vendor/wp-custom-post-type-class/s
 // https://developer.wordpress.org/resource/dashicons
 
 /**
- * CPT: Custom Posts
+ * CPT: Case Studies
  */
-$custom_post_labels = array(
-  'post_type_name' => 'custom_post',
-  'singular' => 'Custom Post',
-  'plural' => 'Custom Posts',
-  'slug' => 'custom-posts'
+$case_study_labels = array(
+  'post_type_name' => 'case_study',
+  'singular' => 'Case Study',
+  'plural' => 'Case Studies',
+  'slug' => 'case-studies'
 );
-$custom_post_options = array(
+$case_study_options = array(
   'public' => true,
   'has_archive' => false,
   'rewrite' => false,
   'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
-  'menu_icon' => 'dashicons-format-quote'
+  'menu_icon' => 'dashicons-portfolio'
 );
-$custom_post = new CPT( $custom_post_labels, $custom_post_options );
+$case_study = new CPT( $case_study_labels, $case_study_options );
 
 /**
  * Featured image column
  */
-$cpts = array( $custom_post );
+$cpts = array( $case_study );
 
 // add column to each $cpt setup variable
 if ( $cpts ) {

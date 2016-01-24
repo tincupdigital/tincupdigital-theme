@@ -8,6 +8,8 @@
 Navigation
  */
 .main-navigation {
+  background-color: $nav-bg-color;
+
   ul {
     display: none;
     list-style-type: none;
@@ -17,10 +19,36 @@ Navigation
   &.toggled ul {
     display: block;
   }
+  a {
+    padding: 0.1rem;
+    text-transform: uppercase;
+  }
 
   @include break-sm {
+    padding: 0.75rem 0;
+
     ul {
       display: block;
+    }
+    li {
+      display: inline;
+      padding: 0 1rem;
+    }
+    a {
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+  @include break-md {
+    padding: 1rem 0;
+
+    li {
+      padding: 0 1.25rem;
+    }
+  }
+  @include break-lg {
+    li {
+      padding: 0 1.5rem;
     }
   }
 
@@ -68,7 +96,6 @@ Mobile Menu
   }
   a {
     font-size: 1.143rem;
-    padding: 2px;
   }
 }
 .site {
