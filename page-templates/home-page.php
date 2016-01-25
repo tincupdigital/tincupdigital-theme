@@ -54,6 +54,11 @@ get_header(); ?>
 									get_template_part( 'templates/home/services', 'section' );
 								}
 
+								/* CTA */
+								if ( get_row_layout() == 'cta_section' ) {
+									get_template_part( 'templates/home/cta', 'section' );
+								}
+
 							endwhile;
 
 						endif; ?>

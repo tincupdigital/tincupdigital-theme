@@ -36,7 +36,7 @@ Navigation
     }
     a {
       display: inline-block;
-      font-weight: bold;
+      font-weight: 600;
     }
   }
   @include break-md {
@@ -96,6 +96,10 @@ Mobile Menu
   }
   a {
     font-size: 1.143rem;
+  }
+
+  @include break-sm {
+    display: none;
   }
 }
 .site {

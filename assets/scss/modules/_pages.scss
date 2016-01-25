@@ -60,14 +60,71 @@ Home Sections
 
 /* About */
 .about-section {
+  padding: 4.5rem 0;
   background: url('../img/about-bg.png') left top repeat;
   color: white;
 
   p {
-    color: $nav-bg-color;
+    color: $accent-color;
 
     &:last-of-type {
       margin-bottom: 0;
     }
   }
+}
+
+/* Services */
+.home-service {
+  padding: 1rem 0 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $border-color;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  @include break-sm {
+    &:nth-of-type(odd) {
+      .service-image {
+        float: right;
+      }
+    }
+
+    .service-image {
+      max-width: 80%;
+    }
+  }
+}
+.service-image {
+  max-width: 50%;
+  margin-bottom: 2rem;
+
+  @include break-sm {
+    margin-bottom: 0;
+  }
+}
+.service-headline {
+  color: $headline-color;
+}
+.service-button {
+  @include button-point-right;
+}
+
+/* CTA */
+.cta-section {
+  padding: 4.5rem 0;
+  background: url('../img/cta-bg.png') left top repeat;
+  p {
+    font-weight: 600;
+    color: $text-color--dark;
+  }
+}
+.cta-headline {
+  color: white;
+}
+.cta-button {
+  @include button-point-inward;
+  color: white;
 }

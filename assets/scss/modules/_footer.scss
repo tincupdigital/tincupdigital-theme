@@ -5,6 +5,32 @@
 .site-footer {}
 
 /*
+Footer Top
+ */
+.footer-top {
+  padding: 3rem 0;
+}
+.footer-top--logo {
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 225px;
+}
+.footer-top--contact {
+  list-style-type: none;
+
+  span {
+    color: $headline-color;
+  }
+}
+
+/*
+Footer Bottom
+ */
+.footer-bottom {
+  background-color: $footer-bg-color;
+}
+
+/*
 Sticky Footer
  */
 .site {

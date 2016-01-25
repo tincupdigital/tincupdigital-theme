@@ -53,6 +53,48 @@ Buttons
     background-color: darken($bg-color, 7.5%);
   }
 }
+@mixin button-brand {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 2.0;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+@mixin button-point-right {
+  @include button-brand;
+
+  &:after {
+    content: ">";
+    color: $accent-color;
+    padding-left: 0.25rem;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1.0;
+  }
+}
+@mixin button-point-inward {
+  @include button-brand;
+  font-size: 0.875rem;
+
+  &:before,
+  &:after {
+    color: $accent-color;
+    padding: 0 0.375rem;
+    font-size: 200%;
+    font-weight: normal;
+    line-height: 1.0;
+  }
+  &:before {
+    content: ">";
+  }
+  &:after {
+    content: "<";
+  }
+}
 
 /*
 Clearfix

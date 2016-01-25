@@ -27,19 +27,27 @@ Colors
 
 /* Variables */
 $gray-dark: #404040;
-$gray-light: #EEE;
+$gray-darker: #111;
+$gray-light: #DEDED2;
 
 $brand-colors: (
   'blue': #1B2139,
-  'yellow': #FFB218
+  'yellow': #FFB218,
+  'green': #3D885F
 );
 
 /* Definitions */
 $border-color: $gray-light;
-$link-color: brand-color('blue');
-$text-color: $gray-dark;
+$footer-bg-color: $border-color;
+$link-color: lighten(brand-color('blue'), 10%);
 
-$nav-bg-color: brand-color('yellow');
+$text-color: $gray-dark;
+$text-color--dark: $gray-darker;
+
+$accent-color: brand-color('yellow');
+$nav-bg-color: $accent-color;
+
+$headline-color: brand-color('green');
 
 // social colors
 $facebook: #415696;
@@ -51,7 +59,7 @@ Screen widths
 $width-xs: 35rem !default;
 $width-sm: 48rem !default;
 $width-md: 62rem !default;
-$width-lg: 100rem !default;
+$width-lg: 75rem !default;
 
 /*
 Margins

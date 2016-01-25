@@ -18,9 +18,8 @@ if ( $h_img ) { ?>
 <section class="section home-section home-section--hero hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
 
 	<?php /* Logo */
-	// check if white version of logo has been uploaded
 	if ( get_theme_mod( 'brand_logo_white' ) ) { ?>
-		<div class="hero-section--logo hero-logo home-logo pos--rel z2">
+		<div class="hero-logo hero-section--logo pos--rel z2">
 			<img src="<?php echo get_theme_mod( 'brand_logo_white' ); ?>">
 		</div>
 	<?php } ?>

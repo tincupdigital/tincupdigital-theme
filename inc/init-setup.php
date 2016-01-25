@@ -40,6 +40,10 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
  *
  * @link http://codex.wordpress.org/Function_Reference/add_image_size
  */
+update_option( 'medium_size_w', 600 );
+update_option( 'medium_size_h', 600 );
+update_option( 'medium_crop', 1 );
+
 add_image_size( 'hero', 1920, 768, true );
 
 /**
