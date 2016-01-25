@@ -25,7 +25,23 @@ var Roots = {
   },
   /* Home */
   home: {
-    init: function() {}
+    init: function() {
+      /* Logo Fade */
+      // hat-tip: http://goo.gl/D9GCJ3
+      var fadeStart = 50,
+          fadeUntil = 450,
+          fadeTarget = $('.hero-logo img');
+      $(window).bind('scroll', function() {
+        var offset = $(document).scrollTop(),
+            opacity = 0;
+        if ( offset <= fadeStart ) {
+          opacity = 1;
+        } else if ( offset <= fadeUntil ) {
+          opacity =  1 - ( offset / fadeUntil );
+        }
+        fadeTarget.css('opacity', opacity).html(opacity);
+      });
+    }
   }
 };
 
