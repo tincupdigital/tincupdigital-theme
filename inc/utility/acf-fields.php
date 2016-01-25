@@ -40,7 +40,7 @@ acf_add_local_field_group(array (
               'name' => 'hero_image',
               'type' => 'image',
               'instructions' => 'Upload the hero image.',
-              'required' => 0,
+              'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array (
                 'width' => '',
@@ -206,14 +206,7 @@ acf_add_local_field_group(array (
                   'type' => 'text',
                   'instructions' => 'Enter some text to appear on the service button.',
                   'required' => 1,
-                  'conditional_logic' => array (
-                    array (
-                      array (
-                        'field' => '',
-                        'operator' => '==',
-                      ),
-                    ),
-                  ),
+                  'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
                     'class' => '',
@@ -231,9 +224,9 @@ acf_add_local_field_group(array (
                   'key' => 'field_56a45d8c4da5b',
                   'label' => 'Service Button Link',
                   'name' => 'service_button_link',
-                  'type' => 'post_object',
+                  'type' => 'page_link',
                   'instructions' => 'Select a page for the service button to link to.',
-                  'required' => 0,
+                  'required' => 1,
                   'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
@@ -247,8 +240,6 @@ acf_add_local_field_group(array (
                   ),
                   'allow_null' => 0,
                   'multiple' => 0,
-                  'return_format' => 'object',
-                  'ui' => 1,
                 ),
               ),
             ),
@@ -338,7 +329,7 @@ acf_add_local_field_group(array (
               'name' => 'case_studies',
               'type' => 'relationship',
               'instructions' => 'Select case studies to display in this section.',
-              'required' => 0,
+              'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array (
                 'width' => '',
@@ -414,8 +405,8 @@ acf_add_local_field_group(array (
               'label' => 'CTA Button Text',
               'name' => 'cta_button_text',
               'type' => 'text',
-              'instructions' => 'Enter some text to appear on the service button.',
-              'required' => 0,
+              'instructions' => 'Enter some text to appear on the CTA button.',
+              'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array (
                 'width' => '',
@@ -434,7 +425,7 @@ acf_add_local_field_group(array (
               'key' => 'field_56a463aa19e3e',
               'label' => 'CTA Button Link',
               'name' => 'cta_button_link',
-              'type' => 'post_object',
+              'type' => 'page_link',
               'instructions' => 'Select a page for the service button to link to.',
               'required' => 1,
               'conditional_logic' => 0,
@@ -450,8 +441,6 @@ acf_add_local_field_group(array (
               ),
               'allow_null' => 0,
               'multiple' => 0,
-              'return_format' => 'object',
-              'ui' => 1,
             ),
           ),
           'min' => '',
