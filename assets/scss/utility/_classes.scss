@@ -22,11 +22,6 @@ Floats
 .fl--right { float: left; }
 
 /*
-Images
- */
-.img--round { border-radius: 50%; }
-
-/*
 Mixins
  */
 .bg-cover {
@@ -58,6 +53,7 @@ Stack order
 /*
 Text
  */
+.txt--left { text-align: left; }
 .txt--center { text-align: center; }
 .txt--right { text-align: right; }
 

@@ -34,9 +34,8 @@ get_header(); ?>
 
 						endif;
 
-						/* Nav */
-						// it's displayed down here on the home page
-						get_template_part( 'templates/navigation/home', 'nav' );
+						/* Header */
+						get_template_part( 'templates/headers/home', 'header' );
 
 						/* Sections */
 						if ( have_rows( 'home_sections' ) ):

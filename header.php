@@ -35,10 +35,8 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
 	<?php // check if this is the home page
-				// because the nav is in a different
-				// spot and doesn't contain site branding
 	if ( !is_front_page() ) {
-		get_template_part( 'templates/navigation/main', 'header' );
+		get_template_part( 'templates/headers/main', 'header' );
 	} ?>
 
 	<div id="content" class="site-content">

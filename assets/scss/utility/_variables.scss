@@ -28,7 +28,7 @@ Colors
 /* Variables */
 $gray-dark: #404040;
 $gray-darker: #111;
-$gray-light: #DEDED2;
+$gray-light: #EEE;
 
 $brand-colors: (
   'blue': #1B2139,
@@ -38,7 +38,7 @@ $brand-colors: (
 
 /* Definitions */
 $border-color: $gray-light;
-$footer-bg-color: $border-color;
+$footer-bg-color: darken($border-color, 2.5%);
 $link-color: lighten(brand-color('blue'), 10%);
 
 $text-color: $gray-dark;
