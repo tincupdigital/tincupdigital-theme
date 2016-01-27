@@ -7,7 +7,7 @@
 
 // set up grid columns
 if ( $home_row_num == 'odd' ) {
-  $grid_cols = 'col-xs-12 col-sm-5 col-sm-push-7';
+  $grid_cols = 'col-xs-12 col-sm-5 last-sm';
 } else {
   $grid_cols = 'col-xs-12 col-sm-5';
 }
