@@ -36,7 +36,7 @@ get_header(); ?>
 
 						/* Nav */
 						// it's displayed down here on the home page
-						get_template_part( 'templates/global/main', 'navigation' );
+						get_template_part( 'templates/navigation/home', 'nav' );
 
 						/* Sections */
 						if ( have_rows( 'home_sections' ) ):

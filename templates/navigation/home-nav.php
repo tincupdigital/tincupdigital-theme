@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the main navigation.
+ * Template part for the home navigation
  *
  * @package _s
  */

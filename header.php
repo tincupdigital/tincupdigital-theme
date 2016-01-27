@@ -34,18 +34,11 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<?php // this section is in a different spot on the
-				// home page, so let's fun a check first
-	if ( !is_front_page() ) { ?>
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<h1 class="site-title m0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
-			</div><!-- .site-branding -->
-
-			<?php /* Nav */
-			get_template_part( 'templates/content/main', 'navigation' ); ?>
-		</header><!-- #masthead -->
-	<?php } ?>
+	<?php // check if this is the home page
+				// because the nav is in a different
+				// spot and doesn't contain site branding
+	if ( !is_front_page() ) {
+		get_template_part( 'templates/navigation/main', 'header' );
+	} ?>
 
 	<div id="content" class="site-content">

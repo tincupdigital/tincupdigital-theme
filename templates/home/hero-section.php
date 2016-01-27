@@ -15,14 +15,14 @@ if ( get_sub_field( 'hero_image' ) ) {
 
 // is hero present?
 if ( $h_img ) { ?>
-<section class="section home-section home-section--hero hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
+  <section class="section home-section home-section--hero hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
 
-	<?php /* Logo */
-	if ( get_theme_mod( 'brand_logo_white' ) ) { ?>
-		<div class="hero-logo hero-section--logo pos--rel z2">
-			<img src="<?php echo get_theme_mod( 'brand_logo_white' ); ?>">
-		</div>
-	<?php } ?>
+  	<?php /* Logo */
+  	if ( get_theme_mod( 'brand_logo_white' ) ) { ?>
+  		<div class="hero-logo hero-section--logo pos--rel z2">
+  			<img src="<?php echo get_theme_mod( 'brand_logo_white' ); ?>">
+  		</div>
+  	<?php } ?>
 
-</section>
+  </section>
 <?php }

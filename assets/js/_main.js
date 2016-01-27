@@ -21,7 +21,10 @@
 var Roots = {
   /* Common */
   common: {
-    init: function() {}
+    init: function() {
+      /* WOW.js */
+      new WOW().init();
+    }
   },
   /* Home */
   home: {
