@@ -15,9 +15,12 @@
 }
 .site-branding,
 .main-navigation li {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 
   @include break-sm {
+    padding: 0 1rem;
+  }
+  @include break-lg {
     padding: 0 1.5rem;
   }
 }

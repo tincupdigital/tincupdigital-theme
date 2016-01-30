@@ -39,8 +39,6 @@ get_header(); ?>
 
 						/* Sections */
 						if ( have_rows( 'home_sections' ) ):
-
-							// second loop through, displaying other rows
 							while ( have_rows( 'home_sections' ) ): the_row();
 
 								/* About */
@@ -59,7 +57,6 @@ get_header(); ?>
 								}
 
 							endwhile;
-
 						endif; ?>
 
 						<?php

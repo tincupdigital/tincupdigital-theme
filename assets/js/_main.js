@@ -24,6 +24,17 @@ var Roots = {
     init: function() {
       /* WOW.js */
       new WOW().init();
+
+      /* Tabslet */
+      if ( $('.tabs').length > 0 ) {
+        console.log('There are tabs!');
+
+        $('.tabs').tabslet({
+          mouseevent: 'click',
+          attribute: 'href',
+          animation: true
+        });
+      }
     }
   },
   /* Home */

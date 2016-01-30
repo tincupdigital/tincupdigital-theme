@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the hero section.
+ * Template part for the home page hero section.
  *
  * @package _s
  */

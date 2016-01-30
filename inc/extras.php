@@ -19,11 +19,6 @@ function _s_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
-  /* About Page */
-  if ( is_page_template( 'page-templates/about-page.php' ) ) {
-    $classes[] = 'about-page';
-  }
-
 	return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );

@@ -69,6 +69,20 @@ add_filter( 'upload_mimes', '_s_add_svg_media_upload' );
 add_action( 'admin_head', '_s_fix_svg_thumbnails' );
 
 /**
+ * Page template slug body class
+ */
+function _s_page_template_body_class( $classes ) {
+  global $post;
+  if ( isset( $post ) ) {
+    $template = get_post_meta( $post->ID, '_wp_page_template', true );
+    $replace = array( 'page-templates/', '.php' );
+    $classes[] = str_replace( $replace, '', $template );
+  }
+  return $classes;
+}
+add_filter( 'body_class', '_s_page_template_body_class' );
+
+/**
  * Get featured image URL
  */
 function _s_get_feat_img_url( $size ) {

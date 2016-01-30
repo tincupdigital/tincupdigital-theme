@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the services section.
+ * Template part for the home page services section.
  *
  * @package _s
  */
@@ -13,18 +13,15 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <?php // we're going to stagger even and odd
-                  // rows, so we need to set a counter for testing.
+            <?php // staggering even/odd rows, so set a counter
             $count = 1;
 
             // loop through rows
             while( have_rows( 'services' ) ): the_row(); ?>
 
-              <div class="service home-service">
+              <div class="service home-service service-area">
                 <div class="row">
-                  <?php
-                  // set $home_row_num variable so grid
-                  // columns can be set up differently.
+                  <?php // set odd/even row variable
                   if ( ( $count % 2 ) !== 0 ) {
                     $home_row_num = 'odd';
                   } else {
@@ -32,13 +29,12 @@
                   }
 
                   // get the image and text templates
-                  include( locate_template( '/templates/home/services-section_service-image.php' ) );
-                  include( locate_template( '/templates/home/services-section_service-text.php' ) ); ?>
+                  include( locate_template( '/templates/home/service-image.php' ) );
+                  include( locate_template( '/templates/home/service-text.php' ) ); ?>
                 </div>
               </div>
 
-            <?php
-            // increment the counter
+            <?php // increment the counter
             $count++;
 
             // end the loop

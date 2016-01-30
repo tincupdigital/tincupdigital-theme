@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the services section text block
+ * Template part for the home service section text.
  *
  * @package _s
  */
@@ -19,9 +19,8 @@ $s_btxt = get_sub_field( 'service_button_text' );
 $s_blnk = get_sub_field( 'service_button_link' ); ?>
 
 <div class="<?php echo $grid_cols; ?>">
-  <div class="service-block service-text">
-    <?php
-    /* Headline */
+  <div class="service-text home-service--text">
+    <?php /* Headline */
     if ( $s_hdl ) { ?>
       <h2 class="service-headline h3 mt0">
         <?php echo $s_hdl; ?>

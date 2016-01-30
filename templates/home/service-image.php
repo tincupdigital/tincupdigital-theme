@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the services section image block
+ * Template part for the home service section image.
  *
  * @package _s
  */
@@ -23,10 +23,10 @@ if ( $s_img ) {
 } ?>
 
 <div class="<?php echo $grid_cols; ?>">
-  <div class="service-block service-image-area">
+  <div class="service-image home-service--image">
     <?php /* Image */
     if ( $s_img ) { ?>
-      <img class="service-image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_ttl; ?>">
+      <img class="service-area-image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_ttl; ?>">
     <?php } ?>
   </div>
 </div>

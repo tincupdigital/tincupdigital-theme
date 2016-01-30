@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the about section.
+ * Template part for the home page about section.
  *
  * @package _s
  */
