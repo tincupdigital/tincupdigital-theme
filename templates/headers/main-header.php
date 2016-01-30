@@ -16,6 +16,7 @@
         <h1 class="site-title m0">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
+            <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo-hz-white.png">
           </a>
         </h1>
         <p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>

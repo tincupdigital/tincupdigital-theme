@@ -15,9 +15,19 @@ if ( $h_img ) { ?>
     <?php /* Text */
     if ( $h_txt ) { ?>
       <div class="hero-text hero-section--text service-hero--text pos--rel z2">
-        <div class="hero-text--inner txt--center">
-          <?php echo wpautop( $h_txt ); ?>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+
+              <div class="hero-text--inner txt--center">
+                <?php echo wpautop( $h_txt ); ?>
+              </div>
+
+            </div>
+          </div>
         </div>
+
       </div>
     <?php } ?>
 

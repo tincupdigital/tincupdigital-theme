@@ -20,15 +20,12 @@
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2">
             <div class="footer-top--inner txt--center">
-              <?php
-              /* Logo */
-              if ( get_theme_mod( 'brand_logo' ) ) { ?>
-                <div class="footer-logo footer-top--logo">
-                  <img src="<?php echo get_theme_mod( 'brand_logo' ); ?>">
-                </div>
-              <?php }
+              <!-- Logo -->
+              <div class="footer-logo footer-top--logo">
+                <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo-hz.png">
+              </div>
 
-              /* Contact Info */
+              <?php /* Contact Info */
               // set contact info variables
               $phone = get_theme_mod( 'phone_number' );
               $email = get_theme_mod( 'email_address' );

@@ -3,26 +3,49 @@
  */
 
 .site-header {
-  padding: 1.0rem 0;
   background-color: $nav-bg-color;
-
-  @include break-sm {
-    padding: 1.5rem 0;
-  }
 }
 .site-branding {
   text-align: center;
 }
 .site-branding,
 .main-navigation li {
-  padding: 0 0.5rem;
+  padding: 0.75rem 0.25rem;
 
   @include break-sm {
-    padding: 0 1rem;
+    padding: 1.25rem 0.75rem;
   }
   @include break-lg {
-    padding: 0 1.5rem;
+    padding: 1.25rem;
   }
+}
+
+.site-branding {
+  position: relative;
+  background-color: $logo-bg-color;
+
+  a {
+    display: block;
+    text-indent: -9999px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-left: 10rem solid transparent;
+    border-right: 10rem solid transparent;
+    border-top: 1rem solid $logo-bg-color;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+.site-title img {
+  display: block;
+  max-width: 200px;
 }
 
 /*
@@ -40,11 +63,29 @@ Navigation
     padding: 0;
   }
   li {
+    position: relative;
     display: table-cell;
+    z-index: 3;
+
+    &.current_page_item:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      margin-left: -0.75rem;
+      border-left: 0.75rem solid transparent;
+      border-right: 0.75rem solid transparent;
+      border-top: 0.75rem solid $nav-bg-color;
+      font-size: 0;
+      line-height: 0;
+    }
   }
   a {
     font-weight: 600;
     text-transform: uppercase;
+    padding: 0.25rem;
   }
 }
 .main-navigation--column {
