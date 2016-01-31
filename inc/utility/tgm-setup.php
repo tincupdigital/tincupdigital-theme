@@ -39,6 +39,12 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Contact Form 7',
+      'slug' => 'contact-form-7',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
       'name' => 'Force Regenerate Thumbnails',
       'slug' => 'force-regenerate-thumbnails',
       'required' => true,

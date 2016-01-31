@@ -12,19 +12,33 @@ get_header(); ?>
   <div class="container">
     <div class="row">
 
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       	<div id="primary" class="content-area">
       		<main id="main" class="site-main" role="main">
 
       			<?php while ( have_posts() ) : the_post(); ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <header class="entry-header">
-                  <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                </header><!-- .entry-header -->
+                <?php /* Title */
+                if ( !get_field( 'hide_title' ) ) { ?>
+                  <header class="entry-header">
+                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                  </header><!-- .entry-header -->
+                <?php } ?>
 
                 <div class="entry-content">
                   <?php the_content(); ?>
+
+                  <?php /* Form */
+                  if ( get_field( 'contact_form' ) ) {
+                    $p_obj = get_field( 'contact_form' );
+                    // set up form id and title
+                    $f_id = $p_obj->ID;
+                    $f_ttl = $p_obj->post_title;
+
+                    echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]');
+                  } ?>
+
                   <?php
                     wp_link_pages( array(
                       'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),

@@ -89,3 +89,18 @@ Animate.css
 .fadeOut {
   animation-name: fadeOut;
 }
+
+/*
+Contact Form 7
+ */
+.wpcf7 {
+  label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
+  span input,
+  span textarea {
+    border: 1px solid $border-color;
+  }
+}
