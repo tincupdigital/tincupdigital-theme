@@ -161,8 +161,10 @@ Home Sections
     color: $text-color--dark;
   }
 }
-.cta-headline {
-  color: white;
+.cta-section--inner {
+  .cta-headline {
+    color: white;
+  }
 }
 .cta-button {
   @include button-point-inward;

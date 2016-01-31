@@ -6,7 +6,12 @@
   background-color: white;
 }
 .site-content {
-  padding: 3rem 0;
+  padding: 2rem 0;
+}
+.no-title {
+  .site-content {
+    padding: 3rem 0;
+  }
 }
 
 /*

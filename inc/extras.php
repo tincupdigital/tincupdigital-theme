@@ -19,6 +19,11 @@ function _s_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+  // Page with no title
+  if ( is_page() && get_field( 'hide_title' ) ) {
+    $classes[] = 'no-title';
+  }
+
 	return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );
