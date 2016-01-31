@@ -6,27 +6,21 @@
   background-color: $nav-bg-color;
 }
 .site-branding {
-  text-align: center;
-}
-.site-branding,
-.main-navigation li {
-  padding: 0.75rem 0.25rem;
-
-  @include break-sm {
-    padding: 1.25rem 0.75rem;
-  }
-  @include break-lg {
-    padding: 1.25rem;
-  }
-}
-
-.site-branding {
   position: relative;
   background-color: $logo-bg-color;
+  max-width: 150px;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.5rem;
 
-  a {
-    display: block;
-    text-indent: -9999px;
+  @include break-sm {
+    max-width: 200px;
+    margin: 0 1rem;
+    padding: 0.75rem 1.25rem;
+  }
+  @include break-lg {
+    max-width: 250px;
+    margin: 0 1.25rem;
+    padding: 0.75rem 1.5rem;
   }
 
   &:after {
@@ -36,16 +30,27 @@
     left: 0;
     width: 100%;
     height: 0;
-    border-left: 10rem solid transparent;
-    border-right: 10rem solid transparent;
-    border-top: 1rem solid $logo-bg-color;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 0.75rem solid $logo-bg-color;
     font-size: 0;
     line-height: 0;
+    z-index: 3;
+
+    @include break-sm {
+      border-left-width: 100px;
+      border-right-width: 100px;
+    }
+    @include break-lg {
+      border-left-width: 125px;
+      border-right-width: 125px;
+    }
   }
 }
-.site-title img {
+.site-title a {
   display: block;
-  max-width: 200px;
+  padding: 0 !important;
+  margin: 0 auto;
 }
 
 /*
@@ -54,8 +59,8 @@ Navigation
 .main-navigation {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   ul {
     list-style-type: none;
@@ -64,10 +69,9 @@ Navigation
   }
   li {
     position: relative;
-    display: table-cell;
-    z-index: 3;
+    display: inline-block;
 
-    &.current_page_item:after {
+    /*&.current_page_item:after {
       content: "";
       position: absolute;
       top: 100%;
@@ -80,14 +84,20 @@ Navigation
       border-top: 0.75rem solid $nav-bg-color;
       font-size: 0;
       line-height: 0;
-    }
+    }*/
   }
   a {
+    display: block;
+    padding: 0.5rem;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 0.25rem;
+    color: $text-color;
+
+    @include break-sm {
+      padding: 1rem;
+    }
+    @include break-lg {
+      padding: 1.25rem;
+    }
   }
-}
-.main-navigation--column {
-  flex: 0 1 auto;
 }

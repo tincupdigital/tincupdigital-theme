@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: Contact Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

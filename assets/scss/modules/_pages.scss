@@ -115,6 +115,9 @@ Home Sections
     }
   }
 }
+.about-headline {
+  color: white;
+}
 
 /* Services */
 .services-section {
@@ -143,9 +146,6 @@ Home Sections
   position: relative;
   padding: 2.5rem 0;
   z-index: 2;
-}
-.service-headline {
-  color: $headline-color;
 }
 .service-button {
   @include button-point-right;
@@ -228,7 +228,7 @@ Services
   a {
     position: relative;
     display: inline-block;
-    background-color: $headline-color;
+    background-color: $heading-color;
     color: white;
     padding: 1.25rem;
     text-transform: uppercase;
@@ -238,7 +238,7 @@ Services
   }
 
   &.active a {
-    background-color: darken($headline-color, 7.5%);
+    background-color: darken($heading-color, 7.5%);
 
     &:after {
       content: "";
@@ -250,7 +250,7 @@ Services
       margin-left: -0.75rem;
       border-left: 0.75rem solid transparent;
       border-right: 0.75rem solid transparent;
-      border-top: 0.75rem solid darken($headline-color, 7.5%);
+      border-top: 0.75rem solid darken($heading-color, 7.5%);
       font-size: 0;
       line-height: 0;
     }
