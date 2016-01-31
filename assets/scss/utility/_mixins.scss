@@ -38,20 +38,13 @@ Background cover
 /*
 Buttons
  */
-@mixin button($bg-color: $link-color) {
-  display: inline-block;
-  background-color: $bg-color;
-  border-radius: 2px;
-  border: none;
-  color: white !important;
-  line-height: 1.0;
-  padding: 0.625rem 1rem;
-  @include animate(background-color);
-
-  &:hover,
-  &:focus {
-    background-color: darken($bg-color, 7.5%);
-  }
+@mixin button {
+  @extend .btn, .btn-primary;
+}
+@mixin button-accent($color: white, $bg-color: $accent-color) {
+  @include button;
+  color: $color !important;
+  background-color: $bg-color !important;
 }
 
 /* Brand */
@@ -120,28 +113,28 @@ Clearfix
 Media queries
  */
 @mixin break-xs {
-  @media (min-width: $width-xs) {
+  @media (min-width: $break-xs) {
     @content
   }
 }
 @mixin break-sm {
-  @media (min-width: $width-sm) {
+  @media (min-width: $break-sm) {
     @content
   }
 }
 @mixin break-md {
-  @media (min-width: $width-md) {
+  @media (min-width: $break-md) {
     @content
   }
 }
 @mixin break-lg {
-  @media (min-width: $width-lg) {
+  @media (min-width: $break-lg) {
     @content
   }
 }
 
 /*
-Screen reader only
+Screen readers
  */
 @mixin sr-only {
   position: absolute !important;

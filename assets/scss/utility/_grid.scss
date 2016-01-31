@@ -98,9 +98,9 @@ $gutter-width: 1.25rem !default;
   order: 1;
 }
 
-@media only screen and (min-width: $width-sm) {
+@media only screen and (min-width: $break-sm) {
   .container {
-    width: $width-sm - (2 * $gutter-width);
+    width: $break-sm - (2 * $gutter-width);
   }
   .col-sm,
   .col-sm-1,
@@ -171,9 +171,9 @@ $gutter-width: 1.25rem !default;
   }
 }
 
-@media only screen and (min-width: $width-md) {
+@media only screen and (min-width: $break-md) {
   .container {
-    width: $width-md - (2 * $gutter-width);
+    width: $break-md - (2 * $gutter-width);
   }
   .col-md,
   .col-md-1,
@@ -244,9 +244,9 @@ $gutter-width: 1.25rem !default;
   }
 }
 
-@media only screen and (min-width: $width-lg) {
+@media only screen and (min-width: $break-lg) {
   .container {
-    width: $width-lg - (2 * $gutter-width);
+    width: $break-lg - (2 * $gutter-width);
   }
   .col-lg,
   .col-lg-1,

@@ -45,6 +45,7 @@ $text-color: $gray-dark;
 $text-color--dark: $gray-darker;
 
 $accent-color: brand-color('yellow');
+$button-color: $link-color;
 $logo-bg-color: brand-color('blue');
 $nav-bg-color: $accent-color;
 
@@ -55,12 +56,12 @@ $facebook: #415696;
 $twitter: #4FA6DD;
 
 /*
-Screen widths
+Breakpoints
  */
-$width-xs: 35rem !default;
-$width-sm: 48rem !default;
-$width-md: 62rem !default;
-$width-lg: 75rem !default;
+$break-xs: 35rem !default;
+$break-sm: 48rem !default;
+$break-md: 62rem !default;
+$break-lg: 75rem !default;
 
 /*
 Margins

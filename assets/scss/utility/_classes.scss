@@ -27,6 +27,25 @@ Images
 .img--round { border-radius: 50%; }
 
 /*
+Hidden
+ */
+@media (max-width: $break-sm) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (max-width: $break-md) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (max-width: $break-lg) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+/*
 Mixins
  */
 .bg-cover {
@@ -34,6 +53,9 @@ Mixins
 }
 .button {
   @include button;
+}
+.button-accent {
+  @include button-accent;
 }
 .screen-reader-text {
   @include sr-only;
@@ -58,7 +80,6 @@ Stack order
 /*
 Text
  */
-.txt--left { text-align: left; }
 .txt--center { text-align: center; }
 .txt--right { text-align: right; }
 
@@ -75,29 +96,19 @@ Vertical alignment
 .va--middle { vertical-align: middle; }
 
 /*
-Visibility
+Visible
  */
-@media (max-width: $width-sm) {
-  .hidden-sm {
+@media (min-width: $break-sm) {
+  .visible-xs {
     display: none !important;
   }
 }
-@media (max-width: $width-md) {
-  .hidden-md {
-    display: none !important;
-  }
-}
-@media (max-width: $width-lg) {
-  .hidden-lg {
-    display: none !important;
-  }
-}
-@media (min-width: $width-md) {
+@media (min-width: $break-md) {
   .visible-sm {
     display: none !important;
   }
 }
-@media (min-width: $width-lg) {
+@media (min-width: $break-lg) {
   .visible-md {
     display: none !important;
   }

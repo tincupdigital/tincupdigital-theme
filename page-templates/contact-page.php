@@ -30,14 +30,17 @@ get_header(); ?>
                   <?php the_content(); ?>
 
                   <?php /* Form */
-                  if ( get_field( 'contact_form' ) ) {
-                    $p_obj = get_field( 'contact_form' );
-                    // set up form id and title
-                    $f_id = $p_obj->ID;
-                    $f_ttl = $p_obj->post_title;
+                  if ( get_field( 'contact_form' ) ) { ?>
+                    <div class="form-area contact-page--form mt3">
+                      <?php // get form post object
+                      $p_obj = get_field( 'contact_form' );
+                      // set up form id and title
+                      $f_id = $p_obj->ID;
+                      $f_ttl = $p_obj->post_title;
 
-                    echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]');
-                  } ?>
+                      echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]'); ?>
+                    </div>
+                  <?php } ?>
 
                   <?php
                     wp_link_pages( array(
