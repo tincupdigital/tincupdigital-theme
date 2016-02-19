@@ -174,20 +174,25 @@ Unslider
   top: 1.25rem; right: 1.25rem;
 
   li {
-    display: block;
+    display: inline-block;
     padding: 2px;
-    margin-bottom: 0.375rem;
+    margin: 0 0.25rem;
     height: 0.75rem;
     width: 0.75rem;
     text-indent: -9999px;
-    border: 3px solid rgba(white, 0.7);
+    border: 3px solid rgba(white, 0.6);
     border-radius: 50%;
 
     &:hover {
       cursor: pointer;
     }
     &.unslider-active {
-      background-color: rgba(white, 0.7);
+      background-color: rgba(white, 0.6);
+    }
+
+    @include break-md {
+      display: block;
+      margin: 0 0 0.375rem;
     }
   }
 }
