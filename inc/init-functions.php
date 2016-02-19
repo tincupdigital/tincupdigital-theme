@@ -14,6 +14,19 @@ function _s_flush_rewrite_rules() {
 add_action( 'after_switch_theme', '_s_flush_rewrite_rules' );
 
 /**
+ * Hide update notices for all but me
+ */
+function _s_hide_update_notices_all() {
+  global $wp_version;
+  return(object) array( 'last_checked' => time(), 'version_checked' => $wp_version );
+}
+if ( wp_get_current_user()->user_login !== 'sean' ) {
+  add_filter( 'pre_site_transient_update_core', '_s_hide_update_notices_all' );
+  add_filter( 'pre_site_transient_update_plugins', '_s_hide_update_notices_all' );
+  add_filter( 'pre_site_transient_update_themes', '_s_hide_update_notices_all' );
+}
+
+/**
  * Google analytics setup
  */
 function _s_google_analytics() { ?>

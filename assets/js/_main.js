@@ -27,12 +27,21 @@ var Roots = {
 
       /* Tabslet */
       if ( $('.tabs').length > 0 ) {
-        console.log('There are tabs!');
-
         $('.tabs').tabslet({
           mouseevent: 'click',
           attribute: 'href',
           animation: true
+        });
+      }
+
+      /* Unslider */
+      if ( $('.unslider').length > 0 ) {
+        $('.unslider').unslider({
+          autoplay: true,
+          delay: 7000,
+          arrows: false,
+          animation: 'vertical',
+          animateHeight: true
         });
       }
     }
