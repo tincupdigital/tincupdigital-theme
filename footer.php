@@ -31,7 +31,7 @@
               $email = get_theme_mod( 'email_address' );
 
               if ( $phone || $email ) { ?>
-                <ul class="footer-contact footer-top--contact txt--bold">
+                <ul class="footer-contact footer-top--contact txt--bold mb1">
                   <?php
                   /* Phone */
                   if ( $phone ) { ?>

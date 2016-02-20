@@ -40,7 +40,7 @@ var Roots = {
           autoplay: true,
           delay: 7000,
           arrows: false,
-          animation: 'horizontal',
+          animation: 'vertical',
           animateHeight: true
         });
       }
