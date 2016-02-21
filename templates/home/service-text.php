@@ -1,25 +1,26 @@
 <?php
 /**
- * Template part for the home service section text.
+ * Template part for the service text.
  *
  * @package _s
  */
 
 // set up grid columns
-if ( $home_row_num == 'odd' ) {
+if ( $row_num == 'odd' ) {
   $grid_cols = 'col-xs-12 col-sm-7 first-sm';
 } else {
   $grid_cols = 'col-xs-12 col-sm-7';
 }
 
-// set field variables
+// set service field vars
 $s_hdl = get_sub_field( 'service_headline' );
 $s_txt = get_sub_field( 'service_text' );
-$s_btxt = get_sub_field( 'service_button_text' );
-$s_blnk = get_sub_field( 'service_button_link' ); ?>
+
+$b_txt = get_sub_field( 'service_button_text' );
+$b_lnk = get_sub_field( 'service_button_link' ); ?>
 
 <div class="<?php echo $grid_cols; ?>">
-  <div class="service-text home-service--text">
+  <div class="service-text service-item--text">
     <?php /* Headline */
     if ( $s_hdl ) { ?>
       <h2 class="service-headline h3 mt0">
@@ -33,9 +34,9 @@ $s_blnk = get_sub_field( 'service_button_link' ); ?>
     }
 
     /* Button */
-    if ( $s_btxt && $s_blnk ) { ?>
-      <a class="service-button" href="<?php echo $s_blnk; ?>">
-        <?php echo $s_btxt; ?>
+    if ( $b_txt && $b_lnk ) { ?>
+      <a class="service-button" href="<?php echo $b_lnk; ?>">
+        <?php echo $b_txt; ?>
       </a>
     <?php } ?>
   </div>

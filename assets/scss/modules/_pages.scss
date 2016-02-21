@@ -20,7 +20,7 @@ Global
 }
 
 /* Services */
-.service-area {
+.service-section--item {
   padding: 1rem 0 3rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid $border-color;
@@ -33,13 +33,13 @@ Global
 
   @include break-sm {
     &:nth-of-type(odd) {
-      .service-area-image {
+      .service-item--image {
         float: right;
       }
     }
   }
 }
-.service-area-image {
+.service-item--image {
   max-width: 50%;
   margin-bottom: 2rem;
 
@@ -116,9 +116,6 @@ Home Sections
     }
   }
 }
-.about-headline {
-  color: white;
-}
 
 /* Services */
 .services-section {
@@ -147,6 +144,9 @@ Home Sections
   position: relative;
   padding: 2.5rem 0;
   z-index: 2;
+}
+.service-headline {
+  font-weight: 600;
 }
 .service-button {
   @include button-point-right;
@@ -182,52 +182,33 @@ Services
     margin-bottom: 0;
   }
 }
-.service-hero {
+.services-hero {
   height: 400px;
+
+  .services-hero--headline {
+    color: white;
+    margin: 0;
+    line-height: 1.375;
+  }
 }
-.service-hero--text {
+.services-hero--text {
   @include vert-align;
 }
-.hero-text--inner {
-  color: white;
-  margin-top: -3.375rem;
 
-  p {
-    margin-top: 0;
-    font-size: 1.75rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  @include break-sm {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-  @include break-md {
-    max-width: 70%;
-  }
-  @include break-lg {
-    max-width: 50%;
-  }
-}
-
-/* Tabs */
-.service-nav--list {
+#services-nav {
   position: absolute;
   width: 100%;
   bottom: 100%;
-
-  list-style-type: none;
   padding: 0;
   margin: 0;
-}
-.service-nav--item {
-  display: inline;
-  font-size: 0; // fix white space
-  padding: 0 2px;
+  text-align: center;
+  list-style-type: none;
+  z-index: 4;
 
+  li {
+    display: inline;
+    padding: 0 1px;
+  }
   a {
     position: relative;
     display: inline-block;
@@ -240,7 +221,7 @@ Services
     line-height: 1.0;
   }
 
-  &.active a {
+  .current-menu-item a {
     background-color: darken($heading-color, 7.5%);
 
     &:after {

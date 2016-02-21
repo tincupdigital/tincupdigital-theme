@@ -1,12 +1,12 @@
 <?php
 /**
- * Template part for the home service section image.
+ * Template part for the service image.
  *
  * @package _s
  */
 
 // set up grid columns
-if ( $home_row_num == 'odd' ) {
+if ( $row_num == 'odd' ) {
   $grid_cols = 'col-xs-12 col-sm-5 last-sm';
 } else {
   $grid_cols = 'col-xs-12 col-sm-5';
@@ -23,10 +23,10 @@ if ( $s_img ) {
 } ?>
 
 <div class="<?php echo $grid_cols; ?>">
-  <div class="service-image home-service--image">
+  <div class="image-container service-image--container">
     <?php /* Image */
     if ( $s_img ) { ?>
-      <img class="service-area-image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_ttl; ?>">
+      <img class="service-image service-item--image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_ttl; ?>">
     <?php } ?>
   </div>
 </div>

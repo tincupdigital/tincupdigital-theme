@@ -36,7 +36,7 @@
 
 	<?php // check if this is the home page
 	if ( !is_front_page() ) {
-		get_template_part( 'templates/headers/main', 'header' );
+		get_template_part( 'templates/global/header', 'main' );
 	} ?>
 
 	<div id="content" class="site-content">

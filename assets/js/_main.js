@@ -25,15 +25,6 @@ var Roots = {
       /* WOW.js */
       new WOW().init();
 
-      /* Tabslet */
-      if ( $('.tabs').length > 0 ) {
-        $('.tabs').tabslet({
-          mouseevent: 'click',
-          attribute: 'href',
-          animation: true
-        });
-      }
-
       /* Unslider */
       if ( $('.unslider').length > 0 ) {
         $('.unslider').unslider({

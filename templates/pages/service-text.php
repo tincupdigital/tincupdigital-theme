@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for the service section highlight text.
+ * Template part for the service text.
  *
  * @package _s
  */
@@ -12,22 +12,22 @@ if ( $row_num == 'odd' ) {
   $grid_cols = 'col-xs-12 col-sm-7';
 }
 
-// set highlight field vars
-$h_hdl = get_sub_field( 'highlight_headline' );
-$h_txt = get_sub_field( 'highlight_text' ); ?>
+// set service field vars
+$s_hdl = get_sub_field( 'service_headline' );
+$s_txt = get_sub_field( 'service_text' ); ?>
 
 <div class="<?php echo $grid_cols; ?>">
-  <div class="highlight-text highlight-section--text">
+  <div class="service-text service-item--text">
     <?php /* Headline */
-    if ( $h_hdl ) { ?>
+    if ( $s_hdl ) { ?>
       <h2 class="service-headline h3 mt0">
-        <?php echo $h_hdl; ?>
+        <?php echo $s_hdl; ?>
       </h2>
     <?php }
 
     /* Text */
-    if ( $h_txt ) {
-      echo wpautop( $h_txt );
+    if ( $s_txt ) {
+      echo wpautop( $s_txt );
     } ?>
   </div>
 </div>

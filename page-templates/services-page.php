@@ -16,22 +16,15 @@ get_header(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <div class="entry-content">
-            <?php /* Sections */
-            if ( have_rows( 'sections' ) ):
-              while ( have_rows( 'sections' ) ): the_row();
+            <?php /* Hero */
+            if ( get_field( 'hero_image' ) && get_field( 'hero_text' ) ) {
+              get_template_part( 'templates/pages/hero', 'section' );
+            } ?>
 
-                /* Hero */
-                if ( get_row_layout() == 'hero_section' ) {
-                  get_template_part( 'templates/pages/hero', 'section' );
-                }
-
-                /* Services */
-                if ( get_row_layout() == 'services_section' ) {
-                  get_template_part( 'templates/pages/services', 'section' );
-                }
-
-              endwhile;
-            endif; ?>
+            <?php /* Services */
+            if ( have_rows( 'services' ) ) {
+              get_template_part( 'templates/pages/services', 'section' );
+            } ?>
 
             <?php /* CTA Section */
             // cta field is attached to home page
@@ -41,7 +34,7 @@ get_header(); ?>
 
                 /* CTA */
                 if ( get_row_layout() == 'cta_section' ) {
-                  get_template_part( 'templates/home/cta', 'section' );
+                  get_template_part( 'templates/global/cta', 'section' );
                 }
 
               endwhile;

@@ -11,15 +11,16 @@
   max-width: 150px;
   padding: 0.5rem 0.75rem;
   margin: 0 0.5rem;
+  z-index: 4;
 
   @include break-sm {
     max-width: 200px;
-    margin: 0 1rem;
+    margin: 0 1rem -1rem;
     padding: 0.75rem 1.25rem;
   }
   @include break-lg {
     max-width: 250px;
-    margin: 0 1.25rem;
+    margin: 0 1.25rem -1.25rem;
     padding: 0.75rem 1.5rem;
   }
 
@@ -35,7 +36,6 @@
     border-top: 0.75rem solid $logo-bg-color;
     font-size: 0;
     line-height: 0;
-    z-index: 3;
 
     @include break-sm {
       border-left-width: 100px;
@@ -59,8 +59,11 @@ Navigation
 .main-navigation {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+
+  & > div {
+    align-self: flex-end;
+  }
 
   ul {
     list-style-type: none;
@@ -71,7 +74,7 @@ Navigation
     position: relative;
     display: inline-block;
 
-    /*&.current_page_item:after {
+    &.current_page_item:after {
       content: "";
       position: absolute;
       top: 100%;
@@ -84,7 +87,8 @@ Navigation
       border-top: 0.75rem solid $nav-bg-color;
       font-size: 0;
       line-height: 0;
-    }*/
+      z-index: 3;
+    }
   }
   a {
     display: block;

@@ -1,77 +1,47 @@
 <?php
 /**
- * Template part for the services section.
+ * Template part for the services page service section.
  *
  * @package _s
  */
 
-/* Services */
-if ( have_rows( 'services' ) ) { ?>
-  <section class="service-section service-section--services pos--rel">
-    <!-- Tabs -->
-    <div class="service-nav service-tabs tabs">
-      <!-- Nav -->
-      <ul class="service-nav--list txt--center z2">
-        <?php // loop through rows
-        while( have_rows( 'services' ) ): the_row();
-          // set up service title and anchor slug
-          $svc_ttl = get_sub_field( 'service_title' );
-          $a_slug = strtolower( str_replace( ' ', '-', $svc_ttl ) ); ?>
+// set a counter so that service image
+// and text blocks can be staggered.
+$count = 1; ?>
 
-          <li class="service-nav--item">
-            <a href="#<?php echo $a_slug; ?>"><?php echo $svc_ttl; ?></a>
-          </li>
-        <?php endwhile; ?>
-      </ul>
+<section class="service-section service-section--services pos--rel">
+  <div class="section-inner service-section--inner pos--rel z3">
+    <?php /* Nav */
+    wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
 
-      <?php /* Services */
-      while( have_rows( 'services' ) ): the_row();
-        // set up service title and div id
-        $svc_ttl = get_sub_field( 'service_title' );
-        $div_id = strtolower( str_replace( ' ', '-', $svc_ttl ) );
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
 
-        /* Highlights */
-        if ( have_rows( 'highlights' ) ) { ?>
-          <div id="<?php echo $div_id; ?>" class="tab-content section-inner service-section--inner pos--rel z3">
-
-            <div class="container">
+          <?php // loop through services
+          while ( have_rows( 'services' ) ): the_row(); ?>
+            <div class="service service-section--item">
               <div class="row">
-                <div class="col-xs-12">
+                <?php // set odd/even row variable
+                if ( ( $count % 2 ) !== 0 ) {
+                  $row_num = 'odd';
+                } else {
+                  $row_num = 'even';
+                }
 
-                  <div class="highlight-section tab-content--highlights">
-                    <?php // same staggering approach as home page
-                    $count = 1;
-
-                    // loop through rows
-                    while( have_rows( 'highlights' ) ): the_row(); ?>
-                      <div class="highlight tab-content--highlight service-area">
-                        <div class="row">
-                          <?php // set odd/even row variable
-                          if ( ( $count % 2 ) !== 0 ) {
-                            $row_num = 'odd';
-                          } else {
-                            $row_num = 'even';
-                          }
-
-                          // get the image and text templates
-                          include( locate_template( '/templates/pages/highlight-image.php' ) );
-                          include( locate_template( '/templates/pages/highlight-text.php' ) ); ?>
-                        </div>
-                      </div>
-                    <?php // increment the counter
-                    $count++;
-
-                    // end the loop
-                    endwhile; ?>
-                  </div>
-
-                </div>
+                // get the image and text templates
+                include( locate_template( '/templates/global/service-image.php' ) );
+                include( locate_template( '/templates/pages/service-text.php' ) ); ?>
               </div>
-            </div>
+            </div><!-- .service -->
 
-          </div><!-- .tab-content -->
-        <?php }
-      endwhile; ?>
+          <?php // increment the counter
+          $count++;
+
+          // end the loop
+          endwhile; ?>
+        </div>
+      </div>
     </div>
-  </section>
-<?php }
+  </div><!-- .section-inner -->
+</section>

@@ -35,7 +35,7 @@ get_header(); ?>
 						endif;
 
 						/* Header */
-						get_template_part( 'templates/headers/home', 'header' );
+						get_template_part( 'templates/global/header', 'home' );
 
 						/* Sections */
 						if ( have_rows( 'home_sections' ) ):
@@ -53,7 +53,7 @@ get_header(); ?>
 
 								/* CTA */
 								if ( get_row_layout() == 'cta_section' ) {
-									get_template_part( 'templates/home/cta', 'section' );
+									get_template_part( 'templates/global/cta', 'section' );
 								}
 
 							endwhile;

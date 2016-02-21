@@ -14,7 +14,7 @@
           <?php
           /* Headline */
           if ( get_sub_field( 'about_headline' ) ) { ?>
-            <h2 class="section-headline about-headline mt0">
+            <h2 class="section-headline about-headline mt0 fnt--bold">
               <?php the_sub_field( 'about_headline' ); ?>
             </h2>
           <?php }
