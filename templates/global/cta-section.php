@@ -22,9 +22,7 @@
                     <?php
                     /* Headline */
                     if ( get_sub_field( 'cta_headline' ) ) { ?>
-                      <h2 class="section-headline cta-headline mt0 txt--center">
-                        <?php the_sub_field( 'cta_headline' ); ?>
-                      </h2>
+                      <h2 class="section-headline cta-headline mt0 txt--center"><?php the_sub_field( 'cta_headline' ); ?></h2>
                     <?php }
 
                     /* Text */

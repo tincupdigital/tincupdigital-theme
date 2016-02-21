@@ -20,9 +20,7 @@ $s_txt = get_sub_field( 'service_text' ); ?>
   <div class="service-text service-item--text">
     <?php /* Headline */
     if ( $s_hdl ) { ?>
-      <h2 class="service-headline h3 mt0">
-        <?php echo $s_hdl; ?>
-      </h2>
+      <h2 class="service-headline h3 mt0"><?php echo $s_hdl; ?></h2>
     <?php }
 
     /* Text */

@@ -248,11 +248,11 @@ acf_add_local_field_group(array (
                 ),
                 array (
                   'key' => 'field_56a45ddf4da5c',
-                  'label' => 'Service Button Text',
-                  'name' => 'service_button_text',
+                  'label' => 'Button Text',
+                  'name' => 'button_text',
                   'type' => 'text',
-                  'instructions' => 'Enter some text to appear on the service button.',
-                  'required' => 1,
+                  'instructions' => 'Enter text to display on the button.',
+                  'required' => 0,
                   'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
@@ -269,11 +269,11 @@ acf_add_local_field_group(array (
                 ),
                 array (
                   'key' => 'field_56a45d8c4da5b',
-                  'label' => 'Service Button Link',
-                  'name' => 'service_button_link',
+                  'label' => 'Button Link',
+                  'name' => 'button_link',
                   'type' => 'post_object',
-                  'instructions' => 'Select a page or post for the service button to link to.',
-                  'required' => 1,
+                  'instructions' => 'Select a page or post for the button to link to.',
+                  'required' => 0,
                   'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
@@ -475,7 +475,7 @@ acf_add_local_field_group(array (
                   'name' => 'button_text',
                   'type' => 'text',
                   'instructions' => 'Enter text to display on the button.',
-                  'required' => 1,
+                  'required' => 0,
                   'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
@@ -496,7 +496,7 @@ acf_add_local_field_group(array (
                   'name' => 'button_link',
                   'type' => 'post_object',
                   'instructions' => 'Select a page or post for the button to link to.',
-                  'required' => 1,
+                  'required' => 0,
                   'conditional_logic' => 0,
                   'wrapper' => array (
                     'width' => '',
