@@ -33,13 +33,9 @@
                     }
 
                     /* Button */
-                    // set button variables
-                    $b_txt = get_sub_field( 'button_text' );
-                    $b_lnk = get_sub_field( 'button_link' );
-
-                    if ( $b_txt && $b_lnk ) { ?>
-                      <a class="cta-button" href="<?php echo $b_lnk; ?>">
-                        <?php echo $b_txt; ?>
+                    if ( get_sub_field( 'button_text' ) && get_sub_field( 'button_link' ) ) { ?>
+                      <a class="cta-button" href="<?php echo get_permalink( get_sub_field( 'button_link' ) ); ?>">
+                        <?php the_sub_field( 'button_text' ); ?>
                       </a>
                     <?php } ?>
                   </li>

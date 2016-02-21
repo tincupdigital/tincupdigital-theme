@@ -271,8 +271,8 @@ acf_add_local_field_group(array (
                   'key' => 'field_56a45d8c4da5b',
                   'label' => 'Service Button Link',
                   'name' => 'service_button_link',
-                  'type' => 'page_link',
-                  'instructions' => 'Select a page for the service button to link to.',
+                  'type' => 'post_object',
+                  'instructions' => 'Select a page or post for the service button to link to.',
                   'required' => 1,
                   'conditional_logic' => 0,
                   'wrapper' => array (
@@ -282,11 +282,14 @@ acf_add_local_field_group(array (
                   ),
                   'post_type' => array (
                     0 => 'page',
+                    1 => 'post',
                   ),
                   'taxonomy' => array (
                   ),
                   'allow_null' => 0,
                   'multiple' => 0,
+                  'return_format' => 'id',
+                  'ui' => 1,
                 ),
               ),
             ),
@@ -491,8 +494,8 @@ acf_add_local_field_group(array (
                   'key' => 'field_56c7645ba0b44',
                   'label' => 'Button Link',
                   'name' => 'button_link',
-                  'type' => 'page_link',
-                  'instructions' => 'Select a page for the button to link to.',
+                  'type' => 'post_object',
+                  'instructions' => 'Select a page or post for the button to link to.',
                   'required' => 1,
                   'conditional_logic' => 0,
                   'wrapper' => array (
@@ -502,11 +505,14 @@ acf_add_local_field_group(array (
                   ),
                   'post_type' => array (
                     0 => 'page',
+                    1 => 'post',
                   ),
                   'taxonomy' => array (
                   ),
                   'allow_null' => 0,
                   'multiple' => 0,
+                  'return_format' => 'id',
+                  'ui' => 1,
                 ),
               ),
             ),

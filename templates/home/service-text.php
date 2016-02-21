@@ -35,7 +35,7 @@ $b_lnk = get_sub_field( 'service_button_link' ); ?>
 
     /* Button */
     if ( $b_txt && $b_lnk ) { ?>
-      <a class="service-button" href="<?php echo $b_lnk; ?>">
+      <a class="service-button" href="<?php echo get_permalink( $b_lnk ); ?>">
         <?php echo $b_txt; ?>
       </a>
     <?php } ?>

@@ -31,7 +31,7 @@ var Roots = {
           autoplay: true,
           delay: 7000,
           arrows: false,
-          animation: 'vertical',
+          animation: "vertical",
           animateHeight: true
         });
       }
