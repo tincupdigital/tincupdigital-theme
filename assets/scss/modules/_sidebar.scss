@@ -7,10 +7,9 @@
 /*
 Widgets
  */
-.widget, .hentry {
-  margin-bottom: $margin-p;
-}
 .widget {
+  margin-bottom: $margin-p;
+
   input[type="text"],
   input[type="submit"],
   button {

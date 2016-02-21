@@ -6,17 +6,15 @@
   background-color: white;
 }
 .site-content {
-  padding: 2rem 0;
-}
-.no-title {
-  .site-content {
-    padding: 3rem 0;
-  }
+  padding: 4rem 0;
 }
 
 /*
 Posts
  */
+.hentry {
+  margin-bottom: 2rem;
+}
 .entry-content {
   h1, .h1,
   h2, .h2,
