@@ -15,7 +15,13 @@
     <div class="site-branding">
       <h1 class="site-title m0">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <img src="<?php bloginfo( 'template_directory' ); ?>/assets/img/logo-hz-white.png">
+          <?php /* Logo */
+          if ( get_theme_mod( 'brand_logo' ) ) { ?>
+            <img src="<?php echo get_theme_mod( 'brand_logo_white' ); ?>">
+          <?php } else {
+            // display name instead
+            bloginfo( 'name' );
+          } ?>
         </a>
       </h1>
       <p class="site-description screen-reader-text"><?php bloginfo( 'description' ); ?></p>
