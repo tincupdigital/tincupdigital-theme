@@ -34,9 +34,15 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-	<?php // check if this is the home page
-	if ( !is_front_page() ) {
-		get_template_part( 'templates/global/header', 'main' );
-	} ?>
+  <header id="masthead" class="site-header" role="banner">
+    <?php /* Home Hero */
+    if ( is_front_page() && get_field( 'hero_image' ) ) {
+      get_template_part( 'templates/home/hero', 'section' );
+    } ?>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'main-nav--container', 'items_wrap' => _s_nav_wrap() ) ); ?>
+    </nav><!-- #site-navigation -->
+  </header><!-- #masthead -->
 
 	<div id="content" class="site-content">

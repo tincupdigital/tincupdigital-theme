@@ -18,27 +18,6 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php /* Sections */
 						if ( have_rows( 'home_sections' ) ):
-
-							// only displaying the hero section here as we want to
-							// display hero first, then main nav, then other sections.
-
-							// loop through rows
-							while ( have_rows( 'home_sections' ) ): the_row();
-
-								/* Hero */
-								if ( get_row_layout() == 'hero_section' ) {
-									get_template_part( 'templates/home/hero', 'section' );
-								}
-
-							endwhile;
-
-						endif;
-
-						/* Header */
-						get_template_part( 'templates/global/header', 'home' );
-
-						/* Sections */
-						if ( have_rows( 'home_sections' ) ):
 							while ( have_rows( 'home_sections' ) ): the_row();
 
 								/* About */

@@ -9,7 +9,7 @@
 <section class="section home-section home-section--about about-section">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="about-section--inner txt--center">
           <?php
           /* Headline */

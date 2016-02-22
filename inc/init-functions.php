@@ -97,9 +97,10 @@ add_filter( 'body_class', '_s_page_template_body_class' );
 
 /**
  * Get featured image URL
+ *
+ * @link http://goo.gl/fzHOaB
  */
 function _s_get_feat_img_url( $size ) {
-  // hat tip: http://goo.gl/fzHOaB
   $img_id = get_post_thumbnail_id();
   $img_array = wp_get_attachment_image_src( $img_id, $size );
   $img_url = $img_array[0];
@@ -121,4 +122,28 @@ function _s_get_phone_link( $phone ) {
   $phone = preg_replace( "/[^0-9,.]/", "", $phone );
   $link = "tel:" . $phone;
   return $link;
+}
+
+/**
+ * Add brand logo at end of nav
+ *
+ * @link https://goo.gl/mDhYeh
+ */
+function _s_nav_wrap() {
+  // check if logo is uploaded
+  if ( get_theme_mod( 'brand_logo_white' ) ) {
+    // set up variables needed by logo
+    $img = get_theme_mod( 'brand_logo_white' );
+    $lnk = esc_url( home_url( '/' ) );
+    $alt = get_bloginfo( 'name' );
+
+    // set up the nav wrapper
+    $wrap = '<ul id="%1$s" class="%2$s">';
+    $wrap .= '%3$s';
+    $wrap .= '<li class="site-logo"><a href="'. $lnk .'"><img src="'. $img .'" alt="'. $alt .'"></a></li>';
+    $wrap .= '</ul>';
+  } else {
+    $wrap = '<ul id="%1$s" class="%2$s">%3$s</ul>';
+  }
+  return $wrap;
 }

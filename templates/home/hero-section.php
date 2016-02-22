@@ -6,10 +6,8 @@
  */
 
 // set up hero image
-if ( get_sub_field( 'hero_image' ) ) {
-	$h_img = get_sub_field( 'hero_image' );
-	$h_img = $h_img['sizes']['hero'];
-}
+$h_img = get_field( 'hero_image' );
+$h_img = $h_img['sizes']['hero'];
 
 // is hero present?
 if ( $h_img ) { ?>
