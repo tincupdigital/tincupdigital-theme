@@ -28,6 +28,11 @@ Posts
 .hentry {
   margin-bottom: 2rem;
 }
+.entry-header {
+  .entry-title {
+    color: $text-color;
+  }
+}
 .entry-content {
   h1, .h1,
   h2, .h2,
@@ -49,9 +54,12 @@ Posts
     min-width: 100%;
   }
 }
-.entry-header {
-  .entry-title {
-    color: $text-color;
+
+/* Margins */
+.services-parent-page,
+.about-page {
+  .entry-content h2 {
+    margin-top: 0;
   }
 }
 
