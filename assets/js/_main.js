@@ -25,6 +25,9 @@ var Roots = {
       /* WOW.js */
       new WOW().init();
 
+      /* FitVids */
+      $('.content-area .entry-content').fitVids();
+
       /* Unslider */
       if ( $('.unslider').length > 0 ) {
         $('.unslider').unslider({

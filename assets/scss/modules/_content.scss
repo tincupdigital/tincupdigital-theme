@@ -2,6 +2,9 @@
  * _content.scss
  */
 
+/*
+Global
+ */
 .site {
   background-color: white;
 }
@@ -27,6 +30,13 @@ Posts
   }
   p.p1 {
     padding: 0 !important;
+  }
+
+  /* Videos */
+  iframe {
+    display: block;
+    margin: 0 auto;
+    min-width: 100%;
   }
 }
 .entry-header {

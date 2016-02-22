@@ -8,7 +8,16 @@
 Footer Top
  */
 .footer-top {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: $border-color;
+    margin: 0 auto 3rem;
+  }
 }
 .footer-top--logo {
   display: block;

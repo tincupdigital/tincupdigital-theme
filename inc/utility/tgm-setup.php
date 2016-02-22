@@ -13,7 +13,7 @@ include_once get_template_directory() . '/inc/vendor/tgm-plugin-activation/class
 /**
  * Reset install notice if previously dismissed.
  */
-// TGM_Plugin_Activation::get_instance()->update_dismiss();
+TGM_Plugin_Activation::get_instance()->update_dismiss();
 
 /**
  * Register the required plugins for this theme.

@@ -9,11 +9,8 @@
 // and text blocks can be staggered.
 $count = 1; ?>
 
-<section class="service-section service-section--services pos--rel">
-  <div class="section-inner service-section--inner pos--rel z3">
-    <?php /* Nav */
-    wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
-
+<section class="service-section service-section--services">
+  <div class="section-inner service-section--inner">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">

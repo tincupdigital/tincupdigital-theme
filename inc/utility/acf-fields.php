@@ -545,56 +545,6 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
-  'key' => 'group_56ad558f43fa3',
-  'title' => 'Page Fields',
-  'fields' => array (
-    array (
-      'key' => 'field_56ad573f8d827',
-      'label' => 'Hide Title?',
-      'name' => 'hide_title',
-      'type' => 'true_false',
-      'instructions' => 'Check to hide the page title.',
-      'required' => 0,
-      'conditional_logic' => 0,
-      'wrapper' => array (
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'message' => '',
-      'default_value' => 0,
-    ),
-  ),
-  'location' => array (
-    array (
-      array (
-        'param' => 'post_type',
-        'operator' => '==',
-        'value' => 'page',
-      ),
-      array (
-        'param' => 'page_template',
-        'operator' => '!=',
-        'value' => 'page-templates/home-page.php',
-      ),
-      array (
-        'param' => 'page_template',
-        'operator' => '!=',
-        'value' => 'page-templates/services-page.php',
-      ),
-    ),
-  ),
-  'menu_order' => 0,
-  'position' => 'acf_after_title',
-  'style' => 'default',
-  'label_placement' => 'top',
-  'instruction_placement' => 'label',
-  'hide_on_screen' => '',
-  'active' => 1,
-  'description' => '',
-));
-
-acf_add_local_field_group(array (
   'key' => 'group_56a9661ec81dc',
   'title' => 'Services Page Fields',
   'fields' => array (
@@ -742,6 +692,72 @@ acf_add_local_field_group(array (
   'hide_on_screen' => array (
     0 => 'the_content',
   ),
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_56ca74d3e4a3f',
+  'title' => 'Services Parent Page Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_56ca74ed4f84b',
+      'label' => 'Hero Image',
+      'name' => 'hero_image',
+      'type' => 'image',
+      'instructions' => 'Upload the hero image.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'return_format' => 'array',
+      'preview_size' => 'thumbnail',
+      'library' => 'all',
+      'min_width' => '',
+      'min_height' => '',
+      'min_size' => '',
+      'max_width' => '',
+      'max_height' => '',
+      'max_size' => '',
+      'mime_types' => '',
+    ),
+    array (
+      'key' => 'field_56ca751f4f84c',
+      'label' => 'Hero Text',
+      'name' => 'hero_text',
+      'type' => 'wysiwyg',
+      'instructions' => 'Enter some text to display above the image in the hero area.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'tabs' => 'all',
+      'toolbar' => 'basic',
+      'media_upload' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'page-templates/services-parent-page.php',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
   'active' => 1,
   'description' => '',
 ));
