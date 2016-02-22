@@ -41,14 +41,16 @@ Global
 }
 .service-item--image {
   max-width: 50%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 
   @include break-sm {
+    max-width: 95%;
     margin-bottom: 0;
-    max-width: 70%;
   }
-  @include break-lg {
-    max-width: 90%;
+}
+.service-item--text {
+  p:last-of-type {
+    margin-bottom: 0;
   }
 }
 

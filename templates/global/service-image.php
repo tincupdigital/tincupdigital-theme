@@ -7,9 +7,9 @@
 
 // set up grid columns
 if ( $row_num == 'odd' ) {
-  $grid_cols = 'col-xs-12 col-sm-5 last-sm';
+  $grid_cols = 'col-xs-12 col-sm-5 last-sm col-md-4';
 } else {
-  $grid_cols = 'col-xs-12 col-sm-5';
+  $grid_cols = 'col-xs-12 col-sm-5 col-md-4';
 }
 
 // set image field variable

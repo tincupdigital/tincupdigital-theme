@@ -7,9 +7,9 @@
 
 // set up grid columns
 if ( $row_num == 'odd' ) {
-  $grid_cols = 'col-xs-12 col-sm-7 first-sm';
+  $grid_cols = 'col-xs-12 col-sm-7 first-sm col-md-8';
 } else {
-  $grid_cols = 'col-xs-12 col-sm-7';
+  $grid_cols = 'col-xs-12 col-sm-7 col-md-8';
 }
 
 // set service field vars
