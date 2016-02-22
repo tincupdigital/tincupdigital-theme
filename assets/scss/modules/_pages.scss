@@ -152,6 +152,14 @@ Home Sections
   @include button-point-right;
 }
 
+// hide angled accent on "Services"
+.services-page {
+  .service-section:before,
+  .service-section:after {
+    display: none;
+  }
+}
+
 /* CTA */
 .cta-section {
   padding: 4.5rem 0;
