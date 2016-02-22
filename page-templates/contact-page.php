@@ -9,48 +9,53 @@
 
 get_header(); ?>
 
-  <div class="container">
-    <div class="row">
+    <div class="container">
+      <div class="row">
 
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      	<div id="primary" class="content-area">
-      		<main id="main" class="site-main" role="main">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <div id="primary" class="content-area">
+            <main id="main" class="site-main" role="main">
 
-      			<?php while ( have_posts() ) : the_post(); ?>
+              <?php while ( have_posts() ) : the_post(); ?>
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <div class="entry-content">
-                  <?php the_content(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                  <div class="entry-content">
+                    <?php the_content(); ?>
 
-                  <?php /* Form */
-                  if ( get_field( 'contact_form' ) ) { ?>
-                    <div class="form-area contact-page--form mt3">
-                      <?php // get form post object
-                      $p_obj = get_field( 'contact_form' );
-                      // set up form id and title
-                      $f_id = $p_obj->ID;
-                      $f_ttl = $p_obj->post_title;
+                    <?php /* Form */
+                    if ( get_field( 'contact_form' ) ) { ?>
+                      <div class="form-area contact-page--form mt3">
+                        <?php // get form post object
+                        $p_obj = get_field( 'contact_form' );
+                        // set up form id and title
+                        $f_id = $p_obj->ID;
+                        $f_ttl = $p_obj->post_title;
 
-                      echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]'); ?>
-                    </div>
-                  <?php } ?>
+                        echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]'); ?>
+                      </div>
+                    <?php } ?>
 
-                  <?php
-                    wp_link_pages( array(
-                      'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-                      'after'  => '</div>',
-                    ) );
-                  ?>
-                </div><!-- .entry-content -->
-              </article><!-- #post-## -->
+                    <?php
+                      wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                        'after'  => '</div>',
+                      ) );
+                    ?>
+                  </div><!-- .entry-content -->
+                </article><!-- #post-## -->
 
-      			<?php endwhile; // End of the loop. ?>
+              <?php endwhile; // End of the loop. ?>
 
-      		</main><!-- #main -->
-      	</div><!-- #primary -->
-      </div>
+            </main><!-- #main -->
+          </div><!-- #primary -->
+        </div>
 
-    </div><!-- .row -->
-  </div><!-- .container -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+
+  </div><!-- #content -->
+
+  <?php /* Divider */
+  get_template_part( 'templates/global/content', 'divider' ); ?>
 
 <?php get_footer(); ?>

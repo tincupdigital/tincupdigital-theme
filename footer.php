@@ -8,10 +8,7 @@
  *
  * @package _s
  */
-
 ?>
-
-  </div><!-- #content -->
 
   <footer id="colophon" class="site-footer" role="contentinfo">
     <!-- Top -->
