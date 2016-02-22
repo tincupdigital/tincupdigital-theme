@@ -74,7 +74,9 @@ Navigation
     position: relative;
     display: inline-block;
 
-    &.current_page_item:after {
+    &.current_page_item:after,
+    &.current_page_parent:after,
+    &.current-page-ancestor:after {
       content: "";
       position: absolute;
       top: 100%;

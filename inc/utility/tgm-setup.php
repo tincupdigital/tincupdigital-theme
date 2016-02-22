@@ -45,6 +45,12 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Disqus Comment System',
+      'slug' => 'disqus-comment-system',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
       'name' => 'Force Regenerate Thumbnails',
       'slug' => 'force-regenerate-thumbnails',
       'required' => true,
