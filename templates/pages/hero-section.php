@@ -14,7 +14,7 @@ $h_txt = get_field( 'hero_text' ); ?>
     <div class="container">
       <div class="row center-xs">
 
-        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="col-xs-10 col-md-8">
           <h1 class="services-hero--headline h2 m0"><?php echo wp_strip_all_tags( $h_txt ); ?></h1>
         </div>
 
