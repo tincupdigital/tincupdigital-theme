@@ -14,9 +14,9 @@ if ( $h_img ) { ?>
   <section class="section home-section home-section--hero hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
 
     <?php /* Logo */
-    if ( get_theme_mod( 'brand_logo_white' ) ) { ?>
+    if ( get_theme_mod( 'white_logo' ) ) { ?>
   		<div class="hero-logo hero-section--logo pos--rel z2">
-  			<img src="<?php echo get_theme_mod( 'brand_logo_white' ); ?>">
+  			<img src="<?php echo get_theme_mod( 'white_logo' ); ?>">
   		</div>
     <?php } ?>
 

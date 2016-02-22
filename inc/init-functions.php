@@ -131,9 +131,9 @@ function _s_get_phone_link( $phone ) {
  */
 function _s_nav_wrap() {
   // check if logo is uploaded
-  if ( get_theme_mod( 'brand_logo_white' ) ) {
+  if ( get_theme_mod( 'white_logo' ) ) {
     // set up variables needed by logo
-    $img = get_theme_mod( 'brand_logo_white' );
+    $img = get_theme_mod( 'white_logo' );
     $lnk = esc_url( home_url( '/' ) );
     $alt = get_bloginfo( 'name' );
 

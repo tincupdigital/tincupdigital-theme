@@ -60,22 +60,22 @@ add_action( 'customize_register', '_s_customizer_add_sections' );
  */
 function _s_customizer_add_fields( $wp_customize ) {
   /* Appearance */
-  $wp_customize->add_setting( 'brand_logo' );
+  $wp_customize->add_setting( 'color_logo' );
   $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'brand_logo', array(
-      'label' => __( 'Brand Logo', '_s' ),
-      'description' => __( 'Upload your brand\'s logo here.', '_s' ),
+    $wp_customize, 'color_logo', array(
+      'label' => __( 'Color Logo', '_s' ),
+      'description' => __( 'Upload a color version of the logo here.', '_s' ),
       'section' => 'appearance',
-      'settings' => 'brand_logo'
+      'settings' => 'color_logo'
     ) )
   );
-  $wp_customize->add_setting( 'brand_logo_white' );
+  $wp_customize->add_setting( 'white_logo' );
   $wp_customize->add_control( new WP_Customize_Image_Control(
-    $wp_customize, 'brand_logo_white', array(
-      'label' => __( 'Brand Logo (White)', '_s' ),
-      'description' => __( 'Upload your brand\'s white logo here.', '_s' ),
+    $wp_customize, 'white logo', array(
+      'label' => __( 'White Logo', '_s' ),
+      'description' => __( 'Upload a white version of the logo here.', '_s' ),
       'section' => 'appearance',
-      'settings' => 'brand_logo_white'
+      'settings' => 'white_logo'
     ) )
   );
 
