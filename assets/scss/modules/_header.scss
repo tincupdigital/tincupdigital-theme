@@ -88,6 +88,13 @@ Navigation
     }
   }
 
+  // for Firefox: http://goo.gl/2Mlygd
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   // accent arrow
   &:after {
     content: "";

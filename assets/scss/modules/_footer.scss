@@ -27,7 +27,7 @@ Footer Top
 Footer Bottom
  */
 .footer-bottom {
-  background-color: $footer-bg-color;
+  background: linear-gradient($footer-bg-color, darken($footer-bg-color, 4%));
 }
 
 /*

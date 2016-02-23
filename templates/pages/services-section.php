@@ -11,6 +11,9 @@ $count = 1; ?>
 
 <section class="service-section service-section--services">
   <div class="section-inner service-section--inner">
+    <?php /* Nav */
+    wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
+
     <div class="container">
       <div class="row">
         <div class="col-xs-12">

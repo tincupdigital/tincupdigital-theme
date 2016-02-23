@@ -9,8 +9,8 @@
 // and text blocks can be staggered.
 $count = 1; ?>
 
-<section class="service-section service-section--services pos--rel">
-  <div class="section-inner service-section--inner pos--rel z3">
+<section class="service-section service-section--services pos--rel z5">
+  <div class="section-inner service-section--inner pos--rel z2">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">

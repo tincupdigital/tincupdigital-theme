@@ -3,13 +3,13 @@
  */
 
 html {
-  font-size: $font-xs;
+  font-size: $font-size--xs;
 
   @include break-sm {
-    font-size: $font-sm;
+    font-size: $font-size--sm;
   }
   @include break-lg {
-    font-size: $font-lg;
+    font-size: $font-size--lg;
   }
 }
 
@@ -36,13 +36,13 @@ h4, .h4 {
 
 h1, .h1 {
   margin-top: 0;
-  font-size: 2.441rem;
+  font-size: 2.074rem;
 }
 
-h2, .h2 { font-size: 1.953rem; }
+h2, .h2 { font-size: 1.728rem; }
 
-h3, .h3 { font-size: 1.563rem; }
+h3, .h3 { font-size: 1.44rem; }
 
-h4, .h4 { font-size: 1.25rem; }
+h4, .h4 { font-size: 1.2rem; }
 
-small, .small { font-size: 0.8em; }
+small, .small { font-size: 0.833em; }

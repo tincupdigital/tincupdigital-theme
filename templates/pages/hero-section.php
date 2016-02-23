@@ -21,7 +21,4 @@ $h_txt = get_field( 'hero_text' ); ?>
       </div>
     </div>
   </div>
-
-  <?php /* Nav */
-  wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
 </section>

@@ -23,15 +23,19 @@ Divider
 }
 
 /*
+Pages
+ */
+.page {
+  .entry-title {
+    color: $heading-color;
+  }
+}
+
+/*
 Posts
  */
 .hentry {
   margin-bottom: 2rem;
-}
-.entry-header {
-  .entry-title {
-    color: $text-color;
-  }
 }
 .entry-content {
   h1, .h1,

@@ -21,7 +21,10 @@ get_header(); ?>
                 get_template_part( 'templates/pages/hero', 'section' );
               } ?>
 
-              <div class="service-section--inner">
+              <div class="service-section--inner pos--rel z5">
+                <?php /* Nav */
+                wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
+
                 <div class="container">
                   <div class="row">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1">

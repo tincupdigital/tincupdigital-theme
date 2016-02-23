@@ -13,7 +13,7 @@ include_once get_template_directory() . '/inc/vendor/tgm-plugin-activation/class
 /**
  * Reset install notice if previously dismissed.
  */
-TGM_Plugin_Activation::get_instance()->update_dismiss();
+//TGM_Plugin_Activation::get_instance()->update_dismiss();
 
 /**
  * Register the required plugins for this theme.
@@ -45,12 +45,6 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'Disqus Comment System',
-      'slug' => 'disqus-comment-system',
-      'required' => true,
-      'force_activation' => true
-    ),
-    array(
       'name' => 'Force Regenerate Thumbnails',
       'slug' => 'force-regenerate-thumbnails',
       'required' => true,
@@ -74,6 +68,12 @@ function _s_register_required_plugins() {
     array(
       'name' => 'Brute Force Login Protection',
       'slug' => 'brute-force-login-protection',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
+      'name' => 'Disqus Comment System',
+      'slug' => 'disqus-comment-system',
       'required' => true,
       'force_activation' => true
     ),

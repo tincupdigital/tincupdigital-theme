@@ -145,7 +145,6 @@ Home Sections
 .service-section--inner {
   position: relative;
   padding: 2.5rem 0;
-  z-index: 2;
 }
 .service-section--headline {
   font-weight: 600;
@@ -208,7 +207,7 @@ Services
 #services-nav {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 100%;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -216,17 +215,17 @@ Services
   z-index: 4;
 
   li {
-    display: inline;
+    display: inline-block;
     padding: 0 1px;
   }
   a {
     position: relative;
-    display: inline-block;
+    display: block;
     background-color: $heading-color;
     color: white;
     padding: 1.25rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.0;
   }
