@@ -91,29 +91,36 @@ Animate.css
 }
 
 /*
-Contact Form 7
+Ninja Forms
  */
-.wpcf7 {
-  form {
-    margin-bottom: $margin-p;
-  }
-  label {
-    display: inline-block;
-    margin-bottom: 0.25rem;
-    font-weight: bold;
-  }
-  span input,
-  span textarea {
+.ninja-forms-required-items {
+  display: none;
+}
+.ninja-forms-form {
+  padding-top: 1rem;
+
+  input[type="text"],
+  textarea {
     border: 1px solid $border-color;
+    border-radius: 2px;
   }
   input[type="submit"] {
     @extend .btn, .btn-primary;
   }
+
+  @include break-sm {
+    .half-width-wrap {
+      display: block;
+      float: left;
+      width: 49%;
+      margin-right: 2%;
+    }
+    .last-wrap {
+      margin-right: 0 !important;
+    }
+  }
 }
 
-.wpcf7-response-output {
-  margin: 0 !important;
-}
 
 /*
 Unslider

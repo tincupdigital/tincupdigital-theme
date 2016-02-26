@@ -266,3 +266,29 @@ About Page
     padding-bottom: 0;
   }
 }
+
+/*
+Contact Page
+ */
+.contact-page {
+  .entry-content {
+    p:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+.contact-page--footer {
+  border-top: 1px solid $border-color;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+
+  p {
+    font-weight: 500;
+  }
+  label {
+    font-weight: 600;
+  }
+  a {
+    display: block;
+  }
+}

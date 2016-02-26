@@ -27,15 +27,30 @@ get_header(); ?>
                     <?php the_content(); ?>
 
                     <?php /* Form */
-                    if ( get_field( 'contact_form' ) ) { ?>
-                      <div class="form-area contact-page--form mt3">
-                        <?php // get form post object
-                        $p_obj = get_field( 'contact_form' );
-                        // set up form id and title
-                        $f_id = $p_obj->ID;
-                        $f_ttl = $p_obj->post_title;
+                    if ( function_exists( 'ninja_forms_display_form' ) ) {
+                      ninja_forms_display_form( 1 );
+                    } ?>
 
-                        echo do_shortcode('[contact-form-7 id="'. $f_id .'" title="'. $f_ttl .'"]'); ?>
+                    <?php /* Footer */
+                    if ( get_field( 'page_footer' ) ) { ?>
+                      <div class="page-footer contact-footer contact-page--footer">
+                        <?php echo wpautop( get_field( 'page_footer' ) ); ?>
+
+                        <?php /* Phone */
+                        if ( get_field( 'phone_number' ) ) { ?>
+                          <div class="contact-footer--block contact-footer--phone mb2">
+                            <label>Call Us</label>
+                            <a class="contact-footer--link h3 mt0" href="<?php echo _s_get_phone_link( get_field( 'phone_number' ) ); ?>"><?php the_field( 'phone_number' ); ?></a>
+                          </div>
+                        <?php }
+
+                        /* Email */
+                        if ( get_field( 'email_address' ) ) { ?>
+                          <div class="contact-footer--block contact-footer--email">
+                            <label>Email Us</label>
+                            <a class="contact-footer--link h3 mt0" href="mailto:<?php the_field( 'email_address' ); ?>"><?php the_field( 'email_address' ); ?></a>
+                          </div>
+                        <?php } ?>
                       </div>
                     <?php } ?>
 

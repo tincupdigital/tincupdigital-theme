@@ -18,7 +18,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <!-- Web fonts -->
-<link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+<!-- This font is huge... shit. -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,600' rel='stylesheet' type='text/css'>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
