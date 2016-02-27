@@ -37,18 +37,22 @@ get_header(); ?>
                         <?php echo wpautop( get_field( 'page_footer' ) ); ?>
 
                         <?php /* Phone */
-                        if ( get_field( 'phone_number' ) ) { ?>
+                        if ( get_theme_mod( 'phone_number' ) ) {
+                          $p_num = get_theme_mod( 'phone_number' ); ?>
+
                           <div class="contact-footer--block contact-footer--phone mb2">
                             <label>Call Us</label>
-                            <a class="contact-footer--link h3 mt0" href="<?php echo _s_get_phone_link( get_field( 'phone_number' ) ); ?>"><?php the_field( 'phone_number' ); ?></a>
+                            <a class="contact-footer--link h3 mt0" href="<?php echo _s_get_phone_link( $p_num ); ?>"><?php echo $p_num; ?></a>
                           </div>
                         <?php }
 
                         /* Email */
-                        if ( get_field( 'email_address' ) ) { ?>
+                        if ( get_theme_mod( 'email_address' ) ) {
+                          $e_add = get_theme_mod( 'email_address' ); ?>
+
                           <div class="contact-footer--block contact-footer--email">
                             <label>Email Us</label>
-                            <a class="contact-footer--link h3 mt0" href="mailto:<?php the_field( 'email_address' ); ?>"><?php the_field( 'email_address' ); ?></a>
+                            <a class="contact-footer--link h3 mt0" href="mailto:<?php echo $e_add; ?>"><?php echo $e_add; ?></a>
                           </div>
                         <?php } ?>
                       </div>

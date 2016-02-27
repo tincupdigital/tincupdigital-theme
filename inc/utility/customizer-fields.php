@@ -9,10 +9,10 @@
  * Panels
  */
 function _s_customizer_add_panels( $wp_customize ) {
-  /* Client Setup */
-  $wp_customize->add_panel( 'client_setup', array(
+  /* Site Setup */
+  $wp_customize->add_panel( 'site_setup', array(
     'capability' => 'edit_theme_options',
-    'title' => __( 'Client Setup', '_s' ),
+    'title' => __( 'Site Setup', '_s' ),
   ) );
 }
 add_action( 'customize_register', '_s_customizer_add_panels' );
@@ -25,7 +25,7 @@ function _s_customizer_add_sections( $wp_customize ) {
   $wp_customize->add_section( 'appearance', array(
     'title' => __( 'Appearance', '_s' ),
     'description' => __( 'Customize the appearance of the site here.', '_s' ),
-    'panel' => 'client_setup',
+    'panel' => 'site_setup',
     'priority' => 1
   ) );
 
@@ -33,7 +33,7 @@ function _s_customizer_add_sections( $wp_customize ) {
   $wp_customize->add_section( 'contact_info', array(
     'title' => __( 'Contact Info', '_s' ),
     'description' => __( 'Contact information can be added here.', '_s' ),
-    'panel' => 'client_setup',
+    'panel' => 'site_setup',
     'priority' => 2
   ) );
 
@@ -41,7 +41,7 @@ function _s_customizer_add_sections( $wp_customize ) {
   $wp_customize->add_section( 'social_media', array(
     'title' => __( 'Social Media', '_s' ),
     'description' => __( 'Social media links can be added here.', '_s' ),
-    'panel' => 'client_setup',
+    'panel' => 'site_setup',
     'priority' => 3
   ) );
 
@@ -49,7 +49,7 @@ function _s_customizer_add_sections( $wp_customize ) {
   $wp_customize->add_section( 'miscellaneous', array(
     'title' => __( 'Miscellaneous', '_s' ),
     'description' => __( 'Miscellaneous items can be configured here.', '_s' ),
-    'panel' => 'client_setup',
+    'panel' => 'site_setup',
     'priority' => 4
   ) );
 }
