@@ -28,11 +28,6 @@ get_header(); ?>
                   <div class="entry-content">
                     <?php the_content(); ?>
 
-                    <?php /* Form */
-                    if ( function_exists( 'ninja_forms_display_form' ) ) {
-                      ninja_forms_display_form( 1 );
-                    } ?>
-
                     <?php /* Footer */
                     if ( get_field( 'page_footer' ) ) { ?>
                       <div class="page-footer contact-footer contact-page--footer">
