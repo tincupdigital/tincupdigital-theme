@@ -215,7 +215,9 @@ Services
   z-index: 4;
 
   li {
+    position: relative;
     display: inline-block;
+    vertical-align: bottom; // fix 1px off in Chrome
     padding: 0 1px;
   }
   a {
