@@ -18,8 +18,20 @@ get_header(); ?>
             <div class="row">
 
               <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                <?php get_template_part( 'templates/content', 'page' ); ?>
-              </div>
+
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                  <div class="entry-content">
+                    <?php the_content(); ?>
+                    <?php
+                      wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                        'after'  => '</div>',
+                      ) );
+                    ?>
+                  </div><!-- .entry-content -->
+                </article><!-- #post-## -->
+
+              </div><!-- .col-xs-12 -->
 
             </div><!-- .row -->
           </div><!-- .container -->
