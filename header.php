@@ -45,5 +45,3 @@
       <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'main-nav--container', 'items_wrap' => _s_nav_wrap() ) ); ?>
     </nav><!-- #site-navigation -->
   </header><!-- #masthead -->
-
-	<div id="content" class="site-content">
