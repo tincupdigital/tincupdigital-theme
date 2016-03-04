@@ -22,11 +22,6 @@ Floats
 .fl--right { float: left; }
 
 /*
-Fonts
- */
-.fnt--bold { font-weight: 600 } // Raleway bold weight
-
-/*
 Images
  */
 .img--round { border-radius: 50%; }
@@ -93,6 +88,11 @@ Text
 
 .txt--lower { text-transform: lowercase; }
 .txt--upper { text-transform: uppercase; }
+
+// font weights
+.txt--300 { font-weight: 300 }
+.txt--600 { font-weight: 600 }
+.txt--700 { font-weight: 700 }
 
 /*
 Vertical alignment

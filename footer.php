@@ -30,15 +30,15 @@
               $email = get_theme_mod( 'email_address' );
 
               if ( $phone || $email ) { ?>
-                <ul class="footer-contact footer-top--contact txt--bold mb1">
+                <ul class="footer-contact footer-top--contact txt--bold mb1 p0">
                   <?php
                   /* Phone */
                   if ( $phone ) { ?>
-                    <li><span>Call Us</span> <a href="<?php echo _s_get_phone_link( $phone ); ?>"><?php echo $phone; ?></a></li>
+                    <li><span>Call Us:</span> <a href="<?php echo _s_get_phone_link( $phone ); ?>"><?php echo $phone; ?></a></li>
                   <?php }
                   /* Email */
                   if ( $email ) { ?>
-                    <li><span>Email Us</span> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
+                    <li><span>Email Us:</span> <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></li>
                   <?php } ?>
                 </ul>
               <?php } ?>

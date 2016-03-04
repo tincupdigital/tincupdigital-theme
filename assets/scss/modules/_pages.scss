@@ -197,7 +197,12 @@ Services
 
   .services-hero--headline {
     color: white;
+    font-size: 1.5rem;
     margin-top: -1.375rem;
+
+    @include break-sm {
+      font-size: 1.728rem;
+    }
   }
 }
 .services-hero--text {
@@ -225,11 +230,24 @@ Services
     display: block;
     background-color: $heading-color;
     color: white;
-    padding: 1.25rem;
+    padding: 1rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.0;
+    // white space issues
+    max-width: 100px;
+    word-break: break-all;
+    word-wrap: break-word;
+    hyphens: auto;
+
+    @include break-xs {
+      max-width: none;
+    }
+
+    @include break-sm {
+      padding: 1.25rem;
+    }
   }
 
   .current-menu-item a {
