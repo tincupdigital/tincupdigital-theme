@@ -21,6 +21,9 @@ Footer Top
   span {
     color: $heading-color;
   }
+  a {
+    @include link-color($text-color);
+  }
 }
 
 /*
