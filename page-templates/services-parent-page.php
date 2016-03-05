@@ -16,48 +16,55 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="entry-content">
-              <?php /* Hero */
-              if ( get_field( 'hero_image' ) && get_field( 'hero_text' ) ) {
-                get_template_part( 'templates/pages/hero', 'section' );
-              } ?>
+          <div class="service-section">
+            <?php /* Hero */
+            if ( get_field( 'hero_image' ) && get_field( 'hero_text' ) ) {
+              get_template_part( 'templates/pages/hero', 'section' );
+            } ?>
 
-              <div class="service-section--inner pos--rel z5">
-                <?php /* Nav */
-                wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
+            <div class="service-section--inner pos--rel z5">
+              <?php /* Nav */
+              wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
 
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                      <?php the_content(); ?>
-                    </div>
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                      <header class="entry-header">
+                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                      </header><!-- .entry-header -->
+
+                      <div class="entry-content">
+                        <?php the_content(); ?>
+                        <?php
+                          wp_link_pages( array(
+                            'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+                            'after'  => '</div>',
+                          ) );
+                        ?>
+                      </div><!-- .entry-content -->
+                    </article><!-- #post-## -->
                   </div>
-                </div>
-              </div>
 
-              <?php /* CTA Section */
-              // cta field is attached to home page
-              // so let's not do the work twice.
-              if ( have_rows( 'home_sections', _s_get_home_ID() ) ):
-                while ( have_rows( 'home_sections', _s_get_home_ID() ) ): the_row();
+                </div><!-- .row -->
+              </div><!-- .container -->
+            </div>
 
-                  /* CTA */
-                  if ( get_row_layout() == 'cta_section' ) {
-                    get_template_part( 'templates/global/cta', 'section' );
-                  }
+            <?php /* CTA Section */
+            // cta field is attached to home page
+            // so let's not do the work twice.
+            if ( have_rows( 'home_sections', _s_get_home_ID() ) ):
+              while ( have_rows( 'home_sections', _s_get_home_ID() ) ): the_row();
 
-                endwhile;
-              endif; ?>
+                /* CTA */
+                if ( get_row_layout() == 'cta_section' ) {
+                  get_template_part( 'templates/global/cta', 'section' );
+                }
 
-              <?php
-                wp_link_pages( array(
-                  'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-                  'after'  => '</div>',
-                ) );
-              ?>
-            </div><!-- .entry-content -->
-          </article><!-- #post-## -->
+              endwhile;
+            endif; ?>
+          </div><!-- .service-section -->
 
         <?php endwhile; // End of the loop. ?>
 

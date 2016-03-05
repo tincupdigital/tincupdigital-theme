@@ -5,8 +5,9 @@
 /*
 Colors
  */
-.color--body { color: $text-color; }
-.color--link { color: $link-color; }
+.color--txt { color: $text-color !important; }
+.color--lnk { color: $link-color !important; }
+.color--hdl { color: $heading-color !important; }
 
 /*
 Display
@@ -56,6 +57,9 @@ Mixins
 }
 .button-accent {
   @include button-accent;
+}
+.button-brand {
+  @include button-brand;
 }
 .screen-reader-text {
   @include sr-only;

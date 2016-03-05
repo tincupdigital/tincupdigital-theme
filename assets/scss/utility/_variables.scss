@@ -40,15 +40,14 @@ $brand-colors: (
 /* Definitions */
 $border-color: $gray-light;
 $footer-bg-color: brand-color('sand');
-$link-color: lighten(brand-color('blue'), 15%);
+$link-color: brand-color('yellow');
 
 $text-color: $gray-dark;
 $text-color--dark: $gray-darker;
 
-$accent-color: brand-color('yellow');
-$button-color: $link-color;
-$logo-bg-color: brand-color('blue');
-$nav-bg-color: $accent-color;
+$button-color: brand-color('blue');
+$logo-bg-color: $button-color;
+$nav-bg-color: $link-color;
 
 $heading-color: brand-color('green');
 

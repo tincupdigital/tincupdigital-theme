@@ -48,11 +48,7 @@ Global
     margin-bottom: 0;
   }
 }
-.service-item--text {
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-}
+.service-item--text {}
 
 /*
 Home
@@ -105,59 +101,33 @@ Home Sections
 }
 
 /* About */
+.home-section--about {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($button-color, 0.3);
+  }
+}
 .about-section {
   padding: 4.5rem 0 5.5rem;
   background: url('../img/about-bg.png') left top repeat;
   color: white;
 
+  .about-headline {
+    color: white;
+  }
+
   p {
-    color: $accent-color;
+    color: $link-color;
 
     &:last-of-type {
       margin-bottom: 0;
     }
-  }
-}
-
-/* Services */
-.service-section {
-  position: relative;
-  padding: 0;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 150%;
-    height: 5rem;
-    margin-left: -25%;
-    background-color: white;
-    z-index: 1;
-  }
-  &:before {
-    transform: rotate(4deg);
-  }
-  &:after {
-    transform: rotate(-4deg);
-  }
-}
-.service-section--inner {
-  position: relative;
-  padding: 2.5rem 0;
-}
-.service-section--headline {
-  font-weight: 600;
-}
-.service-section--button {
-  @include button-point-right;
-}
-
-// hide angled accent on "Services"
-.services-page {
-  .service-section:before,
-  .service-section:after {
-    display: none;
   }
 }
 
@@ -176,7 +146,7 @@ Home Sections
   }
 }
 .cta-button {
-  @include button-point-inward;
+  //@include button-point-inward;
   color: white;
 }
 
@@ -192,6 +162,13 @@ Services
     margin-bottom: 0;
   }
 }
+.services-page {
+  .service-section--inner {
+    padding: 3rem 0;
+  }
+}
+
+/* Hero */
 .services-hero {
   height: 400px;
 
@@ -209,6 +186,7 @@ Services
   @include vert-align;
 }
 
+/* Nav */
 #services-nav {
   position: absolute;
   width: 100%;
@@ -269,14 +247,6 @@ Services
     }
   }
 }
-.service-section--inner {
-  padding: 4rem 0;
-}
-
-/* Parent */
-.service-parent--inner {
-  padding: 3rem 0;
-}
 
 /*
 About Page
@@ -298,9 +268,7 @@ Contact Page
   }
 }
 .contact-page--footer {
-  border-top: 1px solid $border-color;
   margin-top: 4rem;
-  padding-top: 1.5rem;
 
   p {
     font-weight: 500;

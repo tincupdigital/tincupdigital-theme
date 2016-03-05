@@ -9,7 +9,7 @@ Global
   background-color: white;
 }
 .site-content {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 /*
@@ -38,15 +38,6 @@ Posts
   margin-bottom: 2rem;
 }
 .entry-content {
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
-    color: $heading-color;
-  }
-  h4, .h4 {
-    color: $accent-color;
-    text-transform: uppercase;
-  }
   p.p1 {
     padding: 0 !important;
   }
@@ -93,4 +84,44 @@ Navigation
 .nav-next {
   float: right;
   text-align: right;
+}
+
+/*
+Services
+ */
+.service-section--inner {
+  position: relative;
+  padding: 2.5rem 0;
+}
+.service-section--item {
+  p {
+    margin: 0 0 1rem;
+  }
+}
+.service-section--headline {
+  font-weight: 600;
+}
+
+/* Accented */
+.section--accented {
+  position: relative;
+  padding: 0;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150%;
+    height: 5rem;
+    margin-left: -25%;
+    background-color: white;
+    z-index: 1;
+  }
+  &:before {
+    transform: rotate(4deg);
+  }
+  &:after {
+    transform: rotate(-4deg);
+  }
 }

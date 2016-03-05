@@ -32,8 +32,10 @@
 
                     /* Button */
                     if ( get_sub_field( 'button_text' ) && get_sub_field( 'button_link' ) ) { ?>
-                      <a class="cta-button" href="<?php echo get_permalink( get_sub_field( 'button_link' ) ); ?>">
-                        <?php the_sub_field( 'button_text' ); ?>
+                      <a class="cta-button button-brand" href="<?php echo get_permalink( get_sub_field( 'button_link' ) ); ?>">
+                        <i class="icon-right-open"></i>
+                        <span><?php the_sub_field( 'button_text' ); ?></span>
+                        <i class="icon-left-open"></i>
                       </a>
                     <?php } ?>
                   </li>

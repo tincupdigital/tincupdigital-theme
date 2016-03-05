@@ -16,12 +16,12 @@ $count = 1; ?>
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
 
           <?php // loop through services
           while ( have_rows( 'services' ) ): the_row(); ?>
             <div class="service service-section--item">
-              <div class="row">
+              <div class="row middle-sm">
                 <?php // set odd/even row variable
                 if ( ( $count % 2 ) !== 0 ) {
                   $row_num = 'odd';

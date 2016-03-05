@@ -41,7 +41,7 @@ Buttons
 @mixin button {
   @extend .btn, .btn-primary;
 }
-@mixin button-accent($color: white, $bg-color: $accent-color) {
+@mixin button-accent($color: white, $bg-color: $heading-color) {
   @include button;
   color: $color !important;
   background-color: $bg-color !important;
@@ -49,49 +49,26 @@ Buttons
 
 /* Brand */
 @mixin button-brand {
-  display: inline-block;
-  font-weight: 600;
+  display: block;
+  font-size: 0.75rem;
   text-transform: uppercase;
 
-  &:before,
-  &:after {
+  span, i {
     display: inline-block;
-    color: $accent-color;
-    padding: 0 0.375rem;
-    font-size: 200%;
-    font-weight: normal;
-    margin-top: -0.275em;
     vertical-align: middle;
+    line-height: 1.0;
   }
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  span {
+    font-weight: 700;
   }
-}
-@mixin button-point-right {
-  font-size: 0.75rem;
-  @include button-brand;
-
-  &:after {
-    content: ">";
-    padding-left: 0.25rem;
+  i {
+    font-weight: 400;
+    font-size: 2em;
+    color: $link-color;
   }
 }
-@mixin button-point-inward {
-  font-size: 0.875rem;
+@mixin button-point-in {
   @include button-brand;
-
-  &:before,
-  &:after {
-    padding: 0 0.375rem;
-  }
-  &:before {
-    content: ">";
-  }
-  &:after {
-    content: "<";
-  }
 }
 
 /*
@@ -106,6 +83,19 @@ Clearfix
   }
   &:after {
     clear: both;
+  }
+}
+
+/*
+Link Color
+ */
+@mixin link-color($color: $link-color) {
+  color: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color, 10%);
   }
 }
 

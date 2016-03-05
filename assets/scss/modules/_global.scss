@@ -15,15 +15,10 @@ html {
 }
 
 a {
-  color: $link-color;
   text-decoration: none;
+  @include link-color;
   @include animate(color);
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: darken($link-color, 10%);
-  }
   &:focus {
     outline: thin dotted $border-color;
   }

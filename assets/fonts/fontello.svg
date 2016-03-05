@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2016 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="down-open-mini" unicode="&#xe800;" d="M405 470q22 26 48 0 26-22 0-48l-196-192q-22-22-48 0l-196 192q-26 26 0 48 24 24 50 0l170-156z" horiz-adv-x="466" />
+<glyph glyph-name="left-open" unicode="&#xe801;" d="M242 626q14 16 39 16t41-16q38-36 0-80l-186-196 186-194q38-44 0-80-16-16-40-16t-40 16l-226 236q-16 16-16 38 0 24 16 40 206 214 226 236z" horiz-adv-x="341" />
+<glyph glyph-name="right-open" unicode="&#xe802;" d="M98 626l226-236q16-16 16-40 0-22-16-38l-226-236q-16-16-40-16t-40 16q-36 36 0 80l186 194-186 196q-36 44 0 80 16 16 41 16t39-16z" horiz-adv-x="340" />
+<glyph glyph-name="down-open" unicode="&#xe803;" d="M564 422l-234-224q-18-18-40-18t-40 18l-234 224q-16 16-16 41t16 41q38 38 78 0l196-188 196 188q40 38 78 0 16-16 16-41t-16-41z" horiz-adv-x="580" />
+<glyph glyph-name="twitter" unicode="&#xe804;" d="M920 636q-36-54-94-98l0-24q0-130-60-250t-186-203-290-83q-160 0-290 84 14-2 46-2 132 0 234 80-62 2-110 38t-66 94q10-4 34-4 26 0 50 6-66 14-108 66t-42 120l0 2q36-20 84-24-84 58-84 158 0 48 26 94 154-188 390-196-6 18-6 42 0 78 55 133t135 55q82 0 136-58 60 12 120 44-20-66-82-104 56 8 108 30z" horiz-adv-x="920" />
+<glyph glyph-name="twitter-circled" unicode="&#xe805;" d="M480 830q200 0 340-140t140-340q0-198-140-339t-340-141q-198 0-339 141t-141 339q0 200 141 340t339 140z m196-392q30 22 46 48-32-12-54-14 30 18 42 52-30-16-60-22-28 28-70 28-40 0-67-28t-27-66q0-2 1-10t1-12q-120 6-194 100-14-24-14-48 0-50 44-78-26 0-44 12l0-2q0-34 21-60t55-32q-16-4-24-4-12 0-18 2 20-66 88-66-50-40-118-40l-22 0q68-42 144-42 122 0 196 83t74 187l0 12z" horiz-adv-x="960" />
+<glyph glyph-name="facebook-circled" unicode="&#xe806;" d="M480 830q200 0 340-140t140-340q0-198-140-339t-340-141-340 141-140 339q0 200 140 340t340 140z m114-330l0 78-72 0q-44 0-74-33t-30-81l0-44-76 0 0-74 76 0 0-222 86 0 0 222 90 0 0 74-90 0 0 52q0 28 18 28l72 0z" horiz-adv-x="960" />
+<glyph glyph-name="facebook" unicode="&#xe807;" d="M500 644l-142 0q-14 0-25-15t-11-37l0-102 178 0 0-148-178 0 0-442-170 0 0 442-152 0 0 148 152 0 0 86q0 94 59 159t147 65l142 0 0-156z" horiz-adv-x="500" />
+<glyph glyph-name="left-open-mini" unicode="&#xe808;" d="M252 180q26-26 0-48-26-26-48 0l-192 194q-24 24 0 50l192 194q22 26 48 0 26-22 0-48l-156-172z" horiz-adv-x="265" />
+<glyph glyph-name="right-open-mini" unicode="&#xe809;" d="M13 180l158 170-158 172q-26 26 0 48 26 26 48 0l192-194q24-26 0-50l-192-194q-22-26-48 0-26 22 0 48z" horiz-adv-x="265" />
+</font>
+</defs>
+</svg>

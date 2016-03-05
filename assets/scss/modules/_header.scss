@@ -9,6 +9,10 @@ Navigation
  */
 .main-navigation {
   background-color: $nav-bg-color;
+
+  a {
+    font-weight: 700;
+  }
 }
 .main-nav--menu {
   list-style-type: none;
@@ -29,28 +33,33 @@ Navigation
     &:nth-child(4) { order: 5; }
 
     // accent arrow
-    &.current_page_item:after,
-    &.current_page_parent:after,
-    &.current-page-ancestor:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      margin-left: -0.75rem;
-      border-left: 0.75rem solid transparent;
-      border-right: 0.75rem solid transparent;
-      border-top: 0.75rem solid $nav-bg-color;
-      font-size: 0;
-      line-height: 0;
-      z-index: 3;
+    &.current_page_item,
+    &.current_page_parent,
+    &.current-page-ancestor {
+      a {
+        color: white !important;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin-left: -0.75rem;
+        border-left: 0.75rem solid transparent;
+        border-right: 0.75rem solid transparent;
+        border-top: 0.75rem solid $nav-bg-color;
+        font-size: 0;
+        line-height: 0;
+        z-index: 3;
+      }
     }
   }
 
   li:not(.site-logo) a {
     padding: 1rem 0.75rem;
-    font-weight: 600;
     text-transform: uppercase;
     color: $text-color;
 

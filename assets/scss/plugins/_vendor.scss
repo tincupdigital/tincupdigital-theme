@@ -119,6 +119,10 @@ Ninja Forms
       margin-right: 0 !important;
     }
   }
+
+  .field-wrap {
+    margin-bottom: 1.414rem;
+  }
 }
 
 
@@ -126,7 +130,8 @@ Ninja Forms
 Unslider
  */
 .unslider {
-  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
   margin: 0;
   padding: 0;
 }
@@ -187,14 +192,14 @@ Unslider
     height: 0.75rem;
     width: 0.75rem;
     text-indent: -9999px;
-    border: 3px solid rgba(white, 0.6);
+    border: 3px solid rgba(white, 0.5);
     border-radius: 50%;
 
     &:hover {
       cursor: pointer;
     }
     &.unslider-active {
-      background-color: rgba(white, 0.6);
+      background-color: rgba(white, 0.5);
     }
 
     @include break-md {

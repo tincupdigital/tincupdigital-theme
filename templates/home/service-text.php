@@ -33,8 +33,8 @@ $b_lnk = get_sub_field( 'button_link' ); ?>
 
     /* Button */
     if ( $b_txt && $b_lnk ) { ?>
-      <a class="service-button service-section--button" href="<?php echo get_permalink( $b_lnk ); ?>">
-        <?php echo $b_txt; ?>
+      <a class="service-button service-section--button button-brand color--txt" href="<?php echo get_permalink( $b_lnk ); ?>">
+        <span><?php echo $b_txt; ?></span><i class="icon-right-open"></i>
       </a>
     <?php } ?>
   </div>
