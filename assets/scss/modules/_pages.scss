@@ -170,20 +170,27 @@ Services
 
 /* Hero */
 .services-hero {
-  height: 400px;
+  display: table;
+  width: 100%;
+  height: 100%;
 
   .services-hero--headline {
-    color: white;
+    margin: 0;
     font-size: 1.5rem;
-    margin-top: -1.375rem;
+  }
 
-    @include break-sm {
+  @include break-sm {
+    height: 400px;
+
+    .services-hero--headline {
+      margin-top: -1.375rem;
       font-size: 1.728rem;
     }
   }
 }
 .services-hero--text {
-  @include vert-align;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Nav */
