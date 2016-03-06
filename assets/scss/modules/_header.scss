@@ -2,100 +2,150 @@
  * _header.scss
  */
 
-.site-header {}
+.site-header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 0.75rem 0;
+  background-color: $logo-bg-color;
+  z-index: 9999;
+
+  @include break-sm {
+    position: relative;
+    padding: 0;
+    background-color: $nav-bg-color;
+  }
+}
 
 /*
 Navigation
  */
-.main-navigation {
-  background-color: $nav-bg-color;
-
+.main-navigation,
+.sub-navigation {
   a {
     font-weight: 700;
   }
-}
-.main-nav--menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 
-  li {
-    position: relative;
-    display: inherit; // flex-item
-    align-self: flex-end;
+  .main-nav--menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
 
-    &:nth-child(1) { order: 1; }
-    &:nth-child(2) { order: 2; }
-    &:nth-child(3) { order: 4; }
-    &:nth-child(4) { order: 5; }
+    li {
+      position: relative;
+      align-self: flex-end;
+
+      &:nth-child(1) { order: 1; }
+      &:nth-child(2) { order: 2; }
+      &:nth-child(3) { order: 4; }
+      &:nth-child(4) { order: 5; }
+    }
+
+    // non-logo links
+    li:not(.site-logo) a {
+      padding: 1rem 0.75rem;
+      text-transform: uppercase;
+      color: $text-color;
+
+      @include break-xs {
+        padding: 1rem;
+      }
+
+      @include break-sm {
+        padding: 1.25rem;
+      }
+      @include break-lg {
+        padding: 1.25rem 1.5rem;
+      }
+    }
 
     // accent arrow
-    &.current_page_item,
-    &.current_page_parent,
-    &.current-page-ancestor {
-      a {
-        color: white !important;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        margin-left: -0.75rem;
-        border-left: 0.75rem solid transparent;
-        border-right: 0.75rem solid transparent;
-        border-top: 0.75rem solid $nav-bg-color;
-        font-size: 0;
-        line-height: 0;
-        z-index: 3;
-      }
-    }
-  }
-
-  li:not(.site-logo) a {
-    padding: 1rem 0.75rem;
-    text-transform: uppercase;
-    color: $text-color;
-
-    @include break-xs {
-      padding: 1rem;
-    }
-
     @include break-sm {
-      padding: 1.25rem;
-    }
-    @include break-lg {
-      padding: 1.25rem 1.5rem;
+      li.current_page_item,
+      li.current_page_parent,
+      li.current-page-ancestor {
+        a {
+          color: white !important;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 0;
+          height: 0;
+          margin-left: -0.75rem;
+          border-left: 0.75rem solid transparent;
+          border-right: 0.75rem solid transparent;
+          border-top: 0.75rem solid $nav-bg-color;
+          font-size: 0;
+          line-height: 0;
+          z-index: 3;
+        }
+      }
     }
   }
 }
 
+.main-navigation {
+  .menu-toggle {
+    float: right;
+    @include button-accent;
+  }
+
+  // hide logo menu li items on
+  // mobile, but show the logo
+  .main-nav--menu {
+    li {
+      display: none;
+    }
+    .site-logo {
+      display: inherit;
+    }
+  }
+
+  @include break-sm {
+    .main-nav--menu {
+      justify-content: center;
+
+      li {
+        display: inherit; // flex-item
+      }
+      .sub-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+// hide sub menus in no logo menu
+// and in logo menu on large screens
+.sub-navigation {
+  position: relative;
+  background-color: $nav-bg-color;
+
+  .main-nav--menu {
+    justify-content: center;
+
+    a {
+      display: block;
+    }
+  }
+  .sub-menu {
+    display: none;
+  }
+}
 
 /* Logo */
 .site-logo {
+  display: inherit;
   position: relative;
   max-width: 100px;
-  margin: 0 0.5rem;
-  background-color: $logo-bg-color;
   z-index: 4;
   order: 3;
-
-  a {
-    padding: 0.5rem 0.75rem;
-
-    @include break-sm {
-      padding: 0.75rem 1.25rem;
-    }
-    @include break-lg {
-      padding: 0.75rem 1.5rem;
-    }
-  }
 
   // for Firefox: http://goo.gl/2Mlygd
   img {
@@ -104,44 +154,99 @@ Navigation
     height: auto;
   }
 
-  // accent arrow
-  &:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 0.75rem solid $logo-bg-color;
-    font-size: 0;
-    line-height: 0;
-
-    @include break-xs {
-      border-left-width: 75px;
-      border-right-width: 75px;
-    }
-    @include break-sm {
-      border-left-width: 100px;
-      border-right-width: 100px;
-    }
-    @include break-lg {
-      border-left-width: 125px;
-      border-right-width: 125px;
-    }
-  }
-
-  @include break-xs {
-    max-width: 150px;
-  }
   @include break-sm {
     max-width: 200px;
     margin: 0 1rem -1rem;
+    background-color: $logo-bg-color;
+
+    a {
+      padding: 0.75rem 1.25rem;
+    }
+
+    // accent arrow
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-top: 0.75rem solid $logo-bg-color;
+      font-size: 0;
+      line-height: 0;
+    }
   }
   @include break-lg {
     max-width: 250px;
     margin: 0 1.25rem -1.25rem;
+
+    a {
+      padding: 0.75rem 1.5rem;
+    }
+
+    &:after {
+      border-left-width: 125px;
+      border-right-width: 125px;
+    }
+  }
+}
+
+/*
+Mobile Menu
+ */
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 70%;
+  height: 100%;
+  transition: all 0.375s ease;
+  overflow-y: scroll;
+  background: url('../img/about-bg.png') left top repeat;
+
+  .main-nav--menu {
+    padding: 0 1.5rem 1.25rem;
+    position: relative;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul ul {
+    margin-left: 1.5rem;
+  }
+  li {
+    margin: 1.25rem 0 0;
+
+    // don't display logo
+    &.site-logo {
+      display: none;
+    }
+  }
+  a {
+    font-size: 1.143rem;
+    padding: 0.125rem;
+    @include link-color(white);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($button-color, 0.5);
+  }
+}
+.site {
+  position: relative;
+  @include animate(transform, 0.375s);
+
+  &.pushed {
+    transform: translateX(70%);
   }
 }
 
@@ -149,7 +254,7 @@ Navigation
 Home Page
  */
 .home {
-  .main-nav--top {
+  .site-header {
     display: none;
   }
 }

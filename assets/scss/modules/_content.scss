@@ -9,7 +9,25 @@ Global
   background-color: white;
 }
 .site-content {
-  padding: 5rem 0;
+  padding: 3rem 0;
+
+  @include break-sm {
+    padding: 5rem 0;
+  }
+}
+body:not(.home) {
+  .site-content {
+    // spacing for fixed mobile menu
+    &:before {
+      content: "";
+      display: block;
+      height: 62px;
+
+      @include break-sm {
+        display: none;
+      }
+    }
+  }
 }
 
 /*
