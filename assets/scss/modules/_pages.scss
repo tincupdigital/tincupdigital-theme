@@ -188,6 +188,7 @@ Services
 
 /* Nav */
 #services-nav {
+  display: none;
   position: absolute;
   width: 100%;
   bottom: 100%;
@@ -208,24 +209,11 @@ Services
     display: block;
     background-color: $heading-color;
     color: white;
-    padding: 1rem;
+    padding: 1.25rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.0;
-    // white space issues
-    max-width: 100px;
-    word-break: break-all;
-    word-wrap: break-word;
-    hyphens: auto;
-
-    @include break-xs {
-      max-width: none;
-    }
-
-    @include break-sm {
-      padding: 1.25rem;
-    }
   }
 
   .current-menu-item a {
@@ -245,6 +233,10 @@ Services
       font-size: 0;
       line-height: 0;
     }
+  }
+
+  @include break-sm {
+    display: block;
   }
 }
 

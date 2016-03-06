@@ -65,6 +65,12 @@
       "css": "facebook-circled",
       "code": 59398,
       "src": "entypo"
+    },
+    {
+      "uid": "2cfb3f2b46b34a1790aec0aa846297b6",
+      "css": "menu",
+      "code": 59402,
+      "src": "entypo"
     }
   ]
 }
