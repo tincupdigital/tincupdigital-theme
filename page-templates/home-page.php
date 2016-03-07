@@ -14,8 +14,8 @@ get_header(); ?>
     get_template_part( 'templates/home/hero', 'section' );
   } ?>
 
-  <nav id="site-navigation" class="sub-navigation" role="navigation">
-    <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'main-nav--container' ) ); ?>
+  <nav id="home-navigation" class="sub-navigation" role="navigation">
+    <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container' ) ); ?>
   </nav><!-- #site-navigation -->
 
   <div id="content" class="site-content">

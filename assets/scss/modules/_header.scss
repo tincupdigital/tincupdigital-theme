@@ -255,6 +255,20 @@ Home Page
  */
 .home {
   .site-header {
+    left: -9999px;
+    opacity: 0;
+    @include animate(opacity, 0.325s);
+
+    &.visible {
+      left: 0;
+      opacity: 1;
+    }
+
+    @include break-sm {
+      display: none !important;
+    }
+  }
+  .sub-navigation.hidden {
     display: none;
   }
 }

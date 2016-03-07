@@ -36,11 +36,11 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
   <header id="masthead" class="site-header" role="banner">
-    <nav id="site-navigation" class="main-navigation noscroll" role="navigation">
+    <nav id="site-navigation" class="main-navigation" role="navigation">
       <div class="container">
         <div class="row middle-xs">
           <div class="col-xs-6 col-sm-12">
-            <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'main-nav--container', 'items_wrap' => _s_nav_wrap() ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container', 'items_wrap' => _s_nav_wrap() ) ); ?>
           </div>
           <div class="col-xs-6 visible-xs">
             <button class="menu-toggle btn btn-primary" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>

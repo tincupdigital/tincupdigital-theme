@@ -58,6 +58,16 @@ var Roots = {
         }
         fadeTarget.css('opacity', opacity).html(opacity);
       });
+
+      /* Waypoint */
+      var waypoints = $('.sub-navigation');
+      waypoints.waypoint(function(direction) {
+        if (direction === 'down') {
+          $('.site-header').addClass('visible');
+        } else if (direction ==='up') {
+          $('.site-header').removeClass('visible');
+        }
+      });
     }
   }
 };

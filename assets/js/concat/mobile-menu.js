@@ -7,7 +7,7 @@
 
 (function($){
   // clone the main nav menu
-  var myClone = $('.main-nav--container').clone();
+  var myClone = $('#site-navigation .nav-container').clone();
 
   // prepend it to <body> tag
   $(document.body).prepend(myClone);
