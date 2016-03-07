@@ -49,6 +49,11 @@ Navigation
       text-transform: uppercase;
       color: $text-color;
 
+      &:hover,
+      &:focus {
+        color: white;
+      }
+
       @include break-xs {
         padding: 1rem;
       }

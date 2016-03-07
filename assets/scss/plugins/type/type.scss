@@ -32,6 +32,7 @@ h4, .h4 {
   margin: 1.414rem 0 0.5rem;
   font-weight: inherit;
   line-height: 1.2;
+  color: $heading-color;
 
   a {
     @include link-color($heading-color);
@@ -41,11 +42,6 @@ h4, .h4 {
   &.color--txt { color: $text-color; }
   &.color--lnk { color: $link-color; }
   &.color--hdl { color: $heading-color; }
-}
-h1, .h1,
-h2, .h2,
-h3, .h3 {
-  color: $heading-color;
 }
 
 h1, .h1 {
@@ -57,12 +53,6 @@ h2, .h2 { font-size: 1.728rem; }
 
 h3, .h3 { font-size: 1.44rem; }
 
-h4, .h4 {
-  // font-size: 1.2rem;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: $link-color;
-  text-transform: uppercase;
-}
+h4, .h4 { font-size: 1.2rem; }
 
 small, .small { font-size: 0.833em; }
