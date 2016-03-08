@@ -30,7 +30,7 @@
               $email = get_theme_mod( 'email_address' );
 
               if ( $phone || $email ) { ?>
-                <ul class="footer-contact footer-top--contact txt--bold mb1 p0">
+                <ul class="footer-contact footer-top--contact txt--600 mb1 p0">
                   <?php
                   /* Phone */
                   if ( $phone ) { ?>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <!-- Bottom -->
-    <div class="footer-bottom site-footer--bottom py2 txt--center txt--bold">
+    <div class="footer-bottom site-footer--bottom py2 txt--center txt--600">
       <?php // set up copyright line
       $copy = '&copy;' . date( 'Y' ) . '&nbsp' . get_bloginfo( 'name' ) . ', Inc.'; ?>
 

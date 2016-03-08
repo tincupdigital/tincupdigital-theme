@@ -88,16 +88,12 @@ Text
 .txt--center { text-align: center; }
 .txt--right { text-align: right; }
 
-.txt--bold { font-weight: 600; }
-.txt--light { font-weight: 300; }
+.txt--700 { font-weight: 700; }
+.txt--600 { font-weight: 600; }
+.txt--300 { font-weight: 300; }
 
 .txt--lower { text-transform: lowercase; }
 .txt--upper { text-transform: uppercase; }
-
-// font weights
-.txt--300 { font-weight: 300 }
-.txt--600 { font-weight: 600 }
-.txt--700 { font-weight: 700 }
 
 /*
 Vertical alignment

@@ -14,15 +14,17 @@
           <?php
           /* Headline */
           if ( get_sub_field( 'about_headline' ) ) { ?>
-            <h2 class="section-headline about-headline mt0 txt--600">
+            <h2 class="about-headline about-section--headline mt0 txt--600">
               <?php the_sub_field( 'about_headline' ); ?>
             </h2>
           <?php }
 
           /* Text */
-          if ( get_sub_field( 'about_text' ) ) {
-            echo wpautop( get_sub_field( 'about_text' ) );
-          } ?>
+          if ( get_sub_field( 'about_text' ) ) { ?>
+            <div class="about-text about-section--text txt--600">
+              <?php echo wpautop( get_sub_field( 'about_text' ) ); ?>
+            </div>
+          <?php } ?>
         </div>
       </div>
     </div>
