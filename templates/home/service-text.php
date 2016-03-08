@@ -17,7 +17,12 @@ $s_hdl = get_sub_field( 'service_headline' );
 $s_txt = get_sub_field( 'service_text' );
 
 $b_txt = get_sub_field( 'button_text' );
-$b_lnk = get_sub_field( 'button_link' ); ?>
+$b_lnk = get_sub_field( 'button_link' );
+
+// switch the button text if it's too long
+if ( !isset( $b_txt ) || strlen( $b_txt ) > 20 ) {
+  $b_txt = 'Learn more';
+} ?>
 
 <div class="<?php echo $grid_cols; ?>">
   <div class="service-text service-item--text">
