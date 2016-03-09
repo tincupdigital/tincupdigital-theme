@@ -43,7 +43,7 @@
             <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container', 'items_wrap' => _s_nav_wrap() ) ); ?>
           </div>
           <div class="col-xs-6 visible-xs">
-            <button class="menu-toggle btn btn-primary" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', '_s' ); ?></button>
+            <button class="menu-toggle icon-menu btn btn-primary" aria-controls="primary-menu" aria-expanded="false"></button>
           </div>
         </div>
       </div>

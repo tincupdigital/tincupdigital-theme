@@ -98,7 +98,7 @@ Navigation
 .main-navigation {
   .menu-toggle {
     float: right;
-    @include button-accent;
+    @include button-accent(white, $link-color);
   }
 
   // hide logo menu li items on
@@ -234,7 +234,7 @@ Mobile Menu
   a {
     font-size: 1.143rem;
     padding: 0.125rem;
-    @include link-color(white);
+    @include link-color(white, $link-color);
   }
 
   &:before {

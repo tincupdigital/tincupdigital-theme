@@ -90,13 +90,13 @@ Clearfix
 /*
 Link Color
  */
-@mixin link-color($color: $link-color) {
+@mixin link-color($color: $link-color, $hover: darken($link-color, 10%)) {
   color: $color;
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($color, 10%);
+    color: $hover;
   }
 }
 
