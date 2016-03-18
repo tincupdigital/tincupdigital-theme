@@ -11,11 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header mb3">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php _s_posted_on(); ?>
+		<div class="entry-meta mb1 color--hdl">
+			<span class="posted-on"><?php echo get_the_date( 'F j, Y' ); ?></span>
 		</div><!-- .entry-meta -->
+
+		<?php the_title( '<h1 class="entry-title mb0">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -38,5 +38,9 @@
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+  <div class="back-link--area mb3">
+    <a class="back-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">&laquo; Go back</a>
+  </div>
 </article><!-- #post-## -->
 

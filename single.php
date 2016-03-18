@@ -22,10 +22,6 @@ get_header(); ?>
 
   						<?php get_template_part( 'templates/content', 'single' ); ?>
 
-              <div class="back-link--area mb2">
-                <a class="back-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">&laquo; Go back</a>
-              </div>
-
   						<?php
   							// If comments are open or we have at least one comment, load up the comment template.
   							if ( comments_open() || get_comments_number() ) :

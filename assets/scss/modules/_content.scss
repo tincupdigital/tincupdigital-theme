@@ -42,23 +42,21 @@ Pages
 /*
 Blog
  */
-.blog, .search {
+.blog, .search, .archive {
   .hentry {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $border-color;
     text-align: center;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
     @include break-sm {
       text-align: left;
     }
-  }
-}
-.hentry {
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid $border-color;
-
-  &:last-of-type {
-    padding-bottom: 0;
-    border-bottom: none;
   }
 }
 .entry-content {
@@ -88,14 +86,14 @@ Blog
 /* Captions */
 .wp-caption {
   margin: 0;
-  background-color: lighten($border-color, 5%);
+  background-color: lighten($border-color, 7.5%);
 
   .wp-post-image {
     margin-bottom: 0;
   }
   .wp-caption-text {
     padding: 0.25rem 0.75rem 0.5rem;
-    color: lighten($text-color, 25%);
+    color: lighten($text-color, 32.5%);
   }
 }
 .wp-caption, .wp-post-image {
