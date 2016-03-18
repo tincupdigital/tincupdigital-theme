@@ -63,3 +63,13 @@ Alignment
   margin-left: auto;
   margin-right: auto;
 }
+
+/*
+Divider
+ */
+.site-content--divider {
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: $border-color;
+}

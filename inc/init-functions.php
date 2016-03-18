@@ -169,3 +169,11 @@ function _s_feat_img_caption( $size = 'large', $classes = '' ) {
   echo '<figcaption class="wp-caption-text">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</figcaption>';
   echo '</figure>';
 }
+
+/**
+ * Custom excerpt using wp_trim_words()
+ */
+function _s_custom_excerpt( $words ) {
+  $exc = wp_trim_words( get_the_content(), $words, '...' );
+  echo wpautop( $exc );
+}

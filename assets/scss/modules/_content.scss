@@ -31,16 +31,6 @@ body:not(.home) {
 }
 
 /*
-Divider
- */
-.site-content--divider {
-  margin: 0 auto;
-  width: 90%;
-  height: 1px;
-  background-color: $border-color;
-}
-
-/*
 Pages
  */
 .page {
@@ -50,10 +40,26 @@ Pages
 }
 
 /*
-Posts
+Blog
  */
+.blog, .search {
+  .hentry {
+    text-align: center;
+
+    @include break-sm {
+      text-align: left;
+    }
+  }
+}
 .hentry {
-  margin-bottom: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid $border-color;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 .entry-content {
   p.p1 {
@@ -67,7 +73,19 @@ Posts
     min-width: 100%;
   }
 }
+.entry-image {
+  img {
+    @include image-service;
 
+    @include break-sm {
+      max-height: 200px;
+      width: auto;
+      float: right;
+    }
+  }
+}
+
+/* Captions */
 .wp-caption {
   margin: 0;
   background-color: lighten($border-color, 5%);

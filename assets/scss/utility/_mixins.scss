@@ -88,6 +88,34 @@ Clearfix
 }
 
 /*
+Image Classes
+ */
+@mixin image-center() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin image-service() {
+  max-width: 50%;
+  @include image-center;
+  margin-bottom: 1.5rem;
+
+  @include break-sm {
+    max-width: 95%;
+    margin-bottom: 0;
+  }
+}
+@mixin image-hover {
+  -webkit-backface-visibility: hidden;
+  @include animate(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+/*
 Link Color
  */
 @mixin link-color($color: $link-color, $hover: darken($link-color, 10%)) {

@@ -14,24 +14,28 @@ get_header(); ?>
     <div class="container">
       <div class="row">
 
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
           <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
             <?php if ( have_posts() ) : ?>
 
-              <header class="page-header">
+              <header class="page-header mb3">
                 <?php
                   the_archive_title( '<h1 class="page-title">', '</h1>' );
                   the_archive_description( '<div class="taxonomy-description">', '</div>' );
                 ?>
               </header><!-- .page-header -->
 
+              <!-- Blog widgets -->
+              <div class="blog-widget-area blog-widget-area--top hidden-xs mb3">
+                <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
+              </div>
+
               <?php /* Start the Loop */ ?>
               <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php
-
                   /*
                    * Include the Post-Format-specific template for the content.
                    * If you want to override this in a child theme, then include a file
@@ -52,10 +56,6 @@ get_header(); ?>
 
             </main><!-- #main -->
           </div><!-- #primary -->
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-          <?php get_sidebar(); ?>
         </div>
 
       </div><!-- .row -->

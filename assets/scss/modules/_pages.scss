@@ -45,15 +45,8 @@ Global
   }
 }
 .service-item--image {
-  max-width: 50%;
-  margin-bottom: 1.5rem;
-
-  @include break-sm {
-    max-width: 95%;
-    margin-bottom: 0;
-  }
+  @include image-service;
 }
-.service-item--text {}
 
 /*
 Home
