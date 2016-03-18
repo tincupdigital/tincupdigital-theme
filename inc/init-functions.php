@@ -147,3 +147,25 @@ function _s_nav_wrap() {
   }
   return $wrap;
 }
+
+/**
+ * Check for feat. image caption
+ */
+function _s_has_img_caption() {
+  $cap = get_post( get_post_thumbnail_id() )->post_excerpt;
+  if ( $cap ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**
+ * Featured image w/caption
+ */
+function _s_feat_img_caption( $size = 'large', $classes = '' ) {
+  echo '<figure class="wp-caption alignone">';
+  the_post_thumbnail( $size, $classes );
+  echo '<figcaption class="wp-caption-text">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</figcaption>';
+  echo '</figure>';
+}

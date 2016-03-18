@@ -68,6 +68,22 @@ Posts
   }
 }
 
+.wp-caption {
+  margin: 0;
+  background-color: lighten($border-color, 5%);
+
+  .wp-post-image {
+    margin-bottom: 0;
+  }
+  .wp-caption-text {
+    padding: 0.25rem 0.75rem 0.5rem;
+    color: lighten($text-color, 25%);
+  }
+}
+.wp-caption, .wp-post-image {
+  margin-bottom: $margin-p;
+}
+
 /* Margins */
 .services-parent-page,
 .about-page {

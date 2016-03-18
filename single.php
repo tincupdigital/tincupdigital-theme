@@ -14,7 +14,7 @@ get_header(); ?>
     <div class="container">
       <div class="row">
 
-        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
   				<div id="primary" class="content-area">
   					<main id="main" class="site-main" role="main">
 
@@ -22,7 +22,9 @@ get_header(); ?>
 
   						<?php get_template_part( 'templates/content', 'single' ); ?>
 
-  						<?php the_post_navigation(); ?>
+              <div class="back-link--area mb2">
+                <a class="back-link" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">&laquo; Go back</a>
+              </div>
 
   						<?php
   							// If comments are open or we have at least one comment, load up the comment template.
