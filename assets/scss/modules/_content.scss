@@ -38,6 +38,9 @@ Pages
     color: $heading-color;
   }
 }
+.page-header {
+  border-bottom: 1px solid $border-color;
+}
 
 /*
 Blog
@@ -59,6 +62,12 @@ Blog
     }
   }
 }
+.search, .archive {
+  .site-content {
+    padding-bottom: 0;
+  }
+}
+
 .entry-content {
   p.p1 {
     padding: 0 !important;

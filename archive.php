@@ -25,12 +25,12 @@ get_header(); ?>
                   the_archive_title( '<h1 class="page-title">', '</h1>' );
                   the_archive_description( '<div class="taxonomy-description">', '</div>' );
                 ?>
-              </header><!-- .page-header -->
 
-              <!-- Blog widgets -->
-              <div class="blog-widget-area blog-widget-area--top hidden-xs mb3">
-                <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
-              </div>
+                <!-- Blog widgets -->
+                <div class="blog-widget-area blog-widget-area--top mt2 hidden-xs">
+                  <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
+                </div>
+              </header><!-- .page-header -->
 
               <?php /* Start the Loop */ ?>
               <?php while ( have_posts() ) : the_post(); ?>
@@ -54,6 +54,11 @@ get_header(); ?>
 
             <?php endif; ?>
 
+            <!-- Blog widgets -->
+            <div class="blog-widget-area blog-widget-area--bottom mt2 visible-xs">
+              <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
+            </div>
+
             </main><!-- #main -->
           </div><!-- #primary -->
         </div>
@@ -62,5 +67,8 @@ get_header(); ?>
     </div><!-- .container -->
 
   </div><!-- #content -->
+
+  <?php /* Divider */
+  get_template_part( 'templates/global/content', 'divider' ); ?>
 
 <?php get_footer(); ?>

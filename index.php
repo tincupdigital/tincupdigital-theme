@@ -23,10 +23,12 @@ get_header(); ?>
           <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
 
-            <!-- Blog widgets -->
-            <div class="blog-widget-area blog-widget-area--top hidden-xs mb3">
-              <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
-            </div>
+            <header class="page-header mb3">
+              <!-- Blog widgets -->
+              <div class="blog-widget-area">
+                <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
+              </div>
+            </header>
 
             <?php if ( have_posts() ) : ?>
 
@@ -58,11 +60,6 @@ get_header(); ?>
               <?php get_template_part( 'templates/content', 'none' ); ?>
 
             <?php endif; ?>
-
-            <!-- Blog widgets -->
-            <div class="blog-widget-area blog-widget-area--bottom visible-xs">
-              <?php get_template_part( 'templates/global/blog', 'widget_area' ); ?>
-            </div>
 
             </main><!-- #main -->
           </div><!-- #primary -->
