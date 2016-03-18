@@ -9,23 +9,23 @@ Global
   background-color: white;
 }
 .site-content {
-  padding: 3rem 0;
+  padding-top: calc(64px + 3rem);
+  padding-bottom: 3rem;
 
   @include break-sm {
     padding: 5rem 0;
   }
 }
-body:not(.home) {
-  .site-content {
-    // spacing for fixed mobile menu
-    &:before {
-      content: "";
-      display: block;
-      height: 62px;
 
-      @include break-sm {
-        display: none;
-      }
+// account for admin bar
+.admin-bar {
+  .site-content {
+    // 46px tall
+    padding-top: calc((64px - 46px) + 3rem);
+
+    // 32px tall
+    @include break-sm {
+      padding-top: calc((64px - 32px) + 3rem);
     }
   }
 }
