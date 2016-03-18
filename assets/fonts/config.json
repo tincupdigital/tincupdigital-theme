@@ -71,6 +71,12 @@
       "css": "menu",
       "code": 59402,
       "src": "entypo"
+    },
+    {
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "css": "search",
+      "code": 59403,
+      "src": "entypo"
     }
   ]
 }

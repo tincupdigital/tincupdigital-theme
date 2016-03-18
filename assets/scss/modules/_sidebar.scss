@@ -31,3 +31,41 @@ Widgets
     list-style-position: inside;
   }
 }
+
+/*
+Blog Widgets
+ */
+.blog-widget-area {
+  .widgettitle {
+    display: none;
+  }
+  select, input {
+    border-color: $border-color;
+    border-radius: 2px;
+    font-size: 0.882rem;
+    width: 150px;
+
+    @include break-sm {
+      width: 175px;
+    }
+  }
+  .searchform {
+    position: relative;
+  }
+  .searchform-field {
+    padding-top: 0.625rem;
+    padding-right: 1.75rem;
+  }
+  .searchform-button {
+    position: absolute;
+    top: 50%; right: 0.5rem;
+    padding: 0;
+    line-height: 1.0;
+    background-color: transparent;
+    border: none;
+    margin-top: -0.425rem;
+  }
+}
+.blog-widget-area--top {
+  border-bottom: 1px solid $border-color;
+}
