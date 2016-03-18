@@ -177,3 +177,14 @@ function _s_custom_excerpt( $words ) {
   $exc = wp_trim_words( get_the_content(), $words, '...' );
   echo wpautop( $exc );
 }
+
+/**
+ * Only show posts in search results
+ */
+function _s_search_only_posts( $query ) {
+  if ( $query->is_search ) {
+    $query->set( 'post_type', 'post' );
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts', '_s_search_only_posts' );

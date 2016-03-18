@@ -14,11 +14,9 @@
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-8 last-xs first-sm">
         <header class="entry-header">
-          <?php if ( 'post' === get_post_type() ) : ?>
-            <div class="entry-meta mb1 color--hdl">
-              <span class="posted-on"><?php echo get_the_date( 'F j, Y' ); ?></span>
-            </div><!-- .entry-meta -->
-          <?php endif; ?>
+          <div class="entry-meta mb1 color--hdl">
+            <span class="posted-on"><?php echo get_the_date( 'F j, Y' ); ?></span>
+          </div><!-- .entry-meta -->
 
           <?php the_title( sprintf( '<h2 class="entry-title h1 m0 color--hdl"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
         </header><!-- .entry-header -->
