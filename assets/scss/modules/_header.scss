@@ -16,6 +16,15 @@
     background-color: $nav-bg-color;
   }
 }
+.admin-bar {
+  .site-header {
+    position: absolute;
+
+    @include break-sm {
+      position: relative;
+    }
+  }
+}
 
 /*
 Navigation
@@ -236,7 +245,7 @@ Mobile Menu
   a {
     font-size: 1.143rem;
     padding: 0.125rem;
-    @include link-color(white, $nav-bg-color);
+    @include link-color(white, $button-color);
   }
 }
 .site {
