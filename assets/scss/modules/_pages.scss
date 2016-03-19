@@ -223,25 +223,17 @@ Services
     font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.0;
+    @include animate(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: darken($heading-color, 7.5%);
+    }
   }
 
   .current-menu-item a {
     background-color: darken($heading-color, 7.5%);
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      margin-left: -0.75rem;
-      border-left: 0.75rem solid transparent;
-      border-right: 0.75rem solid transparent;
-      border-top: 0.75rem solid darken($heading-color, 7.5%);
-      font-size: 0;
-      line-height: 0;
-    }
+    @include nav-accents(darken($heading-color, 7.5%));
   }
 
   @include break-sm {

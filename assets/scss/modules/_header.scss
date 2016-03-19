@@ -80,24 +80,10 @@ Navigation
       li.current_page_item,
       li.current_page_parent,
       li.current-page-ancestor {
+        @include nav-accents;
+
         a {
           color: white !important;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          margin-left: -0.75rem;
-          border-left: 0.75rem solid transparent;
-          border-right: 0.75rem solid transparent;
-          border-top: 0.75rem solid $nav-bg-color;
-          font-size: 0;
-          line-height: 0;
-          z-index: 3;
         }
       }
     }

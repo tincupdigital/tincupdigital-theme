@@ -153,6 +153,37 @@ Media queries
 }
 
 /*
+Nav Accents
+ */
+@mixin nav-accents($bg-color: $nav-bg-color) {
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: "fontello";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1.0;
+  }
+  &:before {
+    content: "\e80c";
+    z-index: 3;
+    color: $bg-color;
+    font-size: 3.5rem;
+    margin-top: -1.5rem;
+  }
+  &:after {
+    content: "\e800";
+    z-index: 4;
+    color: white;
+    font-size: 1.125rem;
+    margin-top: -0.325rem;
+    font-weight: bold;
+  }
+}
+
+/*
 Screen readers
  */
 @mixin sr-only {
