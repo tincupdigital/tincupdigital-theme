@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header mb3">
+	<header class="entry-header">
 		<div class="entry-meta mb1 color--hdl">
 			<span class="posted-on"><?php echo get_the_date( 'F j, Y' ); ?></span>
 		</div><!-- .entry-meta -->
@@ -21,9 +21,9 @@
 	<div class="entry-content">
 		<?php /* Image */
 		if ( has_post_thumbnail() && _s_has_img_caption() ) {
-			_s_feat_img_caption( 'large' );
+			_s_feat_img_caption( 'large', 'mt3' );
 		} elseif ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'large' );
+			the_post_thumbnail( 'large', array( 'class' => 'mt3' ) );
 		} ?>
 
 		<?php the_content(); ?>
