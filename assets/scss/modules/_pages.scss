@@ -172,22 +172,27 @@ Services
   width: 100%;
   height: 100%;
 
+  .services-hero--text {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: calc(4rem + 64px); // nav height
+    padding-bottom: 4rem;
+  }
+
   .services-hero--headline {
     margin: 0;
     line-height: 1.35;
   }
 
   @include break-sm {
-    height: 400px;
-
+    .services-hero--text {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
     .services-hero--headline {
       margin-top: -1.375rem;
     }
   }
-}
-.services-hero--text {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 /* Nav */

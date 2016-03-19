@@ -18,7 +18,7 @@ Global
 }
 .admin-bar {
   .site-content {
-    // 32px tall
+    // add nav height
     @include break-sm {
       padding-top: calc((64px - 32px) + 3rem);
     }
