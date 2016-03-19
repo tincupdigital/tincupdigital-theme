@@ -55,6 +55,14 @@ Blog Widgets
   .searchform-field {
     padding-top: 0.625rem;
     padding-right: 1.75rem;
+
+    @include break-sm {
+      @include animate(width, 0.375s);
+
+      &:focus {
+        width: 225px;
+      }
+    }
   }
   .searchform-button {
     position: absolute;

@@ -42,10 +42,9 @@ if ( $cpts ) {
 		$cpt->columns( array(
 			'cb' => '<input type="checkbox" />',
 			'title' => __( 'Title' ),
-			'feat_img' => __( 'Featured Image' ),
-			'p_cat' => __( 'Category' ),
-			'author' => __( 'Author' ),
-			'date' => __( 'Date' )
+      'author' => __( 'Author' ),
+			'date' => __( 'Date' ),
+      'feat_img' => __( 'Featured Image' )
 		) );
 		$cpt->populate_column( 'feat_img', function( $column, $post ) {
 			if ( has_post_thumbnail() ) {

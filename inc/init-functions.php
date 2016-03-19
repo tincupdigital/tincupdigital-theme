@@ -96,6 +96,29 @@ function _s_page_template_body_class( $classes ) {
 add_filter( 'body_class', '_s_page_template_body_class' );
 
 /**
+ * Featured image column for posts
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_posts_columns
+ */
+function _s_add_feat_img_column( $columns ) {
+  return array_merge( $columns,
+    array( 'feat_img' => __( 'Featured Image' ) )
+  );
+}
+add_filter( 'manage_posts_columns', '_s_add_feat_img_column' );
+
+function _s_feat_img_column( $column, $post_id ) {
+  switch( $column ) {
+    case 'feat_img':
+      if ( has_post_thumbnail( $post_id ) ) {
+        the_post_thumbnail( array( 64, 64 ) );
+      }
+      break;
+  }
+}
+add_action( 'manage_posts_custom_column', '_s_feat_img_column', 10, 2 );
+
+/**
  * Get featured image URL
  *
  * @link http://goo.gl/fzHOaB
