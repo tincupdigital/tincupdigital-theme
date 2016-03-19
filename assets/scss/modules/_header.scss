@@ -204,13 +204,15 @@ Mobile Menu
 .mobile-menu {
   position: fixed;
   top: 0; left: 0;
-  width: 70%;
+  width: 100%;
   height: 100%;
   transition: all 0.375s ease;
-  overflow-y: scroll;
-  background: url('../img/about-bg.png') left top repeat;
+  overflow: hidden;
+  background-color: $link-color;
 
   .main-nav--menu {
+    float: right;
+    width: 70%;
     padding: 0 1.5rem 1.25rem;
     position: relative;
   }
@@ -234,16 +236,7 @@ Mobile Menu
   a {
     font-size: 1.143rem;
     padding: 0.125rem;
-    @include link-color(white, $link-color);
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($button-color, 0.5);
+    @include link-color(white, $nav-bg-color);
   }
 }
 .site {
@@ -251,7 +244,7 @@ Mobile Menu
   @include animate(transform, 0.375s);
 
   &.pushed {
-    transform: translateX(70%);
+    transform: translateX(-70%);
   }
 }
 
