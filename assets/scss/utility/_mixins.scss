@@ -60,12 +60,12 @@ Buttons
   }
   span {
     font-weight: 700;
+    letter-spacing: 0.03125rem;
   }
   i {
     font-weight: 400;
     font-size: 2em;
     color: $link-color;
-    // margin-top: -1px;
   }
 }
 @mixin button-point-in {
