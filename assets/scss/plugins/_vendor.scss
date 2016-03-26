@@ -132,7 +132,7 @@ Ninja Forms
 Skippr
  */
 .sy-box.sy-loading {
-  background: url("/images/sy-loader.gif") 50% 50% no-repeat;
+  background: url("../img/sy-loader.gif") 50% 50% no-repeat;
   background-size: 32px;
   min-height: 40px;
 }
@@ -195,12 +195,6 @@ Skippr
   display: block;
   width: 100%;
   border: 0;
-}
-.sy-filler {
-  width: 100%;
-}
-.sy-filler.ready {
-  transition: padding 600ms ease;
 }
 
 /* Nav */

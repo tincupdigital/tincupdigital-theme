@@ -14,7 +14,7 @@
           <?php
           /* CTAs */
           if ( have_rows( 'cta_items' ) ): ?>
-            <ul class="cta-items slippry">
+            <ul class="cta-items slippry list--flat">
               <?php // loop through rows
               while ( have_rows( 'cta_items' ) ): the_row(); ?>
                 <li class="cta-item slippry-item">

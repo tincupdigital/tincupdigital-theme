@@ -38,9 +38,9 @@ var Roots = {
         });
         // set keyboard listener
         $(document).keydown(function(e) {
-          if (e.keyCode == 37) {
+          if (e.keyCode === 37) {
             slippry.goToPrevSlide();
-          } else if (e.keyCode == 39) {
+          } else if (e.keyCode === 39) {
             slippry.goToNextSlide();
           }
         });
