@@ -29,13 +29,20 @@ var Roots = {
       $('.content-area .entry-content').fitVids();
 
       /* Unslider */
-      if ( $('.unslider').length > 0 ) {
-        $('.unslider').unslider({
-          autoplay: true,
-          delay: 7000,
-          arrows: false,
-          animation: "horizontal",
-          animateHeight: true
+      if ( $('.slippry').length > 0 ) {
+        var slippry = $('.slippry').slippry({
+          controls: false,
+          transition: 'fade',
+          speed: 600,
+          pause: 7000
+        });
+        // set keyboard listener
+        $(document).keydown(function(e) {
+          if (e.keyCode == 37) {
+            slippry.goToPrevSlide();
+          } else if (e.keyCode == 39) {
+            slippry.goToNextSlide();
+          }
         });
       }
     }
@@ -43,11 +50,16 @@ var Roots = {
   /* Home */
   home: {
     init: function() {
-      /* Logo Fade */
-      // hat-tip: http://goo.gl/D9GCJ3
+      /**
+       * Logo fade
+       * @link http://goo.gl/D9GCJ3
+       */
+      // set up variables
       var fadeStart = 50,
           fadeUntil = 450,
           fadeTarget = $('.hero-logo img');
+
+      // bind to scroll function
       $(window).bind('scroll', function() {
         var offset = $(document).scrollTop(),
             opacity = 0;

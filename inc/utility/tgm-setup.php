@@ -135,8 +135,3 @@ function _s_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 add_action( 'tgmpa_register', '_s_register_required_plugins' );
-
-/**
- * Reset install notice if previously dismissed.
- */
-// TGM_Plugin_Activation::get_instance()->update_dismiss();

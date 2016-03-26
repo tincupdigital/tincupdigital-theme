@@ -129,65 +129,96 @@ Ninja Forms
 }
 
 /*
-Unslider
+Skippr
  */
-.unslider {
-  overflow-y: hidden;
-  overflow-x: auto;
-  margin: 0;
-  padding: 0;
+.sy-box.sy-loading {
+  background: url("/images/sy-loader.gif") 50% 50% no-repeat;
+  background-size: 32px;
+  min-height: 40px;
 }
-.unslider-wrap {
+.sy-box.sy-loading .sy-slides-wrap,
+.sy-box.sy-loading .sy-pager {
+  visibility: hidden;
+}
+.sy-slides-wrap {
   position: relative;
-}
-.unslider-wrap.unslider-carousel > li {
-  float: left;
-}
-.unslider-vertical > ul {
   height: 100%;
-}
-.unslider-vertical li {
-  float: none;
   width: 100%;
 }
-.unslider-fade {
-  position: relative;
+.sy-slides-wrap:hover .sy-controls {
+  display: block;
 }
-.unslider-fade .unslider-wrap li {
+.sy-slides-crop {
+  height: 100%;
+  width: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 8;
+  overflow: hidden;
 }
-.unslider-fade .unslider-wrap li.unslider-active {
-  z-index: 10;
-}
-.unslider li,
-.unslider ol,
-.unslider ul {
+.sy-list {
+  width: 100%;
+  height: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
-  border: none;
-}
-.unslider-arrow {
   position: absolute;
-  left: 20px;
-  z-index: 2;
-  cursor: pointer;
 }
-.unslider-arrow.next {
-  left: auto;
-  right: 20px;
+.sy-list.horizontal {
+  transition: left ease;
+}
+.sy-list.vertical {
+  transition: top ease;
+}
+.sy-slide {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.sy-slide.sy-active {
+  z-index: 3;
+}
+.sy-slide > img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border: 0;
+}
+.sy-slide > a {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+.sy-slide > a > img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border: 0;
+}
+.sy-filler {
+  width: 100%;
+}
+.sy-filler.ready {
+  transition: padding 600ms ease;
 }
 
 /* Nav */
-.unslider-nav {
+.sy-pager {
   position: absolute;
   top: 1.25rem; right: 1.25rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 
   li {
+    display: inline;
+
+    &.sy-active a {
+      background-color: rgba(white, 0.5);
+    }
+  }
+  a {
     display: inline-block;
     padding: 2px;
     margin: 0 0.25rem;
@@ -196,11 +227,10 @@ Unslider
     text-indent: -9999px;
     border: 3px solid rgba(white, 0.5);
     border-radius: 50%;
+    @include animate(background-color, 0.25s);
 
-    &:hover {
-      cursor: pointer;
-    }
-    &.unslider-active {
+    &:hover,
+    &:focus {
       background-color: rgba(white, 0.5);
     }
 

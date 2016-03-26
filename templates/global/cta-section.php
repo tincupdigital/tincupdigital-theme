@@ -14,34 +14,35 @@
           <?php
           /* CTAs */
           if ( have_rows( 'cta_items' ) ): ?>
-            <div class="cta-items unslider">
-              <ul class="cta-items--list unslider-list">
-                <?php // loop through rows
-                while ( have_rows( 'cta_items' ) ): the_row(); ?>
-                  <li class="cta-item unslider-item">
-                    <?php
-                    /* Headline */
-                    if ( get_sub_field( 'cta_headline' ) ) { ?>
-                      <h2 class="cta-headline cta-section--headline mt0 txt--center"><?php the_sub_field( 'cta_headline' ); ?></h2>
-                    <?php }
+            <ul class="cta-items slippry">
+              <?php // loop through rows
+              while ( have_rows( 'cta_items' ) ): the_row(); ?>
+                <li class="cta-item slippry-item">
+                  <?php
+                  /* Headline */
+                  if ( get_sub_field( 'cta_headline' ) ) { ?>
+                    <h2 class="cta-headline cta-section--headline mt0 txt--center"><?php the_sub_field( 'cta_headline' ); ?></h2>
+                  <?php }
 
-                    /* Text */
-                    if ( get_sub_field( 'cta_text' ) ) {
-                      echo wpautop( get_sub_field( 'cta_text' ) );
-                    }
+                  /* Text */
+                  if ( get_sub_field( 'cta_text' ) ) {
+                    echo wpautop( get_sub_field( 'cta_text' ) );
+                  }
 
-                    /* Button */
-                    if ( get_sub_field( 'button_text' ) && get_sub_field( 'button_link' ) ) { ?>
-                      <a class="cta-button button-brand" href="<?php echo get_permalink( get_sub_field( 'button_link' ) ); ?>">
-                        <i class="icon-right-open"></i>
-                        <span><?php the_sub_field( 'button_text' ); ?></span>
-                        <i class="icon-left-open"></i>
-                      </a>
-                    <?php } ?>
-                  </li>
-                <?php endwhile; ?>
-              </ul>
-            </div><!-- .cta-items -->
+                  /* Button */
+                  if ( get_sub_field( 'button_text' ) && get_sub_field( 'button_link' ) ) { ?>
+                    <a class="cta-button button-brand" href="<?php echo get_permalink( get_sub_field( 'button_link' ) ); ?>">
+                      <i class="icon-right-open"></i>
+                      <span><?php the_sub_field( 'button_text' ); ?></span>
+                      <i class="icon-left-open"></i>
+                    </a>
+                  <?php } ?>
+                </li>
+              <?php endwhile; ?>
+            </ul><!-- .cta-items -->
+
+            <!-- Nav -->
+            <div class="owl-carousel--nav carousel-nav"></div>
           <?php endif; ?>
         </div>
       </div>
