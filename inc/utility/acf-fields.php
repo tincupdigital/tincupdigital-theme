@@ -572,13 +572,37 @@ acf_add_local_field_group(array (
   'title' => 'Post Fields',
   'fields' => array (
     array (
+      'key' => 'field_570053ad15694',
+      'label' => 'Add CTA?',
+      'name' => 'add_cta_item',
+      'type' => 'true_false',
+      'instructions' => 'Check this box if you\'d like to add a CTA item.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 0,
+    ),
+    array (
       'key' => 'field_57001e0cd14dc',
       'label' => 'CTA Item',
       'name' => 'cta_item',
       'type' => 'post_object',
       'instructions' => 'Select a CTA item to display at the bottom of the post.',
       'required' => 0,
-      'conditional_logic' => 0,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_570053ad15694',
+            'operator' => '==',
+            'value' => '1',
+          ),
+        ),
+      ),
       'wrapper' => array (
         'width' => '',
         'class' => '',
@@ -593,6 +617,38 @@ acf_add_local_field_group(array (
       'multiple' => 0,
       'return_format' => 'object',
       'ui' => 1,
+    ),
+    array (
+      'key' => 'field_570052c8bba7b',
+      'label' => 'CTA Item Background',
+      'name' => 'cta_item_background',
+      'type' => 'image',
+      'instructions' => 'Upload or select an image to use as a background for the CTA.',
+      'required' => 0,
+      'conditional_logic' => array (
+        array (
+          array (
+            'field' => 'field_570053ad15694',
+            'operator' => '==',
+            'value' => '1',
+          ),
+        ),
+      ),
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'return_format' => 'array',
+      'preview_size' => 'thumbnail',
+      'library' => 'all',
+      'min_width' => '',
+      'min_height' => '',
+      'min_size' => '',
+      'max_width' => '',
+      'max_height' => '',
+      'max_size' => '',
+      'mime_types' => '',
     ),
   ),
   'location' => array (

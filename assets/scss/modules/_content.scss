@@ -72,6 +72,9 @@ Blog
   }
 }
 
+/*
+Posts
+ */
 .entry-content {
   p.p1 {
     padding: 0 !important;
@@ -96,7 +99,9 @@ Blog
   }
 }
 
-/* Captions */
+/*
+Posts: Captions
+ */
 .wp-caption {
   margin: 0;
   background-color: lighten($border-color, 7.5%);
@@ -113,23 +118,15 @@ Blog
   margin-bottom: $margin-p;
 }
 
-/* Margins */
-.services-parent-page,
-.about-page {
-  .entry-content h2 {
-    margin-top: 0;
-  }
-}
-
 /*
-Comments
+Posts: Comments
  */
 p.form-submit {
   margin: 0;
 }
 
 /*
-Navigation
+Posts: Navigation
  */
 .comment-navigation,
 .posts-navigation,
@@ -147,6 +144,34 @@ Navigation
 .nav-next {
   float: right;
   text-align: right;
+}
+
+/*
+Posts: CTA
+ */
+.cta-item {
+  min-height: 175px;
+  margin: 2.5rem 0 1.5rem;
+  padding: 2rem 3rem;
+  border-radius: 2px;
+  overflow: hidden;
+
+  p {
+    font-weight: 600;
+  }
+
+  &.bg-cover {
+    @include bg-overlay;
+
+    p {
+      color: white;
+    }
+  }
+  &.bg-repeat {
+    p {
+      color: $text-color--dark;
+    }
+  }
 }
 
 /*
