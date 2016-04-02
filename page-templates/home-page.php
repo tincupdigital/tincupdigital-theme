@@ -10,7 +10,7 @@
 get_header(); ?>
 
   <?php /* Home Hero */
-  if ( is_front_page() && get_field( 'hero_image' ) ) {
+  if ( is_front_page() && has_post_thumbnail() ) {
     get_template_part( 'templates/home/hero', 'section' );
   } ?>
 

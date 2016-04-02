@@ -6,8 +6,7 @@
  */
 
 // set up hero image
-$h_img = get_field( 'hero_image' );
-$h_img = $h_img['sizes']['hero']; ?>
+$h_img = _s_get_feat_img_url( 'hero' ); ?>
 
 <section class="section home-section home-section--hero hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
 

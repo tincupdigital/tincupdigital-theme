@@ -20,6 +20,8 @@ get_header(); ?>
             <?php /* Hero */
             if ( has_post_thumbnail() ) {
               get_template_part( 'templates/global/hero', 'section' );
+            } else {
+              get_template_part( 'templates/pages/services', 'hero_fallback' );
             } ?>
 
             <div class="service-section--inner pos--rel z5">

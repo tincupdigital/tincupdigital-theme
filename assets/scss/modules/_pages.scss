@@ -24,34 +24,29 @@ Global: Hero
   }
 
   &.has-text {
-    height: 275px;
     min-height: 275px;
 
     @include break-sm {
-      height: 325px;
       min-height: 325px;
     }
     @include break-md {
-      height: 350px;
       min-height: 350px;
     }
     @include break-lg {
-      height: 400px;
       min-height: 400px;
     }
   }
   &.no-text {
-    height: 225px;
     min-height: 225px;
 
     @include break-sm {
-      height: 275px;
       min-height: 275px;
     }
   }
 }
 
-.hero-section--text {
+.hero-section--text,
+.hero-section--logo {
   display: table-cell;
   vertical-align: middle;
   padding: 4.5rem 0;
@@ -116,19 +111,17 @@ Home: Global
 /* Hero */
 .home-section--hero {
   padding: 0;
-  height: 350px;
+  min-height: 350px;
   background-attachment: fixed;
 
   @include break-sm {
-    height: 400px;
+    min-height: 400px;
   }
   @include break-md {
-    height: 500px;
+    min-height: 500px;
   }
 }
 .hero-section--logo {
-  @include vert-align;
-
   img {
     display: block;
     margin: 0 auto;
