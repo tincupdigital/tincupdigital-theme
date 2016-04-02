@@ -43,7 +43,7 @@ get_header(); ?>
 
                   /* CTA */
                   if ( get_row_layout() == 'cta_section' ) {
-                    get_template_part( 'templates/global/cta', 'section' );
+                    get_template_part( 'templates/home/cta', 'section' );
                   }
 
                 endwhile;

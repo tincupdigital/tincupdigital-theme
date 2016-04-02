@@ -31,18 +31,7 @@ get_header(); ?>
               } ?>
 
               <?php /* CTA Section */
-              // cta field is attached to home page
-              // so let's not do the work twice.
-              if ( have_rows( 'home_sections', _s_get_home_ID() ) ):
-                while ( have_rows( 'home_sections', _s_get_home_ID() ) ): the_row();
-
-                  /* CTA */
-                  if ( get_row_layout() == 'cta_section' ) {
-                    get_template_part( 'templates/global/cta', 'section' );
-                  }
-
-                endwhile;
-              endif; ?>
+              get_template_part( 'templates/pages/cta', 'loader' ); ?>
 
               <?php
                 wp_link_pages( array(

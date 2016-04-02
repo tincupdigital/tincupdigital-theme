@@ -24,12 +24,30 @@ $case_study_labels = array(
 );
 $case_study_options = array(
   'public' => true,
-  'has_archive' => false,
+  'has_archive' => true,
   'rewrite' => false,
   'supports' => array( 'editor', 'revisions', 'thumbnail', 'title' ),
   'menu_icon' => 'dashicons-portfolio'
 );
 $case_study = new CPT( $case_study_labels, $case_study_options );
+
+/**
+ * CPT: CTAs
+ */
+$cta_labels = array(
+  'post_type_name' => 'cta',
+  'singular' => 'CTA',
+  'plural' => 'CTAs',
+  'slug' => 'ctas'
+);
+$cta_options = array(
+  'public' => true,
+  'has_archive' => false,
+  'rewrite' => false,
+  'supports' => array( 'revisions', 'title' ),
+  'menu_icon' => 'dashicons-portfolio'
+);
+$cta = new CPT( $cta_labels, $cta_options );
 
 /**
  * Featured image column

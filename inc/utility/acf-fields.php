@@ -70,6 +70,93 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
+  'key' => 'group_570018af95f95',
+  'title' => 'CTA Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_570018b36f7a3',
+      'label' => 'CTA Text',
+      'name' => 'cta_text',
+      'type' => 'wysiwyg',
+      'instructions' => 'Enter some text for the CTA.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'tabs' => 'all',
+      'toolbar' => 'basic',
+      'media_upload' => 0,
+    ),
+    array (
+      'key' => 'field_570032535556b',
+      'label' => 'CTA Button Link',
+      'name' => 'cta_button_link',
+      'type' => 'post_object',
+      'instructions' => 'Select a page or post for the CTA to link to.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'page',
+        1 => 'post',
+      ),
+      'taxonomy' => array (
+      ),
+      'allow_null' => 0,
+      'multiple' => 0,
+      'return_format' => 'object',
+      'ui' => 1,
+    ),
+    array (
+      'key' => 'field_5700196382857',
+      'label' => 'CTA Button Text',
+      'name' => 'cta_button_text',
+      'type' => 'text',
+      'instructions' => 'Enter some text to display on the CTA button.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'cta',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
   'key' => 'group_56a41987ac5db',
   'title' => 'Home Page Fields',
   'fields' => array (
@@ -372,11 +459,11 @@ acf_add_local_field_group(array (
           'display' => 'block',
           'sub_fields' => array (
             array (
-              'key' => 'field_56c75e67a0b40',
+              'key' => 'field_57001ce4f2578',
               'label' => 'CTA Items',
               'name' => 'cta_items',
-              'type' => 'repeater',
-              'instructions' => 'Add CTAs by clicking "Add CTA" below.',
+              'type' => 'relationship',
+              'instructions' => 'Select the CTA items you\'d like to display. If more than one CTA item is selected, they\'ll be displayed as a slider.',
               'required' => 1,
               'conditional_logic' => 0,
               'wrapper' => array (
@@ -384,97 +471,18 @@ acf_add_local_field_group(array (
                 'class' => '',
                 'id' => '',
               ),
-              'collapsed' => '',
+              'post_type' => array (
+                0 => 'cta',
+              ),
+              'taxonomy' => array (
+              ),
+              'filters' => array (
+                0 => 'search',
+              ),
+              'elements' => '',
               'min' => 1,
               'max' => '',
-              'layout' => 'row',
-              'button_label' => 'Add CTA',
-              'sub_fields' => array (
-                array (
-                  'key' => 'field_56c75ec4a0b41',
-                  'label' => 'CTA Headline',
-                  'name' => 'cta_headline',
-                  'type' => 'text',
-                  'instructions' => 'Enter a headline for the CTA.',
-                  'required' => 1,
-                  'conditional_logic' => 0,
-                  'wrapper' => array (
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                  ),
-                  'default_value' => '',
-                  'placeholder' => '',
-                  'prepend' => '',
-                  'append' => '',
-                  'maxlength' => '',
-                  'readonly' => 0,
-                  'disabled' => 0,
-                ),
-                array (
-                  'key' => 'field_56c75f0ba0b42',
-                  'label' => 'CTA Text',
-                  'name' => 'cta_text',
-                  'type' => 'wysiwyg',
-                  'instructions' => 'Enter the text of the CTA.',
-                  'required' => 1,
-                  'conditional_logic' => 0,
-                  'wrapper' => array (
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                  ),
-                  'default_value' => '',
-                  'tabs' => 'all',
-                  'toolbar' => 'basic',
-                  'media_upload' => 0,
-                ),
-                array (
-                  'key' => 'field_56c75f5ba0b43',
-                  'label' => 'Button Text',
-                  'name' => 'button_text',
-                  'type' => 'text',
-                  'instructions' => 'Enter text to display on the button.',
-                  'required' => 0,
-                  'conditional_logic' => 0,
-                  'wrapper' => array (
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                  ),
-                  'default_value' => '',
-                  'placeholder' => '',
-                  'prepend' => '',
-                  'append' => '',
-                  'maxlength' => '',
-                  'readonly' => 0,
-                  'disabled' => 0,
-                ),
-                array (
-                  'key' => 'field_56c7645ba0b44',
-                  'label' => 'Button Link',
-                  'name' => 'button_link',
-                  'type' => 'post_object',
-                  'instructions' => 'Select a page or post for the button to link to.',
-                  'required' => 0,
-                  'conditional_logic' => 0,
-                  'wrapper' => array (
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                  ),
-                  'post_type' => array (
-                    0 => 'page',
-                    1 => 'post',
-                  ),
-                  'taxonomy' => array (
-                  ),
-                  'allow_null' => 0,
-                  'multiple' => 0,
-                  'return_format' => 'id',
-                  'ui' => 1,
-                ),
-              ),
+              'return_format' => 'object',
             ),
           ),
           'min' => '',
@@ -500,6 +508,108 @@ acf_add_local_field_group(array (
   'hide_on_screen' => array (
     0 => 'the_content',
   ),
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_57001d71dece2',
+  'title' => 'Page Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_57001d857b38e',
+      'label' => 'CTA Items',
+      'name' => 'cta_items',
+      'type' => 'relationship',
+      'instructions' => 'Select the CTA items you\'d like to display. If more than one CTA item is selected, they\'ll be displayed as a slider.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'cta',
+      ),
+      'taxonomy' => array (
+      ),
+      'filters' => array (
+        0 => 'search',
+      ),
+      'elements' => '',
+      'min' => '',
+      'max' => '',
+      'return_format' => 'object',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'page',
+      ),
+      array (
+        'param' => 'page_template',
+        'operator' => '!=',
+        'value' => 'page-templates/home-page.php',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_57001e010a2c4',
+  'title' => 'Post Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_57001e0cd14dc',
+      'label' => 'CTA Item',
+      'name' => 'cta_item',
+      'type' => 'post_object',
+      'instructions' => 'Select a CTA item to display at the bottom of the post.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'cta',
+      ),
+      'taxonomy' => array (
+      ),
+      'allow_null' => 0,
+      'multiple' => 0,
+      'return_format' => 'object',
+      'ui' => 1,
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'post',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
   'active' => 1,
   'description' => '',
 ));

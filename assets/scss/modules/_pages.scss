@@ -172,6 +172,7 @@ Home: CTA
 .cta-section {
   padding: 4.5rem 0;
   background: url('../img/cta-bg.png') left top repeat;
+
   p {
     font-weight: 600;
     color: $text-color--dark;
@@ -183,7 +184,6 @@ Home: CTA
   }
 }
 .cta-button {
-  //@include button-point-inward;
   color: white;
 }
 
