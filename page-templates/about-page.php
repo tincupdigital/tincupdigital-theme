@@ -9,6 +9,11 @@
 
 get_header(); ?>
 
+  <?php /* Hero */
+  if ( has_post_thumbnail() ) {
+    get_template_part( 'templates/global/hero', 'section' );
+  } ?>
+
   <div id="content" class="site-content">
 
     <div id="primary" class="content-area">

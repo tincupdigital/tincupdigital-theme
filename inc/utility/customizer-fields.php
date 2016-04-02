@@ -103,6 +103,20 @@ function _s_customizer_add_fields( $wp_customize ) {
     'section' => 'social_media',
     'type' => 'url'
   ) );
+  $wp_customize->add_setting( 'instagram_url' );
+  $wp_customize->add_control( 'instagram_url', array(
+    'label' => __( 'Instagram URL', '_s' ),
+    'description' => __( 'Add a link to your Instagram page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
+  $wp_customize->add_setting( 'linkedin_url' );
+  $wp_customize->add_control( 'linkedin_url', array(
+    'label' => __( 'LinkedIn URL', '_s' ),
+    'description' => __( 'Add a link to your LinkedIn page.', '_s' ),
+    'section' => 'social_media',
+    'type' => 'url'
+  ) );
   $wp_customize->add_setting( 'twitter_url' );
   $wp_customize->add_control( 'twitter_url', array(
     'label' => __( 'Twitter URL', '_s' ),

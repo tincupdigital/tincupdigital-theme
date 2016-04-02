@@ -19,8 +19,8 @@ get_header(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-content">
               <?php /* Hero */
-              if ( get_field( 'hero_image' ) && get_field( 'hero_text' ) ) {
-                get_template_part( 'templates/pages/hero', 'section' );
+              if ( has_post_thumbnail() ) {
+                get_template_part( 'templates/global/hero', 'section' );
               } ?>
 
               <?php /* Services */

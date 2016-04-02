@@ -19,6 +19,11 @@ function _s_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+  // Page with featured image
+  if ( is_page() && has_post_thumbnail() ) {
+    $classes[] = 'has-hero';
+  }
+
 	return $classes;
 }
 add_filter( 'body_class', '_s_body_classes' );

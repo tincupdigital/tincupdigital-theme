@@ -37,9 +37,9 @@ if ( !isset( $b_txt ) || strlen( $b_txt ) > 20 ) {
     }
 
     /* Button */
-    if ( $b_txt && $b_lnk ) { ?>
+    if ( $b_lnk ) { ?>
       <a class="service-button service-section--button button-brand color--txt" href="<?php echo get_permalink( $b_lnk ); ?>">
-        <span><?php echo $b_txt; ?></span><i class="icon-right-open"></i>
+        <span>Learn more</span><i class="icon-right-open"></i>
       </a>
     <?php } ?>
   </div>

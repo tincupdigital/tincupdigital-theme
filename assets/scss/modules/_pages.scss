@@ -3,11 +3,12 @@
  */
 
 /*
-Global
+Global: Hero
  */
-/* Hero */
 .hero-section {
-  min-height: 300px;
+  display: table;
+  width: 100%;
+  margin-top: 64px;
 
   &:before {
     content: "";
@@ -17,9 +18,53 @@ Global
     height: 100%;
     background-color: rgba(black, 0.5);
   }
+
+  @include break-sm {
+    margin-top: 0;
+  }
+
+  &.has-text {
+    height: 275px;
+    min-height: 275px;
+
+    @include break-sm {
+      height: 325px;
+      min-height: 325px;
+    }
+    @include break-md {
+      height: 350px;
+      min-height: 350px;
+    }
+    @include break-lg {
+      height: 400px;
+      min-height: 400px;
+    }
+  }
+  &.no-text {
+    height: 225px;
+    min-height: 225px;
+
+    @include break-sm {
+      height: 275px;
+      min-height: 275px;
+    }
+  }
 }
 
-/* Services */
+.hero-section--text {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4.5rem 0;
+}
+.hero-section--headline {
+  margin: 0;
+  line-height: 1.35;
+  text-shadow: 1px 1px 0.25rem rgba(black, 0.5);
+}
+
+/*
+Global: Services
+ */
 .service-section--item {
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -49,7 +94,7 @@ Global
 }
 
 /*
-Home
+Home: Global
  */
 .home {
   .site-content {
@@ -64,9 +109,6 @@ Home
   }
 }
 
-/*
-Home Sections
- */
 .home-section {
   padding: 3rem 0;
 }
@@ -98,7 +140,9 @@ Home Sections
   }
 }
 
-/* About */
+/*
+Home: About
+ */
 .home-section--about {
   position: relative;
 
@@ -129,7 +173,9 @@ Home Sections
   }
 }
 
-/* CTA */
+/*
+Home: CTA
+ */
 .cta-section {
   padding: 4.5rem 0;
   background: url('../img/cta-bg.png') left top repeat;
@@ -154,44 +200,21 @@ Services
 .services-parent-page,
 .services-page {
   .site-content {
-    padding: 0;
+    padding: 0 !important;
   }
   .hentry {
     margin-bottom: 0;
+  }
+
+  @include break-sm {
+    .hero-headline {
+      margin-top: -1.375rem;
+    }
   }
 }
 .services-page {
   .service-section--inner {
     padding: 3rem 0;
-  }
-}
-
-/* Hero */
-.services-hero {
-  display: table;
-  width: 100%;
-  height: 100%;
-
-  .services-hero--text {
-    display: table-cell;
-    vertical-align: middle;
-    padding-top: calc(4rem + 64px); // nav height
-    padding-bottom: 4rem;
-  }
-
-  .services-hero--headline {
-    margin: 0;
-    line-height: 1.35;
-  }
-
-  @include break-sm {
-    .services-hero--text {
-      padding-top: 10rem;
-      padding-bottom: 10rem;
-    }
-    .services-hero--headline {
-      margin-top: -1.375rem;
-    }
   }
 }
 
