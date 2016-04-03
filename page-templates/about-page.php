@@ -25,7 +25,7 @@ get_header(); ?>
                   <div class="entry-content">
                     <?php /* Title */
                     if ( get_field( 'page_title' ) ) { ?>
-                      <h1 class="entry-title h2"><?php the_field( 'page_title' ); ?></h1>
+                      <h1 class="entry-title"><?php the_field( 'page_title' ); ?></h1>
                     <?php }
 
                     /* Image */

@@ -64,7 +64,7 @@ Footer Bottom
   a {
     font-size: 2rem;
     margin: 0 1px;
-    @include link-color(rgba(lighten($footer-bottom-text, 12.5%), 0.8), $heading-color);
+    @include link-color(rgba(lighten($footer-bottom-text, 12.5%), 0.8), $link-color);
   }
 }
 

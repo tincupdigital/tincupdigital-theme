@@ -20,7 +20,8 @@ function _s_body_classes( $classes ) {
 	}
 
   // Page with featured image
-  if ( is_page() && has_post_thumbnail() ) {
+  if ( ( is_page() && has_post_thumbnail() ) &&
+  !is_page_template( 'page-templates/about-page.php' ) ) {
     $classes[] = 'has-hero';
   }
 

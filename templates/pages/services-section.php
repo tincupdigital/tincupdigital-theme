@@ -10,7 +10,7 @@
 $count = 1; ?>
 
 <section class="service-section service-section--services">
-  <div class="section-inner service-section--inner">
+  <div class="section-inner service-section--inner pos--rel">
     <?php /* Nav */
     wp_nav_menu( array( 'theme_location' => 'services-nav', 'menu_id' => 'services-nav' ) ); ?>
 
