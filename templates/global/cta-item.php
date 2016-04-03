@@ -22,7 +22,7 @@ if ( $post_object ) {
   $post = $post_object;
   setup_postdata( $post ); ?>
 
-  <div class="cta-item <?php echo $bg_class; ?> pos--rel z1 txt--center" style="background-image: url('<?php echo $cta_bg; ?>');">
+  <div class="cta-item--single <?php echo $bg_class; ?> pos--rel z1 txt--center" style="background-image: url('<?php echo $cta_bg; ?>');">
     <div class="cta-inner cta-item--inner pos--rel z2">
       <!-- Headline -->
       <h2 class="cta-headline cta-item--headline mt0 color--wht"><?php the_title(); ?></h2>

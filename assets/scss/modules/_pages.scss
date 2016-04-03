@@ -3,16 +3,6 @@
  */
 
 /*
-Global
- */
-.services-parent-page,
-.about-page {
-  .entry-content h2 {
-    margin-top: 0;
-  }
-}
-
-/*
 Global: Hero
  */
 .hero-section {
@@ -172,10 +162,6 @@ Home: CTA
   p {
     font-weight: 600;
     color: $text-color--dark;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
   }
 }
 .cta-section--inner {
@@ -197,6 +183,9 @@ Services
 .services-page {
   .site-content {
     padding: 0 !important;
+  }
+  .entry-content h2:first-of-type {
+    margin-top: 0;
   }
   .hentry {
     margin-bottom: 0;

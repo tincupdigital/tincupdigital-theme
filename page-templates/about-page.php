@@ -9,11 +9,6 @@
 
 get_header(); ?>
 
-  <?php /* Hero */
-  if ( has_post_thumbnail() ) {
-    get_template_part( 'templates/global/hero', 'section' );
-  } ?>
-
   <div id="content" class="site-content">
 
     <div id="primary" class="content-area">
@@ -24,10 +19,27 @@ get_header(); ?>
           <div class="container">
             <div class="row">
 
-              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+              <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                   <div class="entry-content">
+                    <?php /* Title */
+                    if ( get_field( 'page_title' ) ) { ?>
+                      <h1 class="entry-title h2"><?php the_field( 'page_title' ); ?></h1>
+                    <?php }
+
+                    /* Image */
+                    if ( has_post_thumbnail() ) {
+                      the_post_thumbnail( 'large', array( 'class' => 'mt3' ) );
+                    }
+
+                    /* Intro */
+                    if ( get_field( 'page_intro' ) ) { ?>
+                      <div class="page-intro entry-content--intro">
+                        <?php echo wpautop( get_field( 'page_intro' ) ); ?>
+                      </div>
+                    <?php } ?>
+
                     <?php the_content(); ?>
                     <?php
                       wp_link_pages( array(
