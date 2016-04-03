@@ -32,6 +32,41 @@ Footer Bottom
 .footer-bottom {
   background: linear-gradient($footer-bg-color, darken($footer-bg-color, 4%));
 }
+.footer-bottom--inner {
+  color: $footer-bottom-text;
+
+  @include break-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+      display: inherit;
+      margin-bottom: 0;
+      padding: 0 0.25rem;
+    }
+
+    .social-link {
+      padding: 0 0.125rem;
+    }
+
+    .footer-bottom--1st { order: 1; }
+    .footer-bottom--2nd { order: 3; }
+    .footer-bottom--3rd { order: 2; }
+  }
+}
+.footer-bottom--1st,
+.footer-bottom--2nd {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+
+  a {
+    font-size: 2rem;
+    margin: 0 1px;
+    @include link-color(rgba(lighten($footer-bottom-text, 12.5%), 0.8), $heading-color);
+  }
+}
 
 /*
 Sticky Footer

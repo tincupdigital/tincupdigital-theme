@@ -34,7 +34,8 @@ $brand-colors: (
   'blue': #1B2139,
   'yellow': #FFB218,
   'green': #3D885F,
-  'sand': #DCDCD3
+  'sand': #DCDCD3,
+  'sand-dark': #60605B
 );
 
 /* Definitions */
@@ -50,6 +51,7 @@ $logo-bg-color: $button-color;
 $nav-bg-color: $link-color;
 
 $heading-color: brand-color('green');
+$footer-bottom-text: brand-color('sand-dark');
 
 // social colors
 $facebook: #415696;

@@ -49,10 +49,45 @@
     </div>
     <!-- Bottom -->
     <div class="footer-bottom site-footer--bottom py2 txt--center txt--600">
-      <?php // set up copyright line
-      $copy = '&copy;' . date( 'Y' ) . '&nbsp' . get_bloginfo( 'name' ) . ', Inc.'; ?>
+      <div class="footer-bottom--inner">
+        <?php /* Social */
+        // set social links to variables
+        $fb_url = get_theme_mod( 'facebook_url' );
+        $li_url = get_theme_mod( 'linkedin_url' );
+        $in_url = get_theme_mod( 'instagram_url' );
+        $tw_url = get_theme_mod( 'twitter_url' );
 
-      <span><?php echo $copy; ?></span>
+        if ( $fb_url || $tw_url ) { ?>
+          <div class="footer-bottom--1st">
+            <?php
+            /* Facebook */
+            if ( $fb_url ) { ?>
+              <a class="social-link icon-facebook-circled" href="<?php echo $fb_url; ?>" target="_blank"></a>
+            <?php }
+            /* Twitter */
+            if ( $tw_url ) { ?>
+              <a class="social-link icon-twitter-circled" href="<?php echo $tw_url; ?>" target="_blank"></a>
+            <?php } ?>
+          </div>
+        <?php }
+
+        if ( $in_url || $li_url ) { ?>
+          <div class="footer-bottom--2nd">
+            <?php
+            /* Instagram */
+            if ( $in_url ) { ?>
+              <a class="social-link icon-instagram-circled" href="<?php echo $in_url; ?>" target="_blank"></a>
+            <?php }
+            /* LinkedIn */
+            if ( $li_url ) { ?>
+              <a class="social-link icon-linkedin-circled" href="<?php echo $li_url; ?>" target="_blank"></a>
+            <?php } ?>
+          </div>
+        <?php } ?>
+
+        <div class="footer-bottom--3rd">
+          <span><?php echo '&copy;' . date( 'Y' ) . ' ' . get_bloginfo( 'name' ) . ', Inc.'; ?></span>
+        </div>
     </div>
   </footer><!-- #colophon -->
 </div><!-- #page -->
