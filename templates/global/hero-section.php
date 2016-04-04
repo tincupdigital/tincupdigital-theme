@@ -25,7 +25,7 @@ if ( get_field( 'hero_text' ) ) {
         <div class="row center-xs">
 
           <div class="col-xs-12 col-sm-10 col-md-8">
-            <h1 class="hero-headline hero-section--headline h2 color--wht lh--normal"><?php echo wp_strip_all_tags( $h_txt ); ?></h1>
+            <h1 class="hero-headline hero-section--headline h2 txt--shadow color--wht lh--normal"><?php echo wp_strip_all_tags( $h_txt ); ?></h1>
           </div>
 
         </div>

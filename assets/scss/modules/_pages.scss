@@ -51,7 +51,6 @@ Global: Hero
 .hero-section--headline {
   margin: 0;
   line-height: 1.35;
-  text-shadow: 1px 1px 0.25rem rgba(black, 0.5);
 }
 
 /*
@@ -173,9 +172,6 @@ Home: CTA
   .cta-headline {
     color: white;
   }
-}
-.cta-headline {
-  text-shadow: 1px 1px 0.25rem rgba(black, 0.5);
 }
 .cta-button {
   color: white;

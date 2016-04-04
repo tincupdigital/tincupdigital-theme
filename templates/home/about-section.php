@@ -14,9 +14,9 @@
           <?php
           /* Headline */
           if ( get_sub_field( 'about_headline' ) ) { ?>
-            <h2 class="about-headline about-section--headline mt0 txt--600">
+            <h1 class="about-headline about-section--headline txt--shadow h2 mt0 txt--600">
               <?php the_sub_field( 'about_headline' ); ?>
-            </h2>
+            </h1>
           <?php }
 
           /* Text */

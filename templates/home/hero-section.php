@@ -13,7 +13,7 @@ $h_img = _s_get_feat_img_url( 'hero' ); ?>
   <?php /* Logo */
   if ( get_theme_mod( 'white_logo' ) ) { ?>
     <div class="hero-logo hero-section--logo pos--rel z2">
-      <img src="<?php echo get_theme_mod( 'white_logo' ); ?>">
+      <img class="hero-logo--img" src="<?php echo get_theme_mod( 'white_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
     </div>
   <?php } ?>
 

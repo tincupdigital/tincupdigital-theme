@@ -19,14 +19,13 @@ $s_img = get_sub_field( 'service_image' );
 if ( $s_img ) {
   $img_url = $s_img['sizes']['medium'];
   $img_alt = $s_img['alt'];
-  $img_ttl = $s_img['title'];
 } ?>
 
 <div class="<?php echo $grid_cols; ?>">
   <div class="image-container service-image--container">
     <?php /* Image */
     if ( $s_img ) { ?>
-      <img class="service-image service-item--image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>" title="<?php echo $img_ttl; ?>">
+      <img class="service-image service-item--image img--round" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>">
     <?php } ?>
   </div>
 </div>

@@ -21,7 +21,7 @@
               <li class="cta-item cta-section--item slippry-item">
                 <?php /* Headline */
                 if ( get_field( 'cta_headline' ) ) { ?>
-                  <h2 class="cta-headline cta-section--headline mt0 txt--center color--wht"><?php the_field( 'cta_headline' ); ?></h2>
+                  <h2 class="cta-headline cta-section--headline txt--shadow mt0 color--wht"><?php the_field( 'cta_headline' ); ?></h2>
                 <?php }
 
                 /* Text */
