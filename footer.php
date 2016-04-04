@@ -20,7 +20,9 @@
               <?php /* Logo */
               if ( get_theme_mod( 'color_logo' ) ) { ?>
                 <div class="footer-logo footer-top--logo">
-                  <img class="footer-logo--img" src="<?php echo get_theme_mod( 'color_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+                  <a href="<?php bloginfo( 'site_url' ); ?>">
+                    <img class="footer-logo--img" src="<?php echo get_theme_mod( 'color_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+                  </a>
                 </div>
               <?php } ?>
 

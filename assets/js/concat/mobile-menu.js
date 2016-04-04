@@ -22,8 +22,9 @@
 
   // remove class if click outside menu
   $(document).mouseup(function(e) {
-    var myTarget = $('.mobile-menu .menu');
-    if ( !myTarget.is(e.target) && ( myTarget.has(e.target).length === 0 ) ) {
+    var menuArea = $('.mobile-menu .menu');
+    // check if menu area is targeted
+    if ( !menuArea.is(e.target) && ( menuArea.has(e.target).length === 0 ) ) {
       $('.site').removeClass('pushed');
     }
   });

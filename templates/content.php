@@ -25,7 +25,7 @@
           <?php _s_custom_excerpt( 20 ); ?>
 
           <a class="service-button service-section--button button-brand color--txt" href="<?php the_permalink(); ?>">
-            <span>Continue reading</span><i class="icon-right-open"></i>
+            <span>Read more</span><i class="icon-right-open"></i>
           </a>
 
           <?php

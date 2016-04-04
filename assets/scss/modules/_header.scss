@@ -223,6 +223,10 @@ Mobile Menu
   li {
     margin: 1.25rem 0 0;
 
+    &.current_page_item a {
+      color: white;
+    }
+
     // don't display logo
     &.site-logo {
       display: none;
