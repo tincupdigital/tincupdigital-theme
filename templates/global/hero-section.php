@@ -6,7 +6,11 @@
  */
 
 // set up hero image
-$h_img = _s_get_feat_img_url( 'hero' );
+if ( has_post_thumbnail() ) {
+  $h_img = _s_get_feat_img_url( 'hero' );
+} else {
+  $h_img = get_bloginfo( 'template_directory' ) . '/assets/img/hero-fallback.jpg';
+}
 
 // set up class based on whether
 // hero text is present.

@@ -91,17 +91,30 @@ Stack order
 .z5 { z-index: 5; }
 
 /*
-Text
+Text: Alignment
  */
 .txt--center { text-align: center; }
 .txt--right { text-align: right; }
 
+/*
+Text: Weight
+ */
 .txt--700 { font-weight: 700; }
 .txt--600 { font-weight: 600; }
 .txt--300 { font-weight: 300; }
 
+/*
+Text: Case
+ */
 .txt--lower { text-transform: lowercase; }
 .txt--upper { text-transform: uppercase; }
+
+/*
+Text: Shadow
+ */
+.txt--shadow {
+  text-shadow: 1px 1px 3px rgba(black, 0.5);
+}
 
 /*
 Vertical alignment

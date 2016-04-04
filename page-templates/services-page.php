@@ -19,11 +19,7 @@ get_header(); ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="entry-content">
               <?php /* Hero */
-              if ( has_post_thumbnail() ) {
-                get_template_part( 'templates/global/hero', 'section' );
-              } else {
-                get_template_part( 'templates/pages/services', 'hero_fallback' );
-              } ?>
+              get_template_part( 'templates/global/hero', 'section' ); ?>
 
               <?php /* Services */
               if ( have_rows( 'services' ) ) {

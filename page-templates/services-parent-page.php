@@ -18,11 +18,7 @@ get_header(); ?>
 
           <div class="service-section">
             <?php /* Hero */
-            if ( has_post_thumbnail() ) {
-              get_template_part( 'templates/global/hero', 'section' );
-            } else {
-              get_template_part( 'templates/pages/services', 'hero_fallback' );
-            } ?>
+            get_template_part( 'templates/global/hero', 'section' ); ?>
 
             <div class="service-section--inner pos--rel z5">
               <?php /* Nav */
