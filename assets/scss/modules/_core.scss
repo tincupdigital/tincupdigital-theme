@@ -13,6 +13,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  background-color: $button-color;
+}
 
 a {
   text-decoration: none;

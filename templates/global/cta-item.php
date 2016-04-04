@@ -23,11 +23,13 @@ if ( $post_object ) {
   setup_postdata( $post ); ?>
 
   <div class="cta-item--single <?php echo $bg_class; ?> pos--rel z1 txt--center" style="background-image: url('<?php echo $cta_bg; ?>');">
-    <div class="cta-inner cta-item--inner pos--rel z2">
-      <!-- Headline -->
-      <h2 class="cta-headline cta-item--headline mt0 color--wht"><?php the_title(); ?></h2>
+  <div class="cta-inner cta-item--inner pos--rel z2">
+      <?php /* Headline */
+      if ( get_field( 'cta_headline' ) ) { ?>
+        <h2 class="cta-headline cta-section--headline mt0 txt--center color--wht"><?php the_field( 'cta_headline' ); ?></h2>
+      <?php }
 
-      <?php /* Text */
+      /* Text */
       if ( get_field( 'cta_text' ) ) {
         echo wpautop( get_field( 'cta_text' ) );
       }

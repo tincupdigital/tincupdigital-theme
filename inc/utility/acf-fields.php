@@ -137,6 +137,27 @@ acf_add_local_field_group(array (
   'title' => 'CTA Fields',
   'fields' => array (
     array (
+      'key' => 'field_57017fc8d0734',
+      'label' => 'CTA Headline',
+      'name' => 'cta_headline',
+      'type' => 'text',
+      'instructions' => 'Enter a headline for the CTA.',
+      'required' => 1,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+      'readonly' => 0,
+      'disabled' => 0,
+    ),
+    array (
       'key' => 'field_570018b36f7a3',
       'label' => 'CTA Text',
       'name' => 'cta_text',
@@ -576,15 +597,15 @@ acf_add_local_field_group(array (
 ));
 
 acf_add_local_field_group(array (
-  'key' => 'group_57001d71dece2',
-  'title' => 'Page Fields',
+  'key' => 'group_57016ab74a6a3',
+  'title' => 'Image Fields',
   'fields' => array (
     array (
-      'key' => 'field_57001d857b38e',
-      'label' => 'CTA Items',
-      'name' => 'cta_items',
-      'type' => 'relationship',
-      'instructions' => 'Select the CTA items you\'d like to display. If more than one CTA item is selected, they\'ll be displayed as a slider.',
+      'key' => 'field_57016acecb482',
+      'label' => 'Custom Thumbnail',
+      'name' => 'custom_thumbnail',
+      'type' => 'image',
+      'instructions' => 'Upload an image to use as a thumbnail for the post. This can be used where the post\'s featured image doesn\'t work very well as an thumbnail.',
       'required' => 0,
       'conditional_logic' => 0,
       'wrapper' => array (
@@ -592,18 +613,16 @@ acf_add_local_field_group(array (
         'class' => '',
         'id' => '',
       ),
-      'post_type' => array (
-        0 => 'cta',
-      ),
-      'taxonomy' => array (
-      ),
-      'filters' => array (
-        0 => 'search',
-      ),
-      'elements' => '',
-      'min' => '',
-      'max' => '',
-      'return_format' => 'object',
+      'return_format' => 'array',
+      'preview_size' => 'thumbnail',
+      'library' => 'all',
+      'min_width' => '',
+      'min_height' => '',
+      'min_size' => '',
+      'max_width' => '',
+      'max_height' => '',
+      'max_size' => '',
+      'mime_types' => '',
     ),
   ),
   'location' => array (
@@ -611,17 +630,12 @@ acf_add_local_field_group(array (
       array (
         'param' => 'post_type',
         'operator' => '==',
-        'value' => 'page',
-      ),
-      array (
-        'param' => 'page_template',
-        'operator' => '!=',
-        'value' => 'page-templates/home-page.php',
+        'value' => 'post',
       ),
     ),
   ),
   'menu_order' => 0,
-  'position' => 'normal',
+  'position' => 'side',
   'style' => 'default',
   'label_placement' => 'top',
   'instruction_placement' => 'label',
@@ -900,6 +914,61 @@ acf_add_local_field_group(array (
     ),
   ),
   'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
+));
+
+acf_add_local_field_group(array (
+  'key' => 'group_57001d71dece2',
+  'title' => 'Page Fields',
+  'fields' => array (
+    array (
+      'key' => 'field_57001d857b38e',
+      'label' => 'CTA Items',
+      'name' => 'cta_items',
+      'type' => 'relationship',
+      'instructions' => 'Select the CTA items you\'d like to display. If more than one CTA item is selected, they\'ll be displayed as a slider.',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'post_type' => array (
+        0 => 'cta',
+      ),
+      'taxonomy' => array (
+      ),
+      'filters' => array (
+        0 => 'search',
+      ),
+      'elements' => '',
+      'min' => '',
+      'max' => '',
+      'return_format' => 'object',
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'page',
+      ),
+      array (
+        'param' => 'page_template',
+        'operator' => '!=',
+        'value' => 'page-templates/home-page.php',
+      ),
+    ),
+  ),
+  'menu_order' => 1,
   'position' => 'normal',
   'style' => 'default',
   'label_placement' => 'top',

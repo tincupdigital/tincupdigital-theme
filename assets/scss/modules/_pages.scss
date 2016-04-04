@@ -8,21 +8,17 @@ Global: Hero
 .hero-section {
   display: table;
   width: 100%;
-  margin-top: 64px;
   @include bg-overlay;
 
-  @include break-sm {
-    margin-top: 0;
-  }
 
   &.has-text {
-    min-height: 275px;
+    min-height: 300px;
 
     @include break-sm {
-      min-height: 325px;
+      min-height: 350px;
     }
     @include break-md {
-      min-height: 350px;
+      min-height: 375px;
     }
     @include break-lg {
       min-height: 400px;
@@ -41,6 +37,15 @@ Global: Hero
 .hero-section--logo {
   display: table-cell;
   vertical-align: middle;
+}
+.hero-section--text {
+  padding: calc(4.5rem + 64px) 0 4.5rem;
+
+  @include break-sm {
+    padding-top: 4.5rem;
+  }
+}
+.hero-section--logo {
   padding: 4.5rem 0;
 }
 .hero-section--headline {

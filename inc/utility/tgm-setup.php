@@ -81,7 +81,7 @@ function _s_register_required_plugins() {
       'name' => 'WP Super Cache',
       'slug' => 'wp-super-cache',
       'required' => true,
-      'force_activation' => true
+      'force_activation' => false
     ),
     array(
       'name' => 'Yoast SEO',

@@ -39,7 +39,13 @@
 
       <div class="col-xs-12 col-sm-6 col-md-4 first-xs last-sm">
         <div class="entry-image">
-          <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'img--round img--center' ) ); ?>
+          <?php if ( get_field( 'custom_thumbnail' ) ) {
+            $thumb = get_field( 'custom_thumbnail' ); ?>
+
+            <img class="img--round img--center wp-post-image" src="<?php echo $thumb['sizes']['thumbnail']; ?>" alt="<?php echo $thumb['alt']; ?>">
+          <?php } else {
+            the_post_thumbnail( 'thumbnail', array( 'class' => 'img--round img--center' ) );
+          } ?>
         </div>
       </div>
     </div>

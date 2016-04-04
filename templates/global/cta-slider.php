@@ -19,10 +19,12 @@
               setup_postdata( $post ); ?>
 
               <li class="cta-item cta-section--item slippry-item">
-                <!-- Headline -->
-                <h2 class="cta-headline cta-section--headline mt0 txt--center"><?php the_title(); ?></h2>
+                <?php /* Headline */
+                if ( get_field( 'cta_headline' ) ) { ?>
+                  <h2 class="cta-headline cta-section--headline mt0 txt--center color--wht"><?php the_field( 'cta_headline' ); ?></h2>
+                <?php }
 
-                <?php /* Text */
+                /* Text */
                 if ( get_field( 'cta_text' ) ) {
                   echo wpautop( get_field( 'cta_text' ) );
                 }
