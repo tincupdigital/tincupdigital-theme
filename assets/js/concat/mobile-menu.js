@@ -26,7 +26,7 @@
     var menuButton = $('.menu-toggle');
 
     // check if menu area is targeted
-    if ( ( !menuArea.is(e.target) && !menuButton.is(e.target) ) && ( menuArea.has(e.target).length === 0 ) ) {
+    if ( !menuArea.is(e.target) && !menuButton.is(e.target) ) {
       $('.site').removeClass('pushed');
     }
   });

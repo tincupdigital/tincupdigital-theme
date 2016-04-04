@@ -199,52 +199,83 @@ Services
   }
 }
 .service-section--inner {
-  padding: 3rem 0;
+  padding-bottom: 3rem;
+
+  @include break-sm {
+    padding-top: 3rem;
+  }
 }
 
 /* Nav */
 #services-nav {
-  display: none;
-  position: absolute;
+  display: table;
   width: 100%;
-  bottom: 100%;
+  margin: 0 0 3rem;
   padding: 0;
-  margin: 0;
-  text-align: center;
   list-style-type: none;
-  z-index: 4;
+  text-align: center;
+  border-collapse: collapse;
 
   li {
-    position: relative;
-    display: inline-block;
-    vertical-align: bottom; // fix 1px off in Chrome
-    padding: 0 1px;
-  }
-  a {
-    position: relative;
-    display: block;
+    display: table-cell;
+    vertical-align: middle;
     background-color: $heading-color;
-    color: white;
-    padding: 1.25rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 1.0;
+    border-right: 1px solid darken($heading-color, 7.5%);
+
     @include animate(background-color);
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.current-menu-item {
       background-color: darken($heading-color, 7.5%);
+    }
+    &:last-of-type {
+      border-right: none;
     }
   }
 
-  .current-menu-item a {
-    background-color: darken($heading-color, 7.5%);
-    @include nav-accents(darken($heading-color, 7.5%));
+  a {
+    display: block;
+    color: white;
+    padding: 0.75rem 1.25rem;
   }
 
   @include break-sm {
+    position: absolute;
     display: block;
+    margin: 0;
+    bottom: 100%;
+    z-index: 4;
+
+    li, a {
+      position: relative;
+    }
+    li {
+      display: inline-block;
+      padding: 0 1px;
+      margin: 0;
+      vertical-align: bottom; // fix 1px off in Chrome
+      background-color: transparent;
+      border: none !important;
+    }
+    a {
+      padding: 1.25rem;
+      background-color: $heading-color;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.0;
+
+      &:hover,
+      &:focus {
+        background-color: darken($heading-color, 7.5%);
+      }
+    }
+
+    .current-menu-item a {
+      background-color: darken($heading-color, 7.5%);
+      @include nav-accents(darken($heading-color, 7.5%));
+    }
   }
 }
 
