@@ -203,7 +203,8 @@ Mobile Menu
   height: 100%;
   transition: all 0.375s ease;
   overflow: hidden;
-  background-color: $link-color;
+  background: $link-color;
+  background: linear-gradient(135deg, $link-color, lighten($link-color, 5%));
 
   .main-nav--menu {
     float: right;
@@ -223,8 +224,8 @@ Mobile Menu
   li {
     margin: 1.25rem 0 0;
 
-    &.current_page_item a {
-      color: white;
+    &.current_page_item > a {
+      border-bottom: 1px dotted white;
     }
 
     // don't display logo
