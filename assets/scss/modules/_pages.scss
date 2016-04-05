@@ -251,13 +251,15 @@ Services
   text-align: center;
   border-collapse: collapse;
 
+  li, a {
+    @include animate(background-color);
+  }
   li {
     display: table-cell;
+    width: 33%;
     vertical-align: middle;
     background-color: $heading-color;
     border-right: 1px solid darken($heading-color, 7.5%);
-
-    @include animate(background-color);
 
     &:hover,
     &:focus,
@@ -268,11 +270,10 @@ Services
       border-right: none;
     }
   }
-
   a {
     display: block;
     color: white;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
   }
 
   @include break-sm {
@@ -287,11 +288,23 @@ Services
     }
     li {
       display: inline-block;
+      width: auto;
       padding: 0 1px;
       margin: 0;
       vertical-align: bottom; // fix 1px off in Chrome
       background-color: transparent;
+      transition: none;
       border: none !important;
+      
+      &:hover,
+      &:focus,
+      &.current-menu-item {
+        background-color: transparent;
+      }      
+      
+      &.current-menu-item a {
+        background-color: darken($heading-color, 7.5%);
+      }
     }
     a {
       padding: 1.25rem;

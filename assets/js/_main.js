@@ -80,8 +80,9 @@ var Roots = {
           controls: false,
           transition: 'fade',
           speed: 1000,
-          pause: 10000,
+          pause: 7000,
           captions: false,
+          responsive: false,
           adaptiveHeight: false
         });
       }
