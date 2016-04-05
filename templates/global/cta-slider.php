@@ -12,13 +12,13 @@
       <div class="col-xs-12 col-sm-10 col-lg-9">
         <div class="cta-section--inner txt--center">
           <!-- Slider -->
-          <ul class="cta-items slippry list--flat">
+          <ul class="cta-slider cta-section--slider slippry list--flat">
             <?php // loop through posts
             foreach( $posts as $post ):
               // set up post data
               setup_postdata( $post ); ?>
 
-              <li class="cta-item cta-section--item slippry-item">
+              <li class="cta-item cta-slider--item slippry-item">
                 <?php /* Headline */
                 if ( get_field( 'cta_headline' ) ) { ?>
                   <h2 class="cta-headline cta-section--headline txt--shadow mt0 color--wht"><?php the_field( 'cta_headline' ); ?></h2>

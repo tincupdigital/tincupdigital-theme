@@ -8,7 +8,10 @@ Global: Hero
 .hero-section {
   display: table;
   width: 100%;
-  @include bg-overlay;
+
+  &.bg-cover {
+    @include bg-overlay;
+  }
 
 
   &.has-text {
@@ -47,6 +50,16 @@ Global: Hero
 }
 .hero-section--logo {
   padding: 4.5rem 0;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 65%;
+
+    @include break-sm {
+      max-width: 450px;
+    }
+  }
 }
 .hero-section--headline {
   margin: 0;
@@ -109,26 +122,39 @@ Home: Hero
  */
 .home-section--hero {
   padding: 0;
+  height: 350px;
   min-height: 350px;
   background-attachment: fixed;
 
+  .sy-box,
+  .hero-item {
+    width: 100%;
+    height: 100%;
+  }
+
   @include break-sm {
+    height: 400px;
     min-height: 400px;
   }
   @include break-md {
+    height: 500px;
     min-height: 500px;
   }
 }
-.hero-section--logo {
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 65%;
 
-    @include break-sm {
-      max-width: 450px;
-    }
-  }
+/* Slider */
+.slider-logo--outer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  @include bg-overlay;
+}
+.slider-logo--inner {
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
 /*

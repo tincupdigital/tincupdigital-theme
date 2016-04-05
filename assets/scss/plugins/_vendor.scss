@@ -140,27 +140,29 @@ Skippr
 .sy-box.sy-loading .sy-pager {
   visibility: hidden;
 }
-.sy-slides-wrap {
-  position: relative;
+.sy-slides-wrap,
+.sy-slides-crop,
+.sy-list {
   height: 100%;
   width: 100%;
+}
+.sy-slides-wrap {
+  position: relative;
 }
 .sy-slides-wrap:hover .sy-controls {
   display: block;
 }
-.sy-slides-crop {
-  height: 100%;
-  width: 100%;
+.sy-slides-crop,
+.sy-list {
   position: absolute;
+}
+.sy-slides-crop {
   overflow: hidden;
 }
 .sy-list {
-  width: 100%;
-  height: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
-  position: absolute;
 }
 .sy-list.horizontal {
   transition: left ease;
@@ -176,25 +178,16 @@ Skippr
 .sy-slide.sy-active {
   z-index: 3;
 }
-.sy-slide > img {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 100%;
-  border: 0;
-}
-.sy-slide > a {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 100%;
-}
-.sy-slide > a > img {
-  margin: 0;
-  padding: 0;
-  display: block;
-  width: 100%;
-  border: 0;
+.sy-slide {
+  img, a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  img {
+    border: 0;
+  }
 }
 
 /* Nav */

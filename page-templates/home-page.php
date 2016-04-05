@@ -10,9 +10,16 @@
 get_header(); ?>
 
   <?php /* Home Hero */
-  if ( is_front_page() && has_post_thumbnail() ) {
-    get_template_part( 'templates/home/hero', 'section' );
-  } ?>
+  if ( have_rows( 'home_sections' ) ):
+    while ( have_rows( 'home_sections' ) ): the_row();
+
+      /* Hero */
+      if ( get_row_layout() == 'hero_section' ) {
+        get_template_part( 'templates/home/hero', 'section' );
+      }
+
+    endwhile;
+  endif; ?>
 
   <nav id="home-navigation" class="sub-navigation" role="navigation">
     <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container' ) ); ?>

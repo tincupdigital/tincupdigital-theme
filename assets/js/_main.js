@@ -28,13 +28,14 @@ var Roots = {
       /* FitVids */
       $('.content-area .entry-content').fitVids();
 
-      /* Unslider */
-      if ( $('.slippry').length > 0 ) {
-        var slippry = $('.slippry').slippry({
+      /* Slippry */
+      if ( $('.cta-slider').length > 0 ) {
+        var slippry = $('.cta-slider').slippry({
           controls: false,
           transition: 'fade',
           speed: 600,
-          pause: 7000
+          pause: 7000,
+          captions: false
         });
         // set keyboard listener
         $(document).keydown(function(e) {
@@ -63,13 +64,27 @@ var Roots = {
       $(window).bind('scroll', function() {
         var offset = $(document).scrollTop(),
             opacity = 0;
-        if ( offset <= fadeStart ) {
+        if (offset <= fadeStart) {
           opacity = 1;
-        } else if ( offset <= fadeUntil ) {
-          opacity =  1 - ( offset / fadeUntil );
+        } else if (offset <= fadeUntil) {
+          opacity =  1 - (offset/fadeUntil);
         }
         fadeTarget.css('opacity', opacity).html(opacity);
       });
+
+      /* Slippry */
+      if ( $('.home-slippry').length > 0 ) {
+        $('.home-slippry').slippry({
+          loop: true,
+          pager: false,
+          controls: false,
+          transition: 'fade',
+          speed: 1000,
+          pause: 10000,
+          captions: false,
+          adaptiveHeight: false
+        });
+      }
 
       /* Waypoint */
       var waypoints = $('.sub-navigation');
