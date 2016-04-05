@@ -101,18 +101,27 @@ Global: Services
 Home: Global
  */
 .home {
-  .site-content {
-    padding-top: 0;
-    padding-bottom: 0;
+  .site-content--home {
+    padding: 0;
   }
+}
+.site-content--home {
   .hentry {
     margin-bottom: 0;
   }
   .entry-content {
     overflow-x: hidden;
   }
+
+  /* Services */
+  .service-section--inner {
+    padding-top: 3rem;
+  }
 }
 
+/*
+Home: Sections
+ */
 .home-section {
   padding: 3rem 0;
 }

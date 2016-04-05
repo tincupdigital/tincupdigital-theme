@@ -25,10 +25,10 @@ get_header(); ?>
     <?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav', 'menu_class' => 'main-nav--menu', 'container_class' => 'nav-container' ) ); ?>
   </nav><!-- #site-navigation -->
 
-  <div id="content" class="site-content">
+  <div id="content" class="site-content site-content--home">
 
     <div id="primary" class="content-area">
-      <main id="main" class="site-main" role="main">
+      <main id="main" class="site-main site-main--home" role="main">
 
         <?php while ( have_posts() ) : the_post(); ?>
 
