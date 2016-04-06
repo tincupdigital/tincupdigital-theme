@@ -81,10 +81,10 @@ if ( post_password_required() ) {
   $fields = array(
     'author' =>
       '<label for="author">Name</label>
-      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="field mb1">',
+      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="field mb2">',
     'email' =>
       '<label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="field mb1">'
+      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="field mb2">'
   );
 
   $comment_field =

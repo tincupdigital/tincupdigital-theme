@@ -88,6 +88,44 @@ Blog
 }
 
 /*
+Blog: Comments
+ */
+.comments-area {
+  .comment-list,
+  .children {
+    list-style-type: none;
+  }
+  .comment-list {
+    padding-left: 0;
+  }
+  .comment-body {
+    margin-bottom: $margin-p;
+    background-color: $border-color--light;
+    padding: 1rem;
+  }
+  .comment-awaiting-moderation {
+    margin: 0;
+    color: lighten($text-color, 32.5%);
+  }
+  .comment-content {
+    p {
+      margin: 0.5rem 0 0.65rem;
+    }
+  }
+  ol.children {
+    padding-left: 2rem;
+  }
+}
+.comment-author {
+  margin-bottom: 0.25rem;
+
+  img, b, span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/*
 Posts
  */
 .entry-content {

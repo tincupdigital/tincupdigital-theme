@@ -75,7 +75,7 @@ function _s_register_required_plugins() {
       'name' => 'Disqus Comment System',
       'slug' => 'disqus-comment-system',
       'required' => true,
-      'force_activation' => true
+      'force_activation' => false
     ),
     array(
       'name' => 'WP Super Cache',

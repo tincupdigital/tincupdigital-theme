@@ -39,7 +39,6 @@ $brand-colors: (
 );
 
 /* Definitions */
-$border-color: $gray-light;
 $footer-bg-color: brand-color('sand');
 $link-color: brand-color('yellow');
 
@@ -52,6 +51,9 @@ $nav-bg-color: $link-color;
 
 $heading-color: brand-color('green');
 $footer-bottom-text: brand-color('sand-dark');
+
+$border-color: $gray-light;
+$border-color--light: #F3F3F3;
 
 // social colors
 $facebook: #415696;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Post Type Class Setup
+ * CPT Class setup
  *
  * @package _s
  */
