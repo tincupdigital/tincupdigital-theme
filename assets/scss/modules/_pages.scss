@@ -7,43 +7,38 @@ Global: Hero
  */
 .hero-section {
   height: 300px;
-  min-height: 300px;
+  min-height: fit-content;
   @include bg-overlay;
 
   @include break-sm {
     height: 350px;
-    min-height: 350px;
   }
   @include break-md {
     height: 375px;
-    min-height: 375px;
   }
   @include break-lg {
     height: 400px;
-    min-height: 400px;
   }
 }
 .hero-section--logo,
 .hero-section--text {
+  padding: 4.5rem 0;
   @include vert-align;
 }
-.hero-section--logo {
-  padding: 4.5rem 0;
+.hero-section--logo img {
+  margin: 0 auto;
+  max-width: 315px;
 
-  img {
-    margin: 0 auto;
-    max-width: 65%;
-
-    @include break-sm {
-      max-width: 450px;
-    }
+  @include break-sm {
+    max-width: 450px;
   }
 }
 .hero-section--text {
-  padding: calc(4.5rem + 64px) 0 4.5rem;
+  margin-top: 64px;
+  padding: 4.5rem 0;
 
   @include break-sm {
-    padding-top: 4.5rem;
+    margin-top: 0;
   }
 }
 .hero-section--headline {
@@ -54,11 +49,9 @@ Global: Hero
 /* No Text */
 .hero-section--no-text {
   height: 225px;
-  max-height: 225px;
 
   @include break-sm {
     height: 275px;
-    max-height: 275px;
   }
 }
 
@@ -126,17 +119,13 @@ Home: Sections
 Home: Hero
  */
 .home .hero-section {
-  height: 350px;
-  min-height: 350px;
   background-attachment: fixed;
 
   @include break-sm {
     height: 400px;
-    min-height: 400px;
   }
   @include break-md {
     height: 500px;
-    min-height: 500px;
   }
 }
 

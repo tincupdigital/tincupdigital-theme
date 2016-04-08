@@ -20,7 +20,7 @@ if ( get_field( 'hero_text' ) ) {
   $class = 'hero-section--no-text';
 } ?>
 
-<section class="services-hero hero-section bg-cover <?php echo $class; ?>" style="background-image: url('<?php echo $h_img; ?>');">
+<section class="services-hero hero-section bg-cover <?php echo $class; ?> txt--center" style="background-image: url('<?php echo $h_img; ?>');">
   <?php /* Text */
   if ( $h_txt ) { ?>
     <div class="hero-text hero-section--text">
