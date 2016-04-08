@@ -110,10 +110,6 @@ AnySlider
 
   li {
     display: inline;
-
-    &.sy-active a {
-      background-color: rgba(white, 0.5);
-    }
   }
   a {
     display: inline-block;
@@ -126,9 +122,13 @@ AnySlider
     border-radius: 50%;
     @include animate(background-color, 0.25s);
 
+    &.as-active,
     &:hover,
     &:focus {
       background-color: rgba(white, 0.5);
+    }
+    &:focus {
+      outline: 0;
     }
 
     @include break-md {

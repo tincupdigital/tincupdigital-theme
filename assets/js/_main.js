@@ -31,12 +31,13 @@ var Roots = {
       /* AnySlider */
       if ( $('.cta-slider').length > 0 ) {
         $('.cta-slider').anyslider({
-          animation: 'slide',
-          interval: 5000,
+          animation: 'slide', // fade not working
+          interval: 10000,
           keyboard: false,
+          pauseOnHover: true,
           showBullets: true,
           showControls: false,
-          speed: 700,
+          speed: 500,
           touch: true
         });
       }

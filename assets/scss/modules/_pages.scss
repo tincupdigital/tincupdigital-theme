@@ -204,15 +204,15 @@ Home: CTA
 .cta-section {
   padding: 4rem 0;
   background: url('../img/cta-bg.png') left top repeat;
-
-  p {
-    font-weight: 600;
-    color: $text-color--dark;
-  }
 }
 .cta-section--inner {
   .cta-headline {
     color: white;
+  }
+  p {
+    padding: 0 5%;
+    font-weight: 600;
+    color: $text-color--dark;
   }
 }
 .cta-section--button {
