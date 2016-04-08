@@ -28,22 +28,16 @@ var Roots = {
       /* FitVids */
       $('.content-area .entry-content').fitVids();
 
-      /* Slippry */
+      /* AnySlider */
       if ( $('.cta-slider').length > 0 ) {
-        var slippry = $('.cta-slider').slippry({
-          controls: false,
-          transition: 'fade',
-          speed: 600,
-          pause: 7000,
-          captions: false
-        });
-        // set keyboard listener
-        $(document).keydown(function(e) {
-          if (e.keyCode === 37) {
-            slippry.goToPrevSlide();
-          } else if (e.keyCode === 39) {
-            slippry.goToNextSlide();
-          }
+        $('.cta-slider').anyslider({
+          animation: 'slide',
+          interval: 5000,
+          keyboard: false,
+          showBullets: true,
+          showControls: false,
+          speed: 700,
+          touch: true
         });
       }
     }
@@ -72,18 +66,16 @@ var Roots = {
         fadeTarget.css('opacity', opacity).html(opacity);
       });
 
-      /* Slippry */
-      if ( $('.home-slippry').length > 0 ) {
-        $('.home-slippry').slippry({
-          loop: true,
-          pager: false,
-          controls: false,
-          transition: 'fade',
-          speed: 1000,
-          pause: 7000,
-          captions: false,
-          responsive: false,
-          adaptiveHeight: false
+      /* AnySlider */
+      if ( $('.home-slider').length > 0 ) {
+        $('.home-slider').anyslider({
+          animation: 'fade',
+          interval: 5000,
+          keyboard: true,
+          showBullets: false,
+          showControls: false,
+          speed: 700,
+          touch: true
         });
       }
 

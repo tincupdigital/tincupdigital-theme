@@ -6,19 +6,21 @@
  */
 ?>
 
-<section class="section cta-section pos--rel">
+<section class="cta-section pos--rel">
+
   <div class="container">
     <div class="row center-xs">
       <div class="col-xs-12 col-sm-10 col-lg-9">
+
         <div class="cta-section--inner txt--center">
           <!-- Slider -->
-          <ul class="cta-slider cta-section--slider slippry list--flat">
+          <div class="slider slider-area cta-slider">
             <?php // loop through posts
             foreach( $posts as $post ):
               // set up post data
               setup_postdata( $post ); ?>
 
-              <li class="cta-item cta-slider--item slippry-item">
+              <div class="slider-slide slider-area--slide cta-slider--slide">
                 <?php /* Headline */
                 if ( get_field( 'cta_headline' ) ) { ?>
                   <h2 class="cta-headline cta-section--headline txt--shadow mt0 color--wht"><?php the_field( 'cta_headline' ); ?></h2>
@@ -41,14 +43,13 @@
                     <i class="icon-left-open"></i>
                   </a>
                 <?php } ?>
-              </li>
+              </div>
             <?php endforeach; ?>
-          </ul><!-- .cta-items -->
-
-          <!-- Nav -->
-          <div class="owl-carousel--nav carousel-nav"></div>
+          </div><!-- .cta-slider -->
         </div>
+
       </div>
-    </div>
-  </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
+
 </section>

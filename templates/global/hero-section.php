@@ -12,19 +12,18 @@ if ( has_post_thumbnail() ) {
   $h_img = get_bloginfo( 'template_directory' ) . '/assets/img/hero-fallback.jpg';
 }
 
-// set up class based on whether
-// hero text is present.
+// set up hero text/class
 if ( get_field( 'hero_text' ) ) {
   $h_txt = get_field( 'hero_text' );
-  $class = 'has-text';
+  $class = 'hero-section--has-text';
 } else {
-  $class = 'no-text';
+  $class = 'hero-section--no-text';
 } ?>
 
-<section class="services-hero hero-section bg-cover pos--rel z1 <?php echo $class; ?>" style="background-image: url('<?php echo $h_img; ?>');">
+<section class="services-hero hero-section bg-cover <?php echo $class; ?>" style="background-image: url('<?php echo $h_img; ?>');">
   <?php /* Text */
   if ( $h_txt ) { ?>
-    <div class="hero-text hero-section--text pos--rel z2">
+    <div class="hero-text hero-section--text">
       <div class="container">
         <div class="row center-xs">
 

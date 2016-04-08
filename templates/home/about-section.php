@@ -6,11 +6,11 @@
  */
 ?>
 
-<section class="section home-section home-section--about about-section">
+<section class="home-section about-section home-section--about">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <div class="about-section--inner txt--center pos--rel z2">
+        <div class="about-section--inner txt--center">
           <?php
           /* Headline */
           if ( get_sub_field( 'about_headline' ) ) { ?>

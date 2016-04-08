@@ -13,39 +13,39 @@ if ( $h_setup === 'single' ) {
   $h_img = get_sub_field( 'hero_image' );
   $h_img = $h_img['sizes']['hero']; ?>
 
-  <section class="section home-section home-section--hero hero-section hero-section bg-cover pos--rel z1" style="background-image: url('<?php echo $h_img; ?>');">
+  <section class="home-section hero-section home-section--hero bg-cover" style="background-image: url('<?php echo $h_img; ?>');">
     <?php /* Logo */
     if ( get_theme_mod( 'white_logo' ) ) { ?>
-      <div class="hero-logo hero-section--logo pos--rel z2">
-        <img class="hero-logo--img" src="<?php echo get_theme_mod( 'white_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+      <div class="logo-section hero-section--logo">
+        <img class="logo-section--img dsp--bl" src="<?php echo get_theme_mod( 'white_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
       </div>
     <?php } ?>
   </section>
 
 <?php } elseif ( $h_setup === 'multiple' ) { ?>
 
-  <section class="section home-section home-section--hero hero-section hero-section pos--rel z1">
+  <section class="home-section hero-section home-section--slider pos--rel">
     <?php /* Slider */
-    $images = get_sub_field( 'hero_gallery' );
-    // check if gallery exists
-    if ( $images ) { ?>
-      <ul class="hero-slider hero-section--slider home-slippry list--flat">
-        <?php foreach ( $images as $image ):
-          // set up slide background image
+    if ( get_sub_field( 'hero_gallery' ) ) {
+      $images = get_sub_field( 'hero_gallery' ); ?>
+
+      <div class="slider slider-area home-slider">
+        <?php // loop through gallery images
+        foreach ( $images as $image ):
           $s_img = $image['sizes']['hero']; ?>
 
-          <li class="hero-item hero-slider--item slippry-item bg-cover" style="background-image: url('<?php echo $s_img; ?>');">
-          </li>
+          <div class="slider-slide slider-area--slide home-slider--slide bg-cover" style="background-image: url('<?php echo $s_img; ?>');">
+          </div>
         <?php endforeach; ?>
-      </ul>
+      </div>
     <?php } ?>
 
     <?php /* Logo */
     if ( get_theme_mod( 'white_logo' ) ) { ?>
-      <div class="slider-logo--outer">
-        <div class="slider-logo--inner">
-          <div class="hero-logo hero-section--logo pos--rel z2">
-            <img class="hero-logo--img" src="<?php echo get_theme_mod( 'white_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+      <div class="logo-section--outer">
+        <div class="logo-section--inner">
+          <div class="logo-section hero-section--logo">
+            <img class="logo-section--img dsp--bl" src="<?php echo get_theme_mod( 'white_logo' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
           </div>
         </div>
       </div>
