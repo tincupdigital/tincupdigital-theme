@@ -48,4 +48,5 @@ if ( $post_object ) {
       <?php } ?>
     </div>
   </div>
-<?php }
+  <?php wp_reset_postdata(); // this is important!
+}

@@ -187,7 +187,7 @@ function _s_has_img_caption() {
  * Featured image w/caption
  */
 function _s_feat_img_caption( $size = 'large', $class = 'mt3' ) {
-  echo '<figure class="wp-caption alignone ' . $class . '">';
+  echo '<figure class="wp-caption alignone '. $class .'">';
   the_post_thumbnail( $size );
   echo '<figcaption class="wp-caption-text">' . get_post( get_post_thumbnail_id() )->post_excerpt . '</figcaption>';
   echo '</figure>';

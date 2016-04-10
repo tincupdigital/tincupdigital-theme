@@ -69,7 +69,7 @@ function _s_register_required_plugins() {
       'name' => 'Akismet',
       'slug' => 'akismet',
       'required' => true,
-      'force_activation' => true
+      'force_activation' => false
     ),
     array(
       'name' => 'Brute Force Login Protection',
@@ -81,7 +81,7 @@ function _s_register_required_plugins() {
       'name' => 'Disqus Comment System',
       'slug' => 'disqus-comment-system',
       'required' => true,
-      'force_activation' => false
+      'force_activation' => true
     ),
     array(
       'name' => 'WP Super Cache',

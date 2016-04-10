@@ -80,21 +80,27 @@ if ( post_password_required() ) {
   <?php // set up comment form here
   $fields = array(
     'author' =>
-      '<label for="author">Name</label>
-      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="field mb2">',
+      '<div class="comment-name mb1">
+      <label for="author">Name</label>
+      <input id="author" name="author" type="text" placeholder="Name" aria-required="true" class="field">
+      </div>',
     'email' =>
-      '<label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="field mb2">'
+      '<div class="comment-email mb1">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="Email" aria-describedby="email-notes" aria-required="true" class="field">
+      </div>'
   );
 
   $comment_field =
-  '<label for="comment">Comment</label>
-  <textarea id="comment" name="comment" cols="45" rows="4" placeholder="" aria-required="true" class="field mb1"></textarea>';
+  '<div class="comment-text mb1">
+  <label for="comment">Comment</label>
+  <textarea id="comment" name="comment" cols="45" rows="4" placeholder="" aria-required="true" class="field"></textarea>
+  </div>';
 
   $args = array(
     'fields' => apply_filters( 'comment_form_default_fields', $fields ),
     'comment_field' => $comment_field,
-    'class_submit' => 'btn btn-primary'
+    'class_submit' => 'btn btn-primary mt2'
   );
   comment_form( $args );
   ?>
