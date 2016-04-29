@@ -143,52 +143,31 @@ Navigation
 .site-logo {
   display: inherit;
   position: relative;
-  max-width: 100px;
   z-index: 4;
   order: 3;
 
-  // for Firefox: http://goo.gl/2Mlygd
-  img {
+  a {
     display: block;
-    width: 100%;
-    height: auto;
+    width: 100px;
+    height: 42px;
+    background-image: url('../img/logos/logo.svg');
+    text-indent: -9999px;
   }
-
   @include break-sm {
-    max-width: 200px;
-    margin: 0 1rem -1rem;
-    background-color: $logo-bg-color;
+    margin: -50px 0 -20px;
 
     a {
-      padding: 0.75rem 1.25rem;
-    }
-
-    // accent arrow
-    &:after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 0;
-      border-left: 100px solid transparent;
-      border-right: 100px solid transparent;
-      border-top: 0.75rem solid $logo-bg-color;
-      font-size: 0;
-      line-height: 0;
+      width: 200px;
+      height: 150px;
+      background-image: url('../img/logos/logo-large.svg');
     }
   }
   @include break-lg {
-    max-width: 250px;
-    margin: 0 1.25rem -1.25rem;
+    margin: -65px 0 -30px;
 
     a {
-      padding: 0.75rem 1.5rem;
-    }
-
-    &:after {
-      border-left-width: 125px;
-      border-right-width: 125px;
+      width: 250px;
+      height: 188px;
     }
   }
 }
@@ -237,6 +216,10 @@ Mobile Menu
     font-size: 1.143rem;
     padding: 0.125rem;
     @include link-color(white, $button-color);
+  }
+
+  @include break-sm {
+    display: none;
   }
 }
 .site {

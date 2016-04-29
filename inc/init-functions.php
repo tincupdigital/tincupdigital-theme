@@ -163,7 +163,7 @@ function _s_nav_wrap() {
     // set up the nav wrapper
     $wrap = '<ul id="%1$s" class="%2$s">';
     $wrap .= '%3$s';
-    $wrap .= '<li class="site-logo"><a href="'. $lnk .'"><img src="'. $img .'" alt="'. $alt .'"></a></li>';
+    $wrap .= '<li class="site-logo"><a class="site-logo--img bg-contain" href="'. $lnk .'">Tin Cup Digital</a></li>';
     $wrap .= '</ul>';
   } else {
     $wrap = '<ul id="%1$s" class="%2$s">%3$s</ul>';
