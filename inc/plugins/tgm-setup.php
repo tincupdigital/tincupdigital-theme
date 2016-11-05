@@ -27,14 +27,7 @@ function _s_register_required_plugins() {
     array(
       'name' => 'Advanced Custom Fields Pro',
       'slug' => 'advanced-custom-fields-pro',
-      'source' => 'http://www.ecm-design.com/assets/plugins/advanced-custom-fields-pro.zip',
-      'required' => true,
-      'force_activation' => true
-    ),
-    array(
-      'name' => 'Advanced Custom Fields: Repeater Field',
-      'slug' => 'acf-repeater',
-      'source' => 'http://www.ecm-design.com/assets/plugins/acf-repeater.zip',
+      'source' => 'https://github.com/ecmdesign/advanced-custom-fields-pro/archive/master.zip',
       'required' => true,
       'force_activation' => true
     ),
@@ -69,7 +62,7 @@ function _s_register_required_plugins() {
       'name' => 'Akismet',
       'slug' => 'akismet',
       'required' => true,
-      'force_activation' => false
+      'force_activation' => true
     ),
     array(
       'name' => 'Brute Force Login Protection',
@@ -84,8 +77,8 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'WP Super Cache',
-      'slug' => 'wp-super-cache',
+      'name' => 'WP Fastest Cache',
+      'slug' => 'wp-fastest-cache',
       'required' => true,
       'force_activation' => false
     ),

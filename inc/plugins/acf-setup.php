@@ -5,6 +5,19 @@
  * @package _s
  */
 
+if ( WP_ENV == 'development' ) {
+  return;
+}
+
+// hide field group menu from users
+if ( wp_get_current_user()->user_login !== 'sean' ) {
+  define( 'ACF_LITE' , true );
+}
+
+/*
+ACF field groups
+ */
+// export field export code here:
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (

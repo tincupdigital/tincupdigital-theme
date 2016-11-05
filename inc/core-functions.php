@@ -45,6 +45,47 @@ if ( get_theme_mod( 'analytics_id' ) ) {
 }
 
 /**
+ * Clean up some header items
+ */
+// hat tip: http://gomakethings.com/remove-junk-from-the-wordpress-header
+function _s_header_area_cleanup() {
+  remove_action( 'wp_head', 'rsd_link' );
+  remove_action( 'wp_head', 'wlwmanifest_link' );
+  remove_action( 'wp_head', 'wp_generator' );
+  remove_action( 'wp_head', 'feed_links_extra', 3 );
+  remove_action( 'wp_head', 'start_post_rel_link' );
+  remove_action( 'wp_head', 'index_rel_link' );
+  remove_action( 'wp_head', 'adjacent_posts_rel_link' );
+  remove_action( 'wp_head', 'rel_canonical', 10, 0 );
+  remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+}
+add_action( 'init', '_s_header_area_cleanup' );
+
+/**
+ * Add custom image sizes
+ *
+ * @link http://codex.wordpress.org/Function_Reference/add_image_size
+ */
+function _s_update_image_sizes() {
+  update_option( 'thumbnail_size_w', 350 );
+  update_option( 'thumbnail_size_h', 350 );
+  update_option( 'thumbnail_crop', 1 );
+
+  update_option( 'medium_size_w', 600 );
+  update_option( 'medium_size_h', 600 );
+  update_option( 'medium_crop', 1 );
+
+  update_option( 'large_size_w', 1024 );
+  update_option( 'large_size_h', 768 );
+  update_option( 'large_crop', 0 );
+
+  add_image_size( 'hero', 1920, 768, true );
+}
+add_action( 'init', '_s_update_image_sizes' );
+
+/**
  * Strip &nbsp; from end of posts
  */
 function _s_trim_trailing_whitespace( $content ) {
